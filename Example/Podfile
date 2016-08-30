@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MAGTablesCollections_Example' do
+  pod 'MAGTablesCollections', :path => '../'
+
+  target 'MAGTablesCollections_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
