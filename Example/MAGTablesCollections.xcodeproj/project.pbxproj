@@ -13,7 +13,6 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* MAGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* MAGAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* MAGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* MAGViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -21,7 +20,15 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		6FD5D8F5257C1EF097DB0565 /* Pods_MAGTablesCollections_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D369BC9CFD346789C63528B6 /* Pods_MAGTablesCollections_Example.framework */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		C78D6AE91D780D9D00F86C0B /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = C78D6AE81D780D9D00F86C0B /* NOTICE */; };
+		C78D6AEC1D780E4800F86C0B /* MAGComfortTextInput.gif in Resources */ = {isa = PBXBuildFile; fileRef = C78D6AEB1D780E4800F86C0B /* MAGComfortTextInput.gif */; };
+		C78D6AF41D78268E00F86C0B /* CollectionCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D6AED1D78268E00F86C0B /* CollectionCell1.xib */; };
+		C78D6AF51D78268E00F86C0B /* CollectionViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = C78D6AEF1D78268E00F86C0B /* CollectionViewController1.m */; };
+		C78D6AF61D78268E00F86C0B /* CollectionViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D6AF01D78268E00F86C0B /* CollectionViewController1.xib */; };
+		C78D6AF71D78268E00F86C0B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78D6AF21D78268E00F86C0B /* MainViewController.m */; };
+		C78D6AF81D78268E00F86C0B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D6AF31D78268E00F86C0B /* MainViewController.xib */; };
+		C78D6AFB1D7828AF00F86C0B /* CollectionManager1.m in Sources */ = {isa = PBXBuildFile; fileRef = C78D6AFA1D7828AF00F86C0B /* CollectionManager1.m */; };
+		C78D6AFE1D782D1B00F86C0B /* CollectionCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = C78D6AFD1D782D1B00F86C0B /* CollectionCell1.m */; };
 		D96169E6BE8AD441752CAB0A /* Pods_MAGTablesCollections_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8FB40D61721BEB1ACBBB0F /* Pods_MAGTablesCollections_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,8 +54,6 @@
 		6003F59B195388D20070C39A /* MAGTablesCollections-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MAGTablesCollections-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* MAGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* MAGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* MAGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MAGViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* MAGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MAGViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* MAGTablesCollections_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MAGTablesCollections_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -58,11 +63,23 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6C62A11C7C43997E17B69B7B /* Pods-MAGTablesCollections_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGTablesCollections_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAGTablesCollections_Tests/Pods-MAGTablesCollections_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6C83E9DF8DFA8F1D10134CFA /* Pods-MAGTablesCollections_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGTablesCollections_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAGTablesCollections_Example/Pods-MAGTablesCollections_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8D8FB40D61721BEB1ACBBB0F /* Pods_MAGTablesCollections_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAGTablesCollections_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98F7B9DA7FB5033A9476539E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9B494E0705C044F031ACC49F /* Pods-MAGTablesCollections_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGTablesCollections_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAGTablesCollections_Example/Pods-MAGTablesCollections_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AE82A912FE3291F449F03EF7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C78D6AE81D780D9D00F86C0B /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NOTICE; path = ../NOTICE; sourceTree = "<group>"; };
+		C78D6AEB1D780E4800F86C0B /* MAGComfortTextInput.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = MAGComfortTextInput.gif; sourceTree = "<group>"; };
+		C78D6AED1D78268E00F86C0B /* CollectionCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell1.xib; sourceTree = "<group>"; };
+		C78D6AEE1D78268E00F86C0B /* CollectionViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController1.h; sourceTree = "<group>"; };
+		C78D6AEF1D78268E00F86C0B /* CollectionViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController1.m; sourceTree = "<group>"; };
+		C78D6AF01D78268E00F86C0B /* CollectionViewController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewController1.xib; sourceTree = "<group>"; };
+		C78D6AF11D78268E00F86C0B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		C78D6AF21D78268E00F86C0B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		C78D6AF31D78268E00F86C0B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		C78D6AF91D7828AF00F86C0B /* CollectionManager1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionManager1.h; sourceTree = "<group>"; };
+		C78D6AFA1D7828AF00F86C0B /* CollectionManager1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionManager1.m; sourceTree = "<group>"; };
+		C78D6AFC1D782D1B00F86C0B /* CollectionCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionCell1.h; sourceTree = "<group>"; };
+		C78D6AFD1D782D1B00F86C0B /* CollectionCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionCell1.m; sourceTree = "<group>"; };
 		D369BC9CFD346789C63528B6 /* Pods_MAGTablesCollections_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAGTablesCollections_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F6904F1D7EDF1BA6D4FCDB /* Pods-MAGTablesCollections_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGTablesCollections_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAGTablesCollections_Tests/Pods-MAGTablesCollections_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +113,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				C78D6AEA1D780E4800F86C0B /* Preview */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for MAGTablesCollections */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -132,9 +150,10 @@
 			children = (
 				6003F59C195388D20070C39A /* MAGAppDelegate.h */,
 				6003F59D195388D20070C39A /* MAGAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* MAGViewController.h */,
-				6003F5A6195388D20070C39A /* MAGViewController.m */,
+				C78D6AFF1D782D3700F86C0B /* CollectionExample1 */,
+				C78D6AF11D78268E00F86C0B /* MainViewController.h */,
+				C78D6AF21D78268E00F86C0B /* MainViewController.m */,
+				C78D6AF31D78268E00F86C0B /* MainViewController.xib */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -178,6 +197,7 @@
 				5C2797173382533BAF3A43B6 /* MAGTablesCollections.podspec */,
 				98F7B9DA7FB5033A9476539E /* README.md */,
 				AE82A912FE3291F449F03EF7 /* LICENSE */,
+				C78D6AE81D780D9D00F86C0B /* NOTICE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -191,6 +211,30 @@
 				6C62A11C7C43997E17B69B7B /* Pods-MAGTablesCollections_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C78D6AEA1D780E4800F86C0B /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				C78D6AEB1D780E4800F86C0B /* MAGComfortTextInput.gif */,
+			);
+			name = Preview;
+			path = ../Preview;
+			sourceTree = "<group>";
+		};
+		C78D6AFF1D782D3700F86C0B /* CollectionExample1 */ = {
+			isa = PBXGroup;
+			children = (
+				C78D6AEE1D78268E00F86C0B /* CollectionViewController1.h */,
+				C78D6AEF1D78268E00F86C0B /* CollectionViewController1.m */,
+				C78D6AF01D78268E00F86C0B /* CollectionViewController1.xib */,
+				C78D6AF91D7828AF00F86C0B /* CollectionManager1.h */,
+				C78D6AFA1D7828AF00F86C0B /* CollectionManager1.m */,
+				C78D6AED1D78268E00F86C0B /* CollectionCell1.xib */,
+				C78D6AFC1D782D1B00F86C0B /* CollectionCell1.h */,
+				C78D6AFD1D782D1B00F86C0B /* CollectionCell1.m */,
+			);
+			name = CollectionExample1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +320,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				C78D6AEC1D780E4800F86C0B /* MAGComfortTextInput.gif in Resources */,
+				C78D6AE91D780D9D00F86C0B /* NOTICE in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				C78D6AF61D78268E00F86C0B /* CollectionViewController1.xib in Resources */,
+				C78D6AF81D78268E00F86C0B /* MainViewController.xib in Resources */,
+				C78D6AF41D78268E00F86C0B /* CollectionCell1.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,8 +439,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* MAGAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* MAGViewController.m in Sources */,
+				C78D6AF51D78268E00F86C0B /* CollectionViewController1.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				C78D6AFE1D782D1B00F86C0B /* CollectionCell1.m in Sources */,
+				C78D6AFB1D7828AF00F86C0B /* CollectionManager1.m in Sources */,
+				C78D6AF71D78268E00F86C0B /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +501,6 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -490,7 +540,6 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -513,6 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MAGTablesCollections/MAGTablesCollections-Prefix.pch";
 				INFOPLIST_FILE = "MAGTablesCollections/MAGTablesCollections-Info.plist";

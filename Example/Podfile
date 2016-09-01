@@ -6,6 +6,8 @@ target 'MAGTablesCollections_Example' do
   target 'MAGTablesCollections_Tests' do
     inherit! :search_paths
 
-    
+    pod 'MAGMatveevReusable', :git => 'https://github.com/Magora-IOS/MAGMatveevReusable.git'
+    pod 'libextobjc', '~> 0.4.1'
+    pod 'Masonry', '~> 1.0'
   end
 end

@@ -1,0 +1,6 @@
+framework module MAGTablesCollections {
+  umbrella header "MAGTablesCollections-umbrella.h"
+
+  export *
+  module * { export * }
+}

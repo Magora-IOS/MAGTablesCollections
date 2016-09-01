@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CollectionViewController1">
+            <connections>
+                <outlet property="cm" destination="fGT-ct-dQn" id="ANf-u1-jr9"/>
+                <outlet property="view" destination="1" id="22d-0g-yNK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Pvm-2P-Xxx">
+                    <rect key="frame" x="0.0" y="40" width="320" height="728"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="81j-Mq-cVS">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uL-zv-Q9z">
+                    <rect key="frame" x="110" y="8" width="100" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <state key="normal" title="LayoutModeSerialFrames"/>
+                    <connections>
+                        <action selector="mode1Action" destination="-1" eventType="touchUpInside" id="OJ2-8f-bXh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQ8-Ur-YoV">
+                    <rect key="frame" x="215" y="8" width="111" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <state key="normal" title="LayoutModePercentDivision"/>
+                    <connections>
+                        <action selector="mode2Action" destination="-1" eventType="touchUpInside" id="JeQ-ch-Tjg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scb-AC-Cxs">
+                    <rect key="frame" x="-3" y="8" width="108" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="mtQ-Vg-eO2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <state key="normal" title="LayoutModeCustomFrames"/>
+                    <connections>
+                        <action selector="mode0Action" destination="-1" eventType="touchUpInside" id="UVs-sk-Eoo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="7uL-zv-Q9z" firstAttribute="height" secondItem="Scb-AC-Cxs" secondAttribute="height" id="0po-1J-aiW"/>
+                <constraint firstItem="7uL-zv-Q9z" firstAttribute="leading" secondItem="Scb-AC-Cxs" secondAttribute="trailing" constant="5" id="21d-b8-bkE"/>
+                <constraint firstItem="Scb-AC-Cxs" firstAttribute="centerY" secondItem="7uL-zv-Q9z" secondAttribute="centerY" id="5yH-HE-1mf"/>
+                <constraint firstAttribute="trailing" secondItem="Pvm-2P-Xxx" secondAttribute="trailing" id="Ai2-5w-bqd"/>
+                <constraint firstItem="7uL-zv-Q9z" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="GLm-HG-5R5"/>
+                <constraint firstItem="OQ8-Ur-YoV" firstAttribute="centerY" secondItem="7uL-zv-Q9z" secondAttribute="centerY" id="Hbp-nA-ckM"/>
+                <constraint firstItem="Pvm-2P-Xxx" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Lcf-fP-YqS"/>
+                <constraint firstItem="OQ8-Ur-YoV" firstAttribute="leading" secondItem="7uL-zv-Q9z" secondAttribute="trailing" constant="5" id="NCr-zn-1kx"/>
+                <constraint firstItem="OQ8-Ur-YoV" firstAttribute="height" secondItem="Scb-AC-Cxs" secondAttribute="height" id="VMc-n6-nZa"/>
+                <constraint firstAttribute="bottom" secondItem="Pvm-2P-Xxx" secondAttribute="bottom" id="flx-N7-KqQ"/>
+                <constraint firstItem="Pvm-2P-Xxx" firstAttribute="top" secondItem="1" secondAttribute="top" constant="40" id="uJG-Cv-PH3"/>
+                <constraint firstItem="7uL-zv-Q9z" firstAttribute="top" secondItem="1" secondAttribute="top" constant="8" id="xTd-9b-2YY"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+        <customObject id="fGT-ct-dQn" customClass="CollectionManager1">
+            <connections>
+                <outlet property="collectionView" destination="Pvm-2P-Xxx" id="Ueq-zE-Glv"/>
+            </connections>
+        </customObject>
+    </objects>
+</document>

@@ -1,0 +1,30 @@
+{
+  "name": "MAGTablesCollections",
+  "version": "0.1.0",
+  "summary": "A short description of MAGTablesCollections.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Magora-IOS/MAGTablesCollections",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Denis Matveev": "matveev@magora-systems.com"
+  },
+  "source": {
+    "git": "https://github.com/Magora-IOS/MAGTablesCollections.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MAGTablesCollections/Classes/**/*",
+  "dependencies": {
+    "MAGMatveevReusable": [
+      "~> 0.1.1"
+    ],
+    "Masonry": [
+      "~> 1.0"
+    ]
+  }
+}
