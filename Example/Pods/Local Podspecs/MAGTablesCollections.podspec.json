@@ -1,8 +1,8 @@
 {
   "name": "MAGTablesCollections",
   "version": "0.1.0",
-  "summary": "A short description of MAGTablesCollections.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "Framework for very convenient work with UITableView and UICollectionView",
+  "description": "Framework for very convenient work with UITableView and UICollectionView. Finish",
   "homepage": "https://github.com/Magora-IOS/MAGTablesCollections",
   "license": {
     "type": "MIT",

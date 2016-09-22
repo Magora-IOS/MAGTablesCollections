@@ -35,22 +35,22 @@
 #define IOS_VERSION_SECOND_NUMBER ([[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."].count > 1 ? [[[[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."] objectAtIndex:1] integerValue] : 0)
 #define IOS_VERSION_THIRD_NUMBER ([[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."].count > 2 ? [[[[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."] objectAtIndex:2] integerValue] : 0)
 
-typedef void(^RCItemBlock)(id item);
-typedef void(^RCIndexBlock)(NSInteger index);
-typedef void(^RCIndexPathBlock)(NSIndexPath *indexPath);
-typedef void(^RCCellBlock)(UITableViewCell *cell);
-typedef void(^RCHeaderCellBlock)(UITableViewCell *cell, NSString *sortProperty, BOOL ascending);
+typedef void(^MAGItemBlock)(id item);
+typedef void(^MAGIndexBlock)(NSInteger index);
+typedef void(^MAGIndexPathBlock)(NSIndexPath *indexPath);
+typedef void(^MAGCellBlock)(UITableViewCell *cell);
+typedef void(^MAGHeaderCellBlock)(UITableViewCell *cell, NSString *sortProperty, BOOL ascending);
 
 
-#define IS_DEBUG_BUILD rc_isDebugBuild()
+#define IS_DEBUG_BUILD mag_isDebugBuild()
 
-BOOL rc_isDebugBuild();
+BOOL mag_isDebugBuild();
 
 
 
-#define EQUAL(a,b) rc_isEqualObjects(a,b)
+#define EQUAL(a,b) mag_isEqualObjects(a,b)
 
-BOOL rc_isEqualObjects(id obj1, id obj2);
+BOOL mag_isEqualObjects(id obj1, id obj2);
 
 
 

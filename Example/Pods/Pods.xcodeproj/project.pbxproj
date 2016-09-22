@@ -7,88 +7,88 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05E8339AC6E9B9584FA1010BD86E7D71 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF50C05F501914BD8B3EFADF332B991 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0642B36967A169F1AA34DF796D94CDC4 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D80FF879206E367C2C85DB30321F01A8 /* MASCompositeConstraint.m */; };
-		06F781B16D63D133F5F67255975CF9C3 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 80EA3F1CCC1180DDE51ABC06A6C43F63 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03961417C933DACA9E047B9DEAFB66DE /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF50C05F501914BD8B3EFADF332B991 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B4021C01214C66EFDFDB3FC910D28A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E542690D41F709BDB92F899A9746563 /* UIKit.framework */; };
 		0CB380D43485EDA9047055D62156A35B /* NSInvocation+EXT.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C95D9E6F27CB8EFCE53C0508025DA70 /* NSInvocation+EXT.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0DF69A0A5C83177437EB3970865B3D55 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D0DBC9CB588E085559241436BD2E1E /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10FD2A777CAEEE52E5A1A8E4D5EE3C80 /* EXTSafeCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = B8032174B9E5422126188C9A8DBBDB60 /* EXTSafeCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12650B7D883F4F5092BE5A6A0ADF2525 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 53A5F2083EE60C3BF697FD4E69E2C7C9 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12A197F1C2BE4B10D70CA7015D09D49F /* MAGCommonDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4349CE02F6984527D2CCBCEA02AA14 /* MAGCommonDefines.m */; };
 		130FFA546258FB231075E5136F05BE42 /* EXTSelectorChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C2E4ACB778AA8D22463F4BC43A0263 /* EXTSelectorChecking.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1333DFAEC6ADBA6D464435CA30DBBA5A /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D020707BF4C48B9C3EB2F41240D9C80 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1511FCDCBAEA8337522B159B2C32D885 /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 694698D4C08380D5F7DCB887AFD9E2D3 /* NSInvocation+EXT.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1761F700411CEF5ED8730CE2CFEC9DFB /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E0EB335E31F3BCD7C5F6C007B375C /* View+MASAdditions.m */; };
 		1AD2016601EF8A3AC4108267956F97A1 /* NSObject+MAGMore.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FB4A2CF0661D425A909A18DB70DC28 /* NSObject+MAGMore.m */; };
 		1AEE39DA9E138B362335B2A3A18672C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A765E1AACB4DEEC2EB6837B644C69EBD /* Foundation.framework */; };
+		1C0294386120F7F17415704846BCECA9 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB28A0CA13A1BBA9080E537E9D2CEF3 /* Masonry-dummy.m */; };
+		24D4C188D62353CA6CA89A056EB509CA /* MAGCustomCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AB53EE46475E94810F108511B220A0C /* MAGCustomCollectionViewLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2646681786ABFB2049747EC7AB6AD1E8 /* NSObject+MAGMore.h in Headers */ = {isa = PBXBuildFile; fileRef = B0769068934971E6C24D82AA3FD456CE /* NSObject+MAGMore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2ADE05E7285AF67CC577C9CCFC82329A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E542690D41F709BDB92F899A9746563 /* UIKit.framework */; };
-		2D14F5EF5EA475EA2D6EA6894529C242 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DA6E45FFB76FA56423E9F8A3CCBE61 /* MASConstraint.m */; };
+		2647123108293088F4C6371E53F69229 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 58156B7A6868DE0D5155EA717976AF44 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32AAEBE71F56F5BB6A9B621C23AE3ECB /* MAGCommonDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC4F973A714D2D59E99998115CB913F /* MAGCommonDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34A879F095CBBB8EFC040720744D97A1 /* EXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 18DEC97E904B7E01474C78740D82A8A1 /* EXTRuntimeExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3827924404D56A716A91B13E44427140 /* MAGMatveevReusable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB1B968274B46D7F71BF96CB49A51A1 /* MAGMatveevReusable-dummy.m */; };
-		38D000E17DAADC9D3714EE66D3566AC9 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C0F0DC17EF68EAEB98772320DC07137 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DE75863A015391B76697728D034506A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A765E1AACB4DEEC2EB6837B644C69EBD /* Foundation.framework */; };
-		3E642CA2051BD2F9BD329C80ACD46E72 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3531912482F859BA2C828CBEC641717F /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		400565A788FEE716D9E444264676170A /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D97C4450CA369BBA18A436D57B02F3 /* MASConstraintMaker.m */; };
-		40E2BBC4246722B89604558316D596E3 /* MAGTablesCollections-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB9F6091E72DD0CCE930FF2A2EFD7C0F /* MAGTablesCollections-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CEFB302A38254236563CB23443B0EE8 /* UICollectionViewCell+MAGMore.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B1840BE830E2F95016BDFE8919EB44C /* UICollectionViewCell+MAGMore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4FD59C665DEACF1773F1C8D7395E55 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD0276D98C828F1C738BBB801BBCD0 /* ViewController+MASAdditions.m */; };
 		417A919ADEA555EEF21E129B9D9348CE /* EXTSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D826F0891B2151CAE1AD066E266CD1 /* EXTSafeCategory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		443A6B65716A8966DF42D0A2AAEAF8F5 /* MAGMatveevReusable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3648C5CC4A5B05347E52CC4BA4AE7B35 /* MAGMatveevReusable-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4561C4DF279AB84FFB845B123CF1AFFC /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1E1246934E6E7C76D24A8B6D8FB8FC /* Masonry.framework */; };
+		44FC5DBE90F0209ED038580559679550 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 92459CB0C4BA3BBA1FE8DF945DC22C09 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4573A06F7227BC1B836C76BD3C43A33C /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB6243ADF4A3A98A9BECCFAABFA9CE2 /* EXTADT.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4605164DC44227A157F6F65998AF1C0F /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E34AF5E1EE5E9AB97961403F8983A2 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B961E14B65E97968165775D2543BEFD /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AD0276D98C828F1C738BBB801BBCD0 /* ViewController+MASAdditions.m */; };
-		50FE2A570BF0B95798CF027C273C19C9 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5860946CBA00BF6E1154069F2F109399 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		565C9977710FE187C9853964DAC064B6 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 58156B7A6868DE0D5155EA717976AF44 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		488A446578F81CB541D8FA5FAE951052 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AF922BFCA595962C757929D0D21BDB9 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4BF4253C83E5A7E761079EADAD8584BC /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 94CF773FD23F289432D910F1DF7A0848 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F3C5F48025750907A5AA3789405058A /* MAGTableSection.h in Headers */ = {isa = PBXBuildFile; fileRef = EA17218F1EC06202B28B65E86B899DD0 /* MAGTableSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57302A5F159D9AF194BEEF02D6831D4D /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 80EA3F1CCC1180DDE51ABC06A6C43F63 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		589517DB828787F74272176BA46F4B45 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A4C9070910B1A1DFB2BE6798C7F4267 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AC94048A262714DB625CBC992BA5A69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A765E1AACB4DEEC2EB6837B644C69EBD /* Foundation.framework */; };
-		5D9CD57141C49A650A60780D1DE03B87 /* MAGTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = DDC61C82C499EEACE321741C82440E59 /* MAGTableSection.m */; };
-		5E167E699AEEAD3712FD26AE9675D00B /* MAGCustomCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = C69570DF16F90913437149AD8AFCB4A9 /* MAGCustomCollectionViewLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5EB59F66E69FFF12BE78E3B997849B09 /* UIView+MAGMore.h in Headers */ = {isa = PBXBuildFile; fileRef = A88C3C58DEAE9FE733EFEE80BD024DAB /* UIView+MAGMore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60963A5415C890A6CFA23B05A480D612 /* EXTSynthesize.h in Headers */ = {isa = PBXBuildFile; fileRef = 88F6FA2402B5917D4792249299C9FE2B /* EXTSynthesize.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		67E8CB76AD46E0EBF67441A3BDC101A3 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2F37E2A9B4DC7BCCAEB81444C7C46 /* MASViewConstraint.m */; };
-		6F8C60E1BECA89C1556C3E51ED585440 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A765E1AACB4DEEC2EB6837B644C69EBD /* Foundation.framework */; };
+		697DD75FDEFB3F373B1B2CCA38C68D1E /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBD7B1A1C898E50004A9B504C9FB052 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		725F1B12F7D09E8B4DD1A2581307C785 /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AD26C8440EC06E34069F6F0196832199 /* EXTConcreteProtocol.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		72CE0F9948D2449C814861A3969F9EC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A765E1AACB4DEEC2EB6837B644C69EBD /* Foundation.framework */; };
 		73A63F9D90E8740A3A6B62754D5F889E /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C862D55305F7B034D4D099324E289BD3 /* EXTRuntimeExtensions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		78B950DA373CB18EBE104AC25619A94F /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AF922BFCA595962C757929D0D21BDB9 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7ACDD73AED695F95C3A577BCE4257A4C /* MAGTableManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BF20AF120E068AECF09588E005719F38 /* MAGTableManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B66CF7A2C5C6CD33265B65C79113708 /* libextobjc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B855CD1987BCBFA9F1E24E52582D40 /* libextobjc-dummy.m */; };
-		82E2E99E86A4CF1446C4A91EF7D3C38A /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB28A0CA13A1BBA9080E537E9D2CEF3 /* Masonry-dummy.m */; };
+		83ED989C6F9CD8D570C16EA414ADDC70 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B46AD6048116D2AE326392C7E03B5ED8 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8802A4B9409AE9C886D93564E6035D1F /* MAGTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA7893E1C3C677BB2C42CB75D997966 /* MAGTableManager.m */; };
+		8C08F94E84A0719C96BF3EBEB76B8E62 /* MAGTableManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BFAC39E7D82D13619D15D359349BEA21 /* MAGTableManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FBFFEF6B80C43B9B1B1F788D4F45AE2 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 0041E2CBAC05492D40C381357037A7F9 /* MASViewAttribute.m */; };
+		90D62E391CB141142EB4C1EDBBBF9175 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D97C4450CA369BBA18A436D57B02F3 /* MASConstraintMaker.m */; };
+		920D9C523F5641AED3E900AE4D889E06 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DA6E45FFB76FA56423E9F8A3CCBE61 /* MASConstraint.m */; };
 		92474AFC89B268A87687486C825E996B /* EXTKeyPathCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = A608FBEAF1F96D13B728F329ABB691B1 /* EXTKeyPathCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92B800992EF81D0387DF8A9095128C4B /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A4C9070910B1A1DFB2BE6798C7F4267 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9703B0FB4D9632B3C0BAC85B844FCE2D /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 70333A533A2870FDA0381AF19E7AB23C /* NSMethodSignature+EXT.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9B15B67C47AD575EDD37B2EC6DBF1F39 /* MAGMatveevReusable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A563EB576A0FAF682CC2B87ECE3F8149 /* MAGMatveevReusable.framework */; };
-		9BD5E3779B5DFADFDEBA7F4A2BD8336F /* MAGTablesCollections-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F207CE154A133B168A54C6F42FEE68 /* MAGTablesCollections-dummy.m */; };
-		9E33CFC8C5DC2498C7019E5E2F620076 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 94CF773FD23F289432D910F1DF7A0848 /* MASUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F62DB26C43060F8AB46BED3B44A37F7 /* UICollectionViewCell+MAGMore.h in Headers */ = {isa = PBXBuildFile; fileRef = D8194B798E20C10F42564D7BF3F513E8 /* UICollectionViewCell+MAGMore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A466AD6870C2721DD0F2803E1885A012 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBD7B1A1C898E50004A9B504C9FB052 /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		A51FB278EFE7AF7D79944D87B0A5E17C /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 0041E2CBAC05492D40C381357037A7F9 /* MASViewAttribute.m */; };
-		A7BDC57056B5C864922298CAC84C9775 /* MAGTableSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FE4C0A764C96D1625BF1C48C896E47 /* MAGTableSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9987D529929CF2A89482997B2FD024FD /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D7E04997BC4B6EC03656E3D6A25C5 /* NSArray+MASAdditions.m */; };
+		A0409DB693ABC071C111A890CF7B3647 /* MAGTablesCollections-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E4F207CE154A133B168A54C6F42FEE68 /* MAGTablesCollections-dummy.m */; };
+		A67F97FC3ADFF165336CF87D5A90F4BA /* MAGCollectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E2A9F11850240C3F97CC88AFC648896 /* MAGCollectionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A832963F00AC6BEEDA4B975752102CE1 /* EXTSelectorChecking.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C950CF2EB8B2535DFA399A6674763DE /* EXTSelectorChecking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8D6E709C2851AD353DB85E56D48C6F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A765E1AACB4DEEC2EB6837B644C69EBD /* Foundation.framework */; };
 		A8FF687AA40A1CA60CC45BE647091990 /* extobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = E475A3664CF81C8AF60338DB863930CC /* extobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC04E0BEB93A9242FD0F7C42DFC49B40 /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA3F1121F1549C8F98EBBA70D745988D /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA695283BA18D67A0706A638162FFC0B /* MAGCustomCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B74C093646A123F8BB0E1CE9C41B4D72 /* MAGCustomCollectionViewLayout.m */; };
 		AD837B7C700FDF86832A66C091BE80E6 /* NSMethodSignature+EXT.h in Headers */ = {isa = PBXBuildFile; fileRef = 6426D82A5B509C45134060943E1E8AEA /* NSMethodSignature+EXT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF4266A1F8B0C545B840A5FB5B2984C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A765E1AACB4DEEC2EB6837B644C69EBD /* Foundation.framework */; };
 		B201335966D662A3D197121FCAE284A4 /* EXTConcreteProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F7E95561AF58BF78A2EDCCD3D1E579 /* EXTConcreteProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B65C53DBAF9473FE3FAC7483AD1C9A63 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = E804D70EB859C535F70B02F3FC7EB431 /* MASLayoutConstraint.m */; };
+		B6B1DA879BBD296C818D3CC64E2C20DD /* MAGCollectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C150ED7344BCB6DFA5679C0F9B9F834 /* MAGCollectionManager.m */; };
 		B8D924627F1995BB0F1E82F3C89D5F1A /* EXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F54F1063F577AF2B666F67F02C705BF /* EXTScope.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5AB959AB4C462ED072F8932448850E2 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B46AD6048116D2AE326392C7E03B5ED8 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF7CCBE78E74B8A37810032739E04DB2 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3531912482F859BA2C828CBEC641717F /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1A6815BBD1EF79D0CBEEDBAE981C109 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = E804D70EB859C535F70B02F3FC7EB431 /* MASLayoutConstraint.m */; };
+		C1ECEA965A2695F5C18917302A4B0DA5 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E0EB335E31F3BCD7C5F6C007B375C /* View+MASAdditions.m */; };
+		C21F8A864351F3EC5CBA9012444CCE0F /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1E1246934E6E7C76D24A8B6D8FB8FC /* Masonry.framework */; };
+		C2D3070B4F41AF5C92912C408A23B1EB /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA3F1121F1549C8F98EBBA70D745988D /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3EC2F629CD35BAC8CCD613184B8BBFA /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 53A5F2083EE60C3BF697FD4E69E2C7C9 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C955ABF6EB4F0500CAE2BC2830EF9F62 /* UIView+MAGMore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3198D7FE6D485B9980F950459E7FBFD7 /* UIView+MAGMore.m */; };
 		CC4B12BDE9FFAC2E44DCAAFE42C14756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A765E1AACB4DEEC2EB6837B644C69EBD /* Foundation.framework */; };
+		CCAFB6C2453CF9CC6C76DA06391ABB45 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5860946CBA00BF6E1154069F2F109399 /* MASConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCD2C5AC8055D730CA24CEA709318F57 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2F37E2A9B4DC7BCCAEB81444C7C46 /* MASViewConstraint.m */; };
+		CCEF2C4E31A60AD32D388B9D23996E59 /* UICollectionViewCell+MAGMore.m in Sources */ = {isa = PBXBuildFile; fileRef = F857DEFA863B5FA60ADD9C5C743DA1E4 /* UICollectionViewCell+MAGMore.m */; };
 		D093F184B5D201F9A1262908E0EC52BF /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = C20350BB28F2DA4C2C68AAC9311F2443 /* EXTNil.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		DA8FC0CABD981714A7A4BBA37BD00CE1 /* EXTNil.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F9D987DA31754A438A69920C6621FF /* EXTNil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1FF5F26F184942E63E8427D96E7F686 /* MAGTableManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2970870681E7989793E54A6E61E568 /* MAGTableManager.m */; };
-		E28F5D6FB302E06B0C43B3915889F053 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9D7E04997BC4B6EC03656E3D6A25C5 /* NSArray+MASAdditions.m */; };
+		DB1E675235D1E18A67E0ECADE76F999C /* MAGMatveevReusable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A563EB576A0FAF682CC2B87ECE3F8149 /* MAGMatveevReusable.framework */; };
+		DD397DAF8E69539372EC8DE97F3ACFB8 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D80FF879206E367C2C85DB30321F01A8 /* MASCompositeConstraint.m */; };
+		E360BB1B7BAA8004C7FB917004781051 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E34AF5E1EE5E9AB97961403F8983A2 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4F69A69D1E69BD081DE419B47484FF7 /* EXTADT.h in Headers */ = {isa = PBXBuildFile; fileRef = BCF413B6E3583C5FE2C5D55AC865D4A7 /* EXTADT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E592767C2033E08E371E25A9CC3B5C0B /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C0F0DC17EF68EAEB98772320DC07137 /* Masonry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E90795E748B3B9B45DD76A11EE381719 /* Pods-MAGTablesCollections_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF73F33C06315A228DBF02DFF6FDB6E0 /* Pods-MAGTablesCollections_Tests-dummy.m */; };
+		E98377FDE2F9CFD4ADD6C8FD0410EE98 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D0DBC9CB588E085559241436BD2E1E /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA443A171F8FA181413A80CD9DD63C16 /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 39FC1732A4E53587AC32AAC13209B5D9 /* metamacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EABE2B435D1478C0545CC6C0418E2372 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F8D35AF342CC7B17B42C5A1FE44FB3 /* EXTScope.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		EB8C3922C8E0EA88D2A954FDB1CE1867 /* MAGCollectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CDB6B5E07A40DFABDA0B57CBB81687 /* MAGCollectionManager.m */; };
-		EB9F5811BFD74AEB56D72AA72077B544 /* MAGCustomCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 06740B1445DC72CB42C70D9BDB04BD22 /* MAGCustomCollectionViewLayout.m */; };
+		EBC6B5B576D43A8DAD1457EFED472FAB /* MAGTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0243A67AF028D910CDAB2C8D0D9FA59B /* MAGTableSection.m */; };
 		EC2AA45700218F9A05039A8CF264A84C /* Pods-MAGTablesCollections_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7491C8B0E773D0AF0D4B29F21B7735F2 /* Pods-MAGTablesCollections_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED0AAFC8D870A45FEE28177764A39DFD /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D020707BF4C48B9C3EB2F41240D9C80 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED77068004246A09FCD81AF02B20387B /* Pods-MAGTablesCollections_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E556E3FD6D082BF6125FAEB1B5C6731 /* Pods-MAGTablesCollections_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEFDEE509524EDA8F929A58DE99F9AB3 /* UICollectionViewCell+MAGMore.m in Sources */ = {isa = PBXBuildFile; fileRef = EE25BC4AD2CC5E603A604C4B1257B120 /* UICollectionViewCell+MAGMore.m */; };
-		F821D27C3BE6ED7EC99B21EBCC0E5C9A /* MAGCollectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF5406D584E9039107F5BAF1E82D749 /* MAGCollectionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9386AFEB83DBDE3F11877E35C56A50D /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 92459CB0C4BA3BBA1FE8DF945DC22C09 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9A41D70C0D01655D242016439203FE0 /* MAGTablesCollections-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB9F6091E72DD0CCE930FF2A2EFD7C0F /* MAGTablesCollections-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEDB75665DA6B333F1A99C344C10821F /* Pods-MAGTablesCollections_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E148AA9FDF8078CA18FFDDF3203C59C6 /* Pods-MAGTablesCollections_Example-dummy.m */; };
 		FFE3710F2C2C82C01661112F291437B0 /* libextobjc-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 795E4EAF4BDF9F38F3D424F7707F80BE /* libextobjc-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -98,7 +98,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 66E5686A98A6CAE55ABE7AF0512C63AE;
+			remoteGlobalIDString = 0CE8669D84858138801C3743B58EFDEE;
 			remoteInfo = MAGTablesCollections;
 		};
 		14064AB284277A64055848E9173B167B /* PBXContainerItemProxy */ = {
@@ -108,35 +108,28 @@
 			remoteGlobalIDString = 7F2461A9D9724998746452861A76414F;
 			remoteInfo = libextobjc;
 		};
-		58130255E39CB3973EBC6ECBD848A2F3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 502FD1308D472C548E19AD6328CE2B94;
-			remoteInfo = Masonry;
-		};
 		5BB9D6C9CD70D1EC6731570203831144 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 502FD1308D472C548E19AD6328CE2B94;
+			remoteGlobalIDString = 973206A4700B61183C6558B0B754C09B;
 			remoteInfo = Masonry;
 		};
 		81FB1B01FB66038547247FFAACD32982 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 502FD1308D472C548E19AD6328CE2B94;
+			remoteGlobalIDString = 973206A4700B61183C6558B0B754C09B;
 			remoteInfo = Masonry;
 		};
-		921229B4F3C9692638E5C63390E75D85 /* PBXContainerItemProxy */ = {
+		8DFFA656FF682889C9A115E2153AD73E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AD5CF118FDA5AB0F6AE8E17A42FCC747;
 			remoteInfo = MAGMatveevReusable;
 		};
-		C4526B33CA4622E07FD06EEC62AF0C76 /* PBXContainerItemProxy */ = {
+		921229B4F3C9692638E5C63390E75D85 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -150,11 +143,18 @@
 			remoteGlobalIDString = AD5CF118FDA5AB0F6AE8E17A42FCC747;
 			remoteInfo = MAGMatveevReusable;
 		};
+		F1938211FB103741594CD8A272D467BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 973206A4700B61183C6558B0B754C09B;
+			remoteInfo = Masonry;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0041E2CBAC05492D40C381357037A7F9 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
-		06740B1445DC72CB42C70D9BDB04BD22 /* MAGCustomCollectionViewLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MAGCustomCollectionViewLayout.m; sourceTree = "<group>"; };
+		0243A67AF028D910CDAB2C8D0D9FA59B /* MAGTableSection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MAGTableSection.m; sourceTree = "<group>"; };
 		0A5CB6CB3A6F623E39D35086DEB5069C /* Pods-MAGTablesCollections_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MAGTablesCollections_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0B0FE187EBDB9771A4D1EF749E8AB8FD /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Masonry.modulemap; sourceTree = "<group>"; };
 		0BF2E2B6CD2167DD0CFEA47C2410F9F5 /* Pods-MAGTablesCollections_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MAGTablesCollections_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -167,6 +167,7 @@
 		1E556E3FD6D082BF6125FAEB1B5C6731 /* Pods-MAGTablesCollections_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MAGTablesCollections_Tests-umbrella.h"; sourceTree = "<group>"; };
 		26AD0276D98C828F1C738BBB801BBCD0 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		2A1E1246934E6E7C76D24A8B6D8FB8FC /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AB53EE46475E94810F108511B220A0C /* MAGCustomCollectionViewLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAGCustomCollectionViewLayout.h; sourceTree = "<group>"; };
 		2AF922BFCA595962C757929D0D21BDB9 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
 		2BE9072649847B743389CF375A15BA1D /* MAGTablesCollections.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MAGTablesCollections.modulemap; sourceTree = "<group>"; };
 		2D9D7E04997BC4B6EC03656E3D6A25C5 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
@@ -178,6 +179,7 @@
 		3531912482F859BA2C828CBEC641717F /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		3648C5CC4A5B05347E52CC4BA4AE7B35 /* MAGMatveevReusable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAGMatveevReusable-umbrella.h"; sourceTree = "<group>"; };
 		39FC1732A4E53587AC32AAC13209B5D9 /* metamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = metamacros.h; path = extobjc/metamacros.h; sourceTree = "<group>"; };
+		3C150ED7344BCB6DFA5679C0F9B9F834 /* MAGCollectionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MAGCollectionManager.m; sourceTree = "<group>"; };
 		3DA16E2C344AAD39079F9AA9FF8076EC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EBD145D80A6743EC5A48F213A51A792 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		3FF2F37E2A9B4DC7BCCAEB81444C7C46 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		67D4596C46BA614E0B0F143A88F42BFD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		694698D4C08380D5F7DCB887AFD9E2D3 /* NSInvocation+EXT.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+EXT.m"; path = "extobjc/NSInvocation+EXT.m"; sourceTree = "<group>"; };
 		6A3F60FD8BFFD0207E901D50183DF8EA /* libextobjc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = libextobjc.xcconfig; sourceTree = "<group>"; };
+		6E2A9F11850240C3F97CC88AFC648896 /* MAGCollectionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAGCollectionManager.h; sourceTree = "<group>"; };
 		6E542690D41F709BDB92F899A9746563 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		70333A533A2870FDA0381AF19E7AB23C /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMethodSignature+EXT.m"; path = "extobjc/NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
 		7491C8B0E773D0AF0D4B29F21B7735F2 /* Pods-MAGTablesCollections_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MAGTablesCollections_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -210,17 +213,15 @@
 		80EA3F1CCC1180DDE51ABC06A6C43F63 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
 		887EE82B3B44A9886464EDEF2558FB87 /* Pods-MAGTablesCollections_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MAGTablesCollections_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		88F6FA2402B5917D4792249299C9FE2B /* EXTSynthesize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTSynthesize.h; path = extobjc/EXTSynthesize.h; sourceTree = "<group>"; };
-		8C2970870681E7989793E54A6E61E568 /* MAGTableManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MAGTableManager.m; sourceTree = "<group>"; };
+		8B1840BE830E2F95016BDFE8919EB44C /* UICollectionViewCell+MAGMore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+MAGMore.h"; sourceTree = "<group>"; };
 		8C950CF2EB8B2535DFA399A6674763DE /* EXTSelectorChecking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTSelectorChecking.h; path = extobjc/EXTSelectorChecking.h; sourceTree = "<group>"; };
 		8D020707BF4C48B9C3EB2F41240D9C80 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
 		8EAB11A407244FB6EF3FB1D03AFFC282 /* MAGMatveevReusable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAGMatveevReusable-prefix.pch"; sourceTree = "<group>"; };
 		92459CB0C4BA3BBA1FE8DF945DC22C09 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94CF773FD23F289432D910F1DF7A0848 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
-		97FE4C0A764C96D1625BF1C48C896E47 /* MAGTableSection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAGTableSection.h; sourceTree = "<group>"; };
 		9C95D9E6F27CB8EFCE53C0508025DA70 /* NSInvocation+EXT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+EXT.h"; path = "extobjc/NSInvocation+EXT.h"; sourceTree = "<group>"; };
 		9CF50C05F501914BD8B3EFADF332B991 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
-		9FF5406D584E9039107F5BAF1E82D749 /* MAGCollectionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAGCollectionManager.h; sourceTree = "<group>"; };
 		A056AD49BEE012796C75B786BE9D37BD /* libextobjc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libextobjc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A2E425382C9B51C63AC092FD5DFD4A /* Pods-MAGTablesCollections_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MAGTablesCollections_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A33C252DCE60099D8DC4AB73CCD9CF69 /* Pods-MAGTablesCollections_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MAGTablesCollections_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -233,27 +234,25 @@
 		AE285025B01A237F721435D3CBA62075 /* Pods-MAGTablesCollections_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MAGTablesCollections_Tests.modulemap"; sourceTree = "<group>"; };
 		B0769068934971E6C24D82AA3FD456CE /* NSObject+MAGMore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MAGMore.h"; path = "MAGMatveevReusable/Classes/NSObject+MAGMore.h"; sourceTree = "<group>"; };
 		B46AD6048116D2AE326392C7E03B5ED8 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		B74C093646A123F8BB0E1CE9C41B4D72 /* MAGCustomCollectionViewLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MAGCustomCollectionViewLayout.m; sourceTree = "<group>"; };
 		B78E0EB335E31F3BCD7C5F6C007B375C /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
 		B7E34AF5E1EE5E9AB97961403F8983A2 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		B8032174B9E5422126188C9A8DBBDB60 /* EXTSafeCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTSafeCategory.h; path = extobjc/EXTSafeCategory.h; sourceTree = "<group>"; };
 		B823C28D18D646107F8BA5BF1CE58751 /* Pods-MAGTablesCollections_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MAGTablesCollections_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BBBD7B1A1C898E50004A9B504C9FB052 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		BCF413B6E3583C5FE2C5D55AC865D4A7 /* EXTADT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTADT.h; path = extobjc/EXTADT.h; sourceTree = "<group>"; };
-		BF20AF120E068AECF09588E005719F38 /* MAGTableManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAGTableManager.h; sourceTree = "<group>"; };
 		BF73F33C06315A228DBF02DFF6FDB6E0 /* Pods-MAGTablesCollections_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MAGTablesCollections_Tests-dummy.m"; sourceTree = "<group>"; };
+		BFAC39E7D82D13619D15D359349BEA21 /* MAGTableManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAGTableManager.h; sourceTree = "<group>"; };
 		C1036D2A69E0FBBA6BFC8C97B7C93999 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C20350BB28F2DA4C2C68AAC9311F2443 /* EXTNil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTNil.m; path = extobjc/EXTNil.m; sourceTree = "<group>"; };
 		C4F8D35AF342CC7B17B42C5A1FE44FB3 /* EXTScope.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTScope.m; path = extobjc/EXTScope.m; sourceTree = "<group>"; };
-		C69570DF16F90913437149AD8AFCB4A9 /* MAGCustomCollectionViewLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAGCustomCollectionViewLayout.h; sourceTree = "<group>"; };
 		C862D55305F7B034D4D099324E289BD3 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTRuntimeExtensions.m; path = extobjc/EXTRuntimeExtensions.m; sourceTree = "<group>"; };
 		CC1B850F429B377F4C060C90F027C48A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA7893E1C3C677BB2C42CB75D997966 /* MAGTableManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MAGTableManager.m; sourceTree = "<group>"; };
 		D1C2E4ACB778AA8D22463F4BC43A0263 /* EXTSelectorChecking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTSelectorChecking.m; path = extobjc/EXTSelectorChecking.m; sourceTree = "<group>"; };
-		D1CDB6B5E07A40DFABDA0B57CBB81687 /* MAGCollectionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MAGCollectionManager.m; sourceTree = "<group>"; };
 		D4D0DBC9CB588E085559241436BD2E1E /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
 		D6F9D987DA31754A438A69920C6621FF /* EXTNil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXTNil.h; path = extobjc/EXTNil.h; sourceTree = "<group>"; };
 		D80FF879206E367C2C85DB30321F01A8 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
-		D8194B798E20C10F42564D7BF3F513E8 /* UICollectionViewCell+MAGMore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+MAGMore.h"; sourceTree = "<group>"; };
-		DDC61C82C499EEACE321741C82440E59 /* MAGTableSection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MAGTableSection.m; sourceTree = "<group>"; };
 		E148AA9FDF8078CA18FFDDF3203C59C6 /* Pods-MAGTablesCollections_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MAGTablesCollections_Example-dummy.m"; sourceTree = "<group>"; };
 		E1C88DBBDE7DD8C190976917ED977DB3 /* MAGMatveevReusable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MAGMatveevReusable.xcconfig; sourceTree = "<group>"; };
 		E241751B4EADC92FD35FD84AD9D06A62 /* Pods-MAGTablesCollections_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MAGTablesCollections_Example-resources.sh"; sourceTree = "<group>"; };
@@ -261,19 +260,39 @@
 		E4F207CE154A133B168A54C6F42FEE68 /* MAGTablesCollections-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MAGTablesCollections-dummy.m"; sourceTree = "<group>"; };
 		E5325C4662A7C159CB78ED89C6183D2B /* Pods_MAGTablesCollections_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAGTablesCollections_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E804D70EB859C535F70B02F3FC7EB431 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
+		EA17218F1EC06202B28B65E86B899DD0 /* MAGTableSection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAGTableSection.h; sourceTree = "<group>"; };
 		EBDEEECEB4A266F49CB805F116A251BD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE25BC4AD2CC5E603A604C4B1257B120 /* UICollectionViewCell+MAGMore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+MAGMore.m"; sourceTree = "<group>"; };
 		EEB6243ADF4A3A98A9BECCFAABFA9CE2 /* EXTADT.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTADT.m; path = extobjc/EXTADT.m; sourceTree = "<group>"; };
 		EEBC8FFCA87C1DF60DF506B66C22D511 /* MAGTablesCollections.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MAGTablesCollections.xcconfig; sourceTree = "<group>"; };
 		EF2EDBFF798A73844630A04DD3FF583B /* libextobjc.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = libextobjc.modulemap; sourceTree = "<group>"; };
 		F2D97C4450CA369BBA18A436D57B02F3 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
 		F615D71757BA1068965A107B983D4720 /* MAGMatveevReusable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MAGMatveevReusable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F857DEFA863B5FA60ADD9C5C743DA1E4 /* UICollectionViewCell+MAGMore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+MAGMore.m"; sourceTree = "<group>"; };
 		FA3F1121F1549C8F98EBBA70D745988D /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
 		FB9F6091E72DD0CCE930FF2A2EFD7C0F /* MAGTablesCollections-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAGTablesCollections-umbrella.h"; sourceTree = "<group>"; };
 		FD4349CE02F6984527D2CCBCEA02AA14 /* MAGCommonDefines.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MAGCommonDefines.m; path = MAGMatveevReusable/Classes/MAGCommonDefines.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		00BE007CFAD096BF71FB6A54D63B2595 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72CE0F9948D2449C814861A3969F9EC2 /* Foundation.framework in Frameworks */,
+				0B4021C01214C66EFDFDB3FC910D28A9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A3EF5838F1D3AF2A287E2D25558D2CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF4266A1F8B0C545B840A5FB5B2984C7 /* Foundation.framework in Frameworks */,
+				DB1E675235D1E18A67E0ECADE76F999C /* MAGMatveevReusable.framework in Frameworks */,
+				C21F8A864351F3EC5CBA9012444CCE0F /* Masonry.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		908C446705295FE9164A771A13C03A75 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,30 +309,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A89B2226C57DE53188E9D2C232B0E8D4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6F8C60E1BECA89C1556C3E51ED585440 /* Foundation.framework in Frameworks */,
-				2ADE05E7285AF67CC577C9CCFC82329A /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AD3218FFE5322EB8077DE3F00EE47DF4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CC4B12BDE9FFAC2E44DCAAFE42C14756 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E818140ECC680181CE8B76F02C0831E7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3DE75863A015391B76697728D034506A /* Foundation.framework in Frameworks */,
-				9B15B67C47AD575EDD37B2EC6DBF1F39 /* MAGMatveevReusable.framework in Frameworks */,
-				4561C4DF279AB84FFB845B123CF1AFFC /* Masonry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +343,15 @@
 				E475A3664CF81C8AF60338DB863930CC /* extobjc.h */,
 			);
 			name = UmbrellaHeader;
+			sourceTree = "<group>";
+		};
+		1306DB8975493DADA4F667D111AC6FDB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E49F40F5934E4C0CA2918A693844744A /* CollectionManager */,
+				95D2D071FF9C8E2FCD9904C32BC0C635 /* TableManager */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		28932859DC79ADBFE5E8925A88372135 /* EXTConcreteProtocol */ = {
@@ -519,6 +528,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		95D2D071FF9C8E2FCD9904C32BC0C635 /* TableManager */ = {
+			isa = PBXGroup;
+			children = (
+				BFAC39E7D82D13619D15D359349BEA21 /* MAGTableManager.h */,
+				CEA7893E1C3C677BB2C42CB75D997966 /* MAGTableManager.m */,
+				EA17218F1EC06202B28B65E86B899DD0 /* MAGTableSection.h */,
+				0243A67AF028D910CDAB2C8D0D9FA59B /* MAGTableSection.m */,
+			);
+			path = TableManager;
+			sourceTree = "<group>";
+		};
 		9BA3E193BF9C24A2AD9BC1E5361DD98C /* EXTKeyPathCoding */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,7 +560,7 @@
 		B3ABAAC018924561BEC61E603888E5F4 /* MAGTablesCollections */ = {
 			isa = PBXGroup;
 			children = (
-				EC4A8203E22037BE61CCE69ECAF9A763 /* Classes */,
+				1306DB8975493DADA4F667D111AC6FDB /* Classes */,
 			);
 			path = MAGTablesCollections;
 			sourceTree = "<group>";
@@ -636,15 +656,15 @@
 			name = "NSMethodSignature+EXT";
 			sourceTree = "<group>";
 		};
-		D96EB63D98B0233846D9666F595488A9 /* CollectionManager */ = {
+		E49F40F5934E4C0CA2918A693844744A /* CollectionManager */ = {
 			isa = PBXGroup;
 			children = (
-				9FF5406D584E9039107F5BAF1E82D749 /* MAGCollectionManager.h */,
-				D1CDB6B5E07A40DFABDA0B57CBB81687 /* MAGCollectionManager.m */,
-				C69570DF16F90913437149AD8AFCB4A9 /* MAGCustomCollectionViewLayout.h */,
-				06740B1445DC72CB42C70D9BDB04BD22 /* MAGCustomCollectionViewLayout.m */,
-				D8194B798E20C10F42564D7BF3F513E8 /* UICollectionViewCell+MAGMore.h */,
-				EE25BC4AD2CC5E603A604C4B1257B120 /* UICollectionViewCell+MAGMore.m */,
+				6E2A9F11850240C3F97CC88AFC648896 /* MAGCollectionManager.h */,
+				3C150ED7344BCB6DFA5679C0F9B9F834 /* MAGCollectionManager.m */,
+				2AB53EE46475E94810F108511B220A0C /* MAGCustomCollectionViewLayout.h */,
+				B74C093646A123F8BB0E1CE9C41B4D72 /* MAGCustomCollectionViewLayout.m */,
+				8B1840BE830E2F95016BDFE8919EB44C /* UICollectionViewCell+MAGMore.h */,
+				F857DEFA863B5FA60ADD9C5C743DA1E4 /* UICollectionViewCell+MAGMore.m */,
 			);
 			path = CollectionManager;
 			sourceTree = "<group>";
@@ -665,15 +685,6 @@
 				694698D4C08380D5F7DCB887AFD9E2D3 /* NSInvocation+EXT.m */,
 			);
 			name = "NSInvocation+EXT";
-			sourceTree = "<group>";
-		};
-		EC4A8203E22037BE61CCE69ECAF9A763 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				D96EB63D98B0233846D9666F595488A9 /* CollectionManager */,
-				F9F3AF34B50064A3116A87A7ADDA0CA0 /* TableManager */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		F53E5CD7FF264D487F9D483173529CB0 /* MAGMatveevReusable */ = {
@@ -704,40 +715,29 @@
 			path = "../Target Support Files/Masonry";
 			sourceTree = "<group>";
 		};
-		F9F3AF34B50064A3116A87A7ADDA0CA0 /* TableManager */ = {
-			isa = PBXGroup;
-			children = (
-				BF20AF120E068AECF09588E005719F38 /* MAGTableManager.h */,
-				8C2970870681E7989793E54A6E61E568 /* MAGTableManager.m */,
-				97FE4C0A764C96D1625BF1C48C896E47 /* MAGTableSection.h */,
-				DDC61C82C499EEACE321741C82440E59 /* MAGTableSection.m */,
-			);
-			path = TableManager;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		270CFEEC60280AF3473F35651DE29E41 /* Headers */ = {
+		473CD5DA5FC62A8F3989F484B1E2AC6A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12650B7D883F4F5092BE5A6A0ADF2525 /* MASCompositeConstraint.h in Headers */,
-				78B950DA373CB18EBE104AC25619A94F /* MASConstraint+Private.h in Headers */,
-				50FE2A570BF0B95798CF027C273C19C9 /* MASConstraint.h in Headers */,
-				06F781B16D63D133F5F67255975CF9C3 /* MASConstraintMaker.h in Headers */,
-				F9386AFEB83DBDE3F11877E35C56A50D /* MASLayoutConstraint.h in Headers */,
-				AC04E0BEB93A9242FD0F7C42DFC49B40 /* Masonry-umbrella.h in Headers */,
-				38D000E17DAADC9D3714EE66D3566AC9 /* Masonry.h in Headers */,
-				9E33CFC8C5DC2498C7019E5E2F620076 /* MASUtilities.h in Headers */,
-				05E8339AC6E9B9584FA1010BD86E7D71 /* MASViewAttribute.h in Headers */,
-				0DF69A0A5C83177437EB3970865B3D55 /* MASViewConstraint.h in Headers */,
-				ED0AAFC8D870A45FEE28177764A39DFD /* NSArray+MASAdditions.h in Headers */,
-				3E642CA2051BD2F9BD329C80ACD46E72 /* NSArray+MASShorthandAdditions.h in Headers */,
-				C5AB959AB4C462ED072F8932448850E2 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
-				92B800992EF81D0387DF8A9095128C4B /* View+MASAdditions.h in Headers */,
-				565C9977710FE187C9853964DAC064B6 /* View+MASShorthandAdditions.h in Headers */,
-				4605164DC44227A157F6F65998AF1C0F /* ViewController+MASAdditions.h in Headers */,
+				C3EC2F629CD35BAC8CCD613184B8BBFA /* MASCompositeConstraint.h in Headers */,
+				488A446578F81CB541D8FA5FAE951052 /* MASConstraint+Private.h in Headers */,
+				CCAFB6C2453CF9CC6C76DA06391ABB45 /* MASConstraint.h in Headers */,
+				57302A5F159D9AF194BEEF02D6831D4D /* MASConstraintMaker.h in Headers */,
+				44FC5DBE90F0209ED038580559679550 /* MASLayoutConstraint.h in Headers */,
+				C2D3070B4F41AF5C92912C408A23B1EB /* Masonry-umbrella.h in Headers */,
+				E592767C2033E08E371E25A9CC3B5C0B /* Masonry.h in Headers */,
+				4BF4253C83E5A7E761079EADAD8584BC /* MASUtilities.h in Headers */,
+				03961417C933DACA9E047B9DEAFB66DE /* MASViewAttribute.h in Headers */,
+				E98377FDE2F9CFD4ADD6C8FD0410EE98 /* MASViewConstraint.h in Headers */,
+				1333DFAEC6ADBA6D464435CA30DBBA5A /* NSArray+MASAdditions.h in Headers */,
+				BF7CCBE78E74B8A37810032739E04DB2 /* NSArray+MASShorthandAdditions.h in Headers */,
+				83ED989C6F9CD8D570C16EA414ADDC70 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				589517DB828787F74272176BA46F4B45 /* View+MASAdditions.h in Headers */,
+				2647123108293088F4C6371E53F69229 /* View+MASShorthandAdditions.h in Headers */,
+				E360BB1B7BAA8004C7FB917004781051 /* ViewController+MASAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +749,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		851D53BC9270F3D5A3C349CD0B1288D3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A67F97FC3ADFF165336CF87D5A90F4BA /* MAGCollectionManager.h in Headers */,
+				24D4C188D62353CA6CA89A056EB509CA /* MAGCustomCollectionViewLayout.h in Headers */,
+				8C08F94E84A0719C96BF3EBEB76B8E62 /* MAGTableManager.h in Headers */,
+				F9A41D70C0D01655D242016439203FE0 /* MAGTablesCollections-umbrella.h in Headers */,
+				4F3C5F48025750907A5AA3789405058A /* MAGTableSection.h in Headers */,
+				3CEFB302A38254236563CB23443B0EE8 /* UICollectionViewCell+MAGMore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B305B405088115F9E7662C8B583E0071 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -757,19 +770,6 @@
 				443A6B65716A8966DF42D0A2AAEAF8F5 /* MAGMatveevReusable-umbrella.h in Headers */,
 				2646681786ABFB2049747EC7AB6AD1E8 /* NSObject+MAGMore.h in Headers */,
 				5EB59F66E69FFF12BE78E3B997849B09 /* UIView+MAGMore.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E5F2E0FEEB82E61F14A60B531839DC3A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F821D27C3BE6ED7EC99B21EBCC0E5C9A /* MAGCollectionManager.h in Headers */,
-				5E167E699AEEAD3712FD26AE9675D00B /* MAGCustomCollectionViewLayout.h in Headers */,
-				7ACDD73AED695F95C3A577BCE4257A4C /* MAGTableManager.h in Headers */,
-				40E2BBC4246722B89604558316D596E3 /* MAGTablesCollections-umbrella.h in Headers */,
-				A7BDC57056B5C864922298CAC84C9775 /* MAGTableSection.h in Headers */,
-				9F62DB26C43060F8AB46BED3B44A37F7 /* UICollectionViewCell+MAGMore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +805,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0CE8669D84858138801C3743B58EFDEE /* MAGTablesCollections */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF11C4B7CECC24AAB1EFA3F6235303B1 /* Build configuration list for PBXNativeTarget "MAGTablesCollections" */;
+			buildPhases = (
+				4F9C0EDED2770FD7ACBF5078AEFEE372 /* Sources */,
+				3A3EF5838F1D3AF2A287E2D25558D2CE /* Frameworks */,
+				851D53BC9270F3D5A3C349CD0B1288D3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E06122441E060C04EBEFD3DE27148900 /* PBXTargetDependency */,
+				7DDFDA2BD6BBD0F3F1AAA451646AED3C /* PBXTargetDependency */,
+			);
+			name = MAGTablesCollections;
+			productName = MAGTablesCollections;
+			productReference = 3113B7CBB7D15BA2E37E1A52C4C27CF8 /* MAGTablesCollections.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		2A9FA65F36CB7FDB6D8688A4FE61CCAC /* Pods-MAGTablesCollections_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39197003A880A3F2A3C91C38C5999E45 /* Build configuration list for PBXNativeTarget "Pods-MAGTablesCollections_Example" */;
@@ -825,42 +844,6 @@
 			productReference = E5325C4662A7C159CB78ED89C6183D2B /* Pods_MAGTablesCollections_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		502FD1308D472C548E19AD6328CE2B94 /* Masonry */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 776E7103E8CFF2C3765BC91EAD36C120 /* Build configuration list for PBXNativeTarget "Masonry" */;
-			buildPhases = (
-				30DD797E93A3090C4EAE0ECAFD02BEAC /* Sources */,
-				A89B2226C57DE53188E9D2C232B0E8D4 /* Frameworks */,
-				270CFEEC60280AF3473F35651DE29E41 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Masonry;
-			productName = Masonry;
-			productReference = 1DE3922E79DF87DFA5796FDF39A14A09 /* Masonry.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		66E5686A98A6CAE55ABE7AF0512C63AE /* MAGTablesCollections */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 95EC193956EB68C81F5709D03D280ABF /* Build configuration list for PBXNativeTarget "MAGTablesCollections" */;
-			buildPhases = (
-				AEA356C5940D7DADE41B7747BF1F3866 /* Sources */,
-				E818140ECC680181CE8B76F02C0831E7 /* Frameworks */,
-				E5F2E0FEEB82E61F14A60B531839DC3A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				73A8A0AE423386402E44FB2944DE44C4 /* PBXTargetDependency */,
-				8040B60906E1869BCA989C41B99F6581 /* PBXTargetDependency */,
-			);
-			name = MAGTablesCollections;
-			productName = MAGTablesCollections;
-			productReference = 3113B7CBB7D15BA2E37E1A52C4C27CF8 /* MAGTablesCollections.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		7F2461A9D9724998746452861A76414F /* libextobjc */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9784B452082E6E8AE675C1C526502ACA /* Build configuration list for PBXNativeTarget "libextobjc" */;
@@ -876,6 +859,23 @@
 			name = libextobjc;
 			productName = libextobjc;
 			productReference = A056AD49BEE012796C75B786BE9D37BD /* libextobjc.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		973206A4700B61183C6558B0B754C09B /* Masonry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3142A266F7AF1E17B310BA5736F6A3C /* Build configuration list for PBXNativeTarget "Masonry" */;
+			buildPhases = (
+				9285FD7CE689F37418B7B8597C0A1867 /* Sources */,
+				00BE007CFAD096BF71FB6A54D63B2595 /* Frameworks */,
+				473CD5DA5FC62A8F3989F484B1E2AC6A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Masonry;
+			productName = Masonry;
+			productReference = 1DE3922E79DF87DFA5796FDF39A14A09 /* Masonry.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AD5CF118FDA5AB0F6AE8E17A42FCC747 /* MAGMatveevReusable */ = {
@@ -938,8 +938,8 @@
 			targets = (
 				7F2461A9D9724998746452861A76414F /* libextobjc */,
 				AD5CF118FDA5AB0F6AE8E17A42FCC747 /* MAGMatveevReusable */,
-				66E5686A98A6CAE55ABE7AF0512C63AE /* MAGTablesCollections */,
-				502FD1308D472C548E19AD6328CE2B94 /* Masonry */,
+				0CE8669D84858138801C3743B58EFDEE /* MAGTablesCollections */,
+				973206A4700B61183C6558B0B754C09B /* Masonry */,
 				2A9FA65F36CB7FDB6D8688A4FE61CCAC /* Pods-MAGTablesCollections_Example */,
 				DA28F589793E7867C5621EF7EF3CDACE /* Pods-MAGTablesCollections_Tests */,
 			);
@@ -958,21 +958,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		30DD797E93A3090C4EAE0ECAFD02BEAC /* Sources */ = {
+		4F9C0EDED2770FD7ACBF5078AEFEE372 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0642B36967A169F1AA34DF796D94CDC4 /* MASCompositeConstraint.m in Sources */,
-				2D14F5EF5EA475EA2D6EA6894529C242 /* MASConstraint.m in Sources */,
-				400565A788FEE716D9E444264676170A /* MASConstraintMaker.m in Sources */,
-				B65C53DBAF9473FE3FAC7483AD1C9A63 /* MASLayoutConstraint.m in Sources */,
-				82E2E99E86A4CF1446C4A91EF7D3C38A /* Masonry-dummy.m in Sources */,
-				A51FB278EFE7AF7D79944D87B0A5E17C /* MASViewAttribute.m in Sources */,
-				67E8CB76AD46E0EBF67441A3BDC101A3 /* MASViewConstraint.m in Sources */,
-				E28F5D6FB302E06B0C43B3915889F053 /* NSArray+MASAdditions.m in Sources */,
-				A466AD6870C2721DD0F2803E1885A012 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				1761F700411CEF5ED8730CE2CFEC9DFB /* View+MASAdditions.m in Sources */,
-				4B961E14B65E97968165775D2543BEFD /* ViewController+MASAdditions.m in Sources */,
+				B6B1DA879BBD296C818D3CC64E2C20DD /* MAGCollectionManager.m in Sources */,
+				AA695283BA18D67A0706A638162FFC0B /* MAGCustomCollectionViewLayout.m in Sources */,
+				8802A4B9409AE9C886D93564E6035D1F /* MAGTableManager.m in Sources */,
+				A0409DB693ABC071C111A890CF7B3647 /* MAGTablesCollections-dummy.m in Sources */,
+				EBC6B5B576D43A8DAD1457EFED472FAB /* MAGTableSection.m in Sources */,
+				CCEF2C4E31A60AD32D388B9D23996E59 /* UICollectionViewCell+MAGMore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -989,6 +984,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				E90795E748B3B9B45DD76A11EE381719 /* Pods-MAGTablesCollections_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9285FD7CE689F37418B7B8597C0A1867 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD397DAF8E69539372EC8DE97F3ACFB8 /* MASCompositeConstraint.m in Sources */,
+				920D9C523F5641AED3E900AE4D889E06 /* MASConstraint.m in Sources */,
+				90D62E391CB141142EB4C1EDBBBF9175 /* MASConstraintMaker.m in Sources */,
+				C1A6815BBD1EF79D0CBEEDBAE981C109 /* MASLayoutConstraint.m in Sources */,
+				1C0294386120F7F17415704846BCECA9 /* Masonry-dummy.m in Sources */,
+				8FBFFEF6B80C43B9B1B1F788D4F45AE2 /* MASViewAttribute.m in Sources */,
+				CCD2C5AC8055D730CA24CEA709318F57 /* MASViewConstraint.m in Sources */,
+				9987D529929CF2A89482997B2FD024FD /* NSArray+MASAdditions.m in Sources */,
+				697DD75FDEFB3F373B1B2CCA38C68D1E /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				C1ECEA965A2695F5C18917302A4B0DA5 /* View+MASAdditions.m in Sources */,
+				3D4FD59C665DEACF1773F1C8D7395E55 /* ViewController+MASAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,26 +1022,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AEA356C5940D7DADE41B7747BF1F3866 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EB8C3922C8E0EA88D2A954FDB1CE1867 /* MAGCollectionManager.m in Sources */,
-				EB9F5811BFD74AEB56D72AA72077B544 /* MAGCustomCollectionViewLayout.m in Sources */,
-				E1FF5F26F184942E63E8427D96E7F686 /* MAGTableManager.m in Sources */,
-				9BD5E3779B5DFADFDEBA7F4A2BD8336F /* MAGTablesCollections-dummy.m in Sources */,
-				5D9CD57141C49A650A60780D1DE03B87 /* MAGTableSection.m in Sources */,
-				EEFDEE509524EDA8F929A58DE99F9AB3 /* UICollectionViewCell+MAGMore.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		089F37BC1B7CC78FFCD70A2AAF6C0F99 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MAGTablesCollections;
-			target = 66E5686A98A6CAE55ABE7AF0512C63AE /* MAGTablesCollections */;
+			target = 0CE8669D84858138801C3743B58EFDEE /* MAGTablesCollections */;
 			targetProxy = 112AAE8032CF79A4D41C742BBC92365B /* PBXContainerItemProxy */;
 		};
 		091E890B6C68BB26EA092E0512A3C691 /* PBXTargetDependency */ = {
@@ -1040,7 +1040,7 @@
 		36FA149131540B74658CBA483CBE3B32 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
-			target = 502FD1308D472C548E19AD6328CE2B94 /* Masonry */;
+			target = 973206A4700B61183C6558B0B754C09B /* Masonry */;
 			targetProxy = 81FB1B01FB66038547247FFAACD32982 /* PBXContainerItemProxy */;
 		};
 		6E0996E36F51B6A7DA9AFBBD75A559BA /* PBXTargetDependency */ = {
@@ -1049,17 +1049,11 @@
 			target = AD5CF118FDA5AB0F6AE8E17A42FCC747 /* MAGMatveevReusable */;
 			targetProxy = 921229B4F3C9692638E5C63390E75D85 /* PBXContainerItemProxy */;
 		};
-		73A8A0AE423386402E44FB2944DE44C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MAGMatveevReusable;
-			target = AD5CF118FDA5AB0F6AE8E17A42FCC747 /* MAGMatveevReusable */;
-			targetProxy = C4526B33CA4622E07FD06EEC62AF0C76 /* PBXContainerItemProxy */;
-		};
-		8040B60906E1869BCA989C41B99F6581 /* PBXTargetDependency */ = {
+		7DDFDA2BD6BBD0F3F1AAA451646AED3C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
-			target = 502FD1308D472C548E19AD6328CE2B94 /* Masonry */;
-			targetProxy = 58130255E39CB3973EBC6ECBD848A2F3 /* PBXContainerItemProxy */;
+			target = 973206A4700B61183C6558B0B754C09B /* Masonry */;
+			targetProxy = F1938211FB103741594CD8A272D467BE /* PBXContainerItemProxy */;
 		};
 		8CEE42CDB3BFB6F4539D935E571E70BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1070,13 +1064,147 @@
 		A18546A777EA482029DC826C08D7D7D2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
-			target = 502FD1308D472C548E19AD6328CE2B94 /* Masonry */;
+			target = 973206A4700B61183C6558B0B754C09B /* Masonry */;
 			targetProxy = 5BB9D6C9CD70D1EC6731570203831144 /* PBXContainerItemProxy */;
+		};
+		E06122441E060C04EBEFD3DE27148900 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MAGMatveevReusable;
+			target = AD5CF118FDA5AB0F6AE8E17A42FCC747 /* MAGMatveevReusable */;
+			targetProxy = 8DFFA656FF682889C9A115E2153AD73E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
+		413CFCDFD5703D63A902BC08D130D1C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A3F60FD8BFFD0207E901D50183DF8EA /* libextobjc.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/libextobjc/libextobjc-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/libextobjc/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/libextobjc/libextobjc.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = libextobjc;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		52A6B57659B8D80FCFA174C1520E0A71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 593F69A746498F3A1A29576E245A8CF1 /* Masonry.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6037EF81E1A78A10699E61E604328264 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 887EE82B3B44A9886464EDEF2558FB87 /* Pods-MAGTablesCollections_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MAGTablesCollections_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MAGTablesCollections_Tests/Pods-MAGTablesCollections_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MAGTablesCollections_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6B462765C55837CD11DDFB10D8FCE368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1C88DBBDE7DD8C190976917ED977DB3 /* MAGMatveevReusable.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MAGMatveevReusable/MAGMatveevReusable-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MAGMatveevReusable/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MAGMatveevReusable/MAGMatveevReusable.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MAGMatveevReusable;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8DED8AD26D381A6ACFF202E5217EC498 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1094,6 +1222,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1108,83 +1237,20 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		11E15662E89EF936A5E43D459C956CA7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E7D1C7CF6E59262F2ABE5E8C72AECC8 /* Pods-MAGTablesCollections_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MAGTablesCollections_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MAGTablesCollections_Example/Pods-MAGTablesCollections_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MAGTablesCollections_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1BBCA4A6F87CA0BAB257774CEC5D1985 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 887EE82B3B44A9886464EDEF2558FB87 /* Pods-MAGTablesCollections_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MAGTablesCollections_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MAGTablesCollections_Tests/Pods-MAGTablesCollections_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MAGTablesCollections_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		204116116F4BD2FFE9E67407BFC8DB83 /* Release */ = {
+		92D1F526AB993AA6FE886657B2CFEA2D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6A3F60FD8BFFD0207E901D50183DF8EA /* libextobjc.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -1209,193 +1275,13 @@
 			};
 			name = Release;
 		};
-		30F008F199F9ADF957C4B38B0758C907 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A8176822AED1584CE7EBB03C16709E3 /* Pods-MAGTablesCollections_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MAGTablesCollections_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MAGTablesCollections_Tests/Pods-MAGTablesCollections_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MAGTablesCollections_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		37236D8D43BAA2DD2C6ACBE8C7FBAE88 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1C88DBBDE7DD8C190976917ED977DB3 /* MAGMatveevReusable.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MAGMatveevReusable/MAGMatveevReusable-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MAGMatveevReusable/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MAGMatveevReusable/MAGMatveevReusable.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = MAGMatveevReusable;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		39BAB68DFC4FD00C0D9A4133468F8152 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1C88DBBDE7DD8C190976917ED977DB3 /* MAGMatveevReusable.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MAGMatveevReusable/MAGMatveevReusable-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MAGMatveevReusable/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MAGMatveevReusable/MAGMatveevReusable.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = MAGMatveevReusable;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		47CA42E256A999B8A943FA47E84B25A8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A3F60FD8BFFD0207E901D50183DF8EA /* libextobjc.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/libextobjc/libextobjc-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/libextobjc/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/libextobjc/libextobjc.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = libextobjc;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		498104741382E8DB2987CD980516C466 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B823C28D18D646107F8BA5BF1CE58751 /* Pods-MAGTablesCollections_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MAGTablesCollections_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MAGTablesCollections_Example/Pods-MAGTablesCollections_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MAGTablesCollections_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		61D35AF5F7A32B4BACAA354541AB6B29 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 593F69A746498F3A1A29576E245A8CF1 /* Masonry.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Masonry;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6539549BBC425F2FFD07165035A56509 /* Debug */ = {
+		98A20D7D4899130376EE5B837789828D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EEBC8FFCA87C1DF60DF506B66C22D511 /* MAGTablesCollections.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1420,11 +1306,13 @@
 			};
 			name = Debug;
 		};
-		AB03E051F60C64BCCA0851E314369B37 /* Debug */ = {
+		9A03CCB15754B799C995A9CE205EA8FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 593F69A746498F3A1A29576E245A8CF1 /* Masonry.xcconfig */;
+			baseConfigurationReference = E1C88DBBDE7DD8C190976917ED977DB3 /* MAGMatveevReusable.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1433,14 +1321,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/MAGMatveevReusable/MAGMatveevReusable-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MAGMatveevReusable/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				MODULEMAP_FILE = "Target Support Files/MAGMatveevReusable/MAGMatveevReusable.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Masonry;
+				PRODUCT_NAME = MAGMatveevReusable;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1449,36 +1337,7 @@
 			};
 			name = Debug;
 		};
-		B2305590C10AE573565679BEE50B96CB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EEBC8FFCA87C1DF60DF506B66C22D511 /* MAGTablesCollections.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MAGTablesCollections/MAGTablesCollections-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MAGTablesCollections/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MAGTablesCollections/MAGTablesCollections.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = MAGTablesCollections;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
+		9E1E4E48AF2EAB23169E611BF694090A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1496,6 +1355,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1515,8 +1375,176 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CE1030AB3370FE27FC7E8A2F32E9BB20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8176822AED1584CE7EBB03C16709E3 /* Pods-MAGTablesCollections_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MAGTablesCollections_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MAGTablesCollections_Tests/Pods-MAGTablesCollections_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MAGTablesCollections_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CE59F87B8D949B52BF0A81B6653E94AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEBC8FFCA87C1DF60DF506B66C22D511 /* MAGTablesCollections.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MAGTablesCollections/MAGTablesCollections-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MAGTablesCollections/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MAGTablesCollections/MAGTablesCollections.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MAGTablesCollections;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EC1818C5642F9A34DCF19DE1CA7C0B02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 593F69A746498F3A1A29576E245A8CF1 /* Masonry.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masonry/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masonry/Masonry.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Masonry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F20B49FCCC30A009950400D71CC1AD79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7D1C7CF6E59262F2ABE5E8C72AECC8 /* Pods-MAGTablesCollections_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MAGTablesCollections_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MAGTablesCollections_Example/Pods-MAGTablesCollections_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MAGTablesCollections_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F7C261B09D77354DDB3D5CC9E3C018AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B823C28D18D646107F8BA5BF1CE58751 /* Pods-MAGTablesCollections_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MAGTablesCollections_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MAGTablesCollections_Example/Pods-MAGTablesCollections_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MAGTablesCollections_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -1526,8 +1554,8 @@
 		29EA86C22E00ED3F6CA3925C92E9B962 /* Build configuration list for PBXNativeTarget "MAGMatveevReusable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37236D8D43BAA2DD2C6ACBE8C7FBAE88 /* Debug */,
-				39BAB68DFC4FD00C0D9A4133468F8152 /* Release */,
+				9A03CCB15754B799C995A9CE205EA8FB /* Debug */,
+				6B462765C55837CD11DDFB10D8FCE368 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1535,8 +1563,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
-				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
+				9E1E4E48AF2EAB23169E611BF694090A /* Debug */,
+				8DED8AD26D381A6ACFF202E5217EC498 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1544,26 +1572,8 @@
 		39197003A880A3F2A3C91C38C5999E45 /* Build configuration list for PBXNativeTarget "Pods-MAGTablesCollections_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				498104741382E8DB2987CD980516C466 /* Debug */,
-				11E15662E89EF936A5E43D459C956CA7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		776E7103E8CFF2C3765BC91EAD36C120 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB03E051F60C64BCCA0851E314369B37 /* Debug */,
-				61D35AF5F7A32B4BACAA354541AB6B29 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		95EC193956EB68C81F5709D03D280ABF /* Build configuration list for PBXNativeTarget "MAGTablesCollections" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6539549BBC425F2FFD07165035A56509 /* Debug */,
-				B2305590C10AE573565679BEE50B96CB /* Release */,
+				F7C261B09D77354DDB3D5CC9E3C018AF /* Debug */,
+				F20B49FCCC30A009950400D71CC1AD79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1571,8 +1581,8 @@
 		9784B452082E6E8AE675C1C526502ACA /* Build configuration list for PBXNativeTarget "libextobjc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				47CA42E256A999B8A943FA47E84B25A8 /* Debug */,
-				204116116F4BD2FFE9E67407BFC8DB83 /* Release */,
+				413CFCDFD5703D63A902BC08D130D1C7 /* Debug */,
+				92D1F526AB993AA6FE886657B2CFEA2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1580,8 +1590,26 @@
 		B677DAD4FCE4C18287942FE23AAEE3CE /* Build configuration list for PBXNativeTarget "Pods-MAGTablesCollections_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				30F008F199F9ADF957C4B38B0758C907 /* Debug */,
-				1BBCA4A6F87CA0BAB257774CEC5D1985 /* Release */,
+				CE1030AB3370FE27FC7E8A2F32E9BB20 /* Debug */,
+				6037EF81E1A78A10699E61E604328264 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3142A266F7AF1E17B310BA5736F6A3C /* Build configuration list for PBXNativeTarget "Masonry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC1818C5642F9A34DCF19DE1CA7C0B02 /* Debug */,
+				52A6B57659B8D80FCFA174C1520E0A71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF11C4B7CECC24AAB1EFA3F6235303B1 /* Build configuration list for PBXNativeTarget "MAGTablesCollections" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98A20D7D4899130376EE5B837789828D /* Debug */,
+				CE59F87B8D949B52BF0A81B6653E94AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
