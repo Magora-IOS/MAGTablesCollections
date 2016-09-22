@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="BcG-bC-Sp1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="lxv-m9-gx4">
+                    <color key="backgroundColor" red="0.5450980392" green="0.59607843140000005" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lxv-m9-gx4" firstAttribute="top" secondItem="BcG-bC-Sp1" secondAttribute="top" id="0Rg-Ii-itO"/>
+                <constraint firstAttribute="trailing" secondItem="lxv-m9-gx4" secondAttribute="trailing" id="CcJ-po-etP"/>
+                <constraint firstItem="lxv-m9-gx4" firstAttribute="leading" secondItem="BcG-bC-Sp1" secondAttribute="leading" id="f5l-Y6-5yT"/>
+                <constraint firstAttribute="bottom" secondItem="lxv-m9-gx4" secondAttribute="bottom" id="ws4-Y9-LpE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34" y="94"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="image2" width="960" height="543"/>
+    </resources>
+</document>

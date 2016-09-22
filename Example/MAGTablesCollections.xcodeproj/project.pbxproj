@@ -29,6 +29,15 @@
 		C78D6AF81D78268E00F86C0B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D6AF31D78268E00F86C0B /* MainViewController.xib */; };
 		C78D6AFB1D7828AF00F86C0B /* CollectionManager1.m in Sources */ = {isa = PBXBuildFile; fileRef = C78D6AFA1D7828AF00F86C0B /* CollectionManager1.m */; };
 		C78D6AFE1D782D1B00F86C0B /* CollectionCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = C78D6AFD1D782D1B00F86C0B /* CollectionCell1.m */; };
+		C78D6B031D7857DD00F86C0B /* TableViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = C78D6B021D7857DD00F86C0B /* TableViewController1.m */; };
+		C78D6B051D78585100F86C0B /* TableViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D6B041D78585100F86C0B /* TableViewController1.xib */; };
+		C78D6B081D78588B00F86C0B /* TableManager1.m in Sources */ = {isa = PBXBuildFile; fileRef = C78D6B071D78588B00F86C0B /* TableManager1.m */; };
+		C78D6B0B1D7858EF00F86C0B /* Cell1.m in Sources */ = {isa = PBXBuildFile; fileRef = C78D6B0A1D7858EF00F86C0B /* Cell1.m */; };
+		C78D6B0D1D7858F900F86C0B /* Cell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D6B0C1D7858F900F86C0B /* Cell1.xib */; };
+		C78D6B0F1D7859D200F86C0B /* Cell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D6B0E1D7859D200F86C0B /* Cell2.xib */; };
+		C78D6B121D7859DC00F86C0B /* Cell2.m in Sources */ = {isa = PBXBuildFile; fileRef = C78D6B111D7859DC00F86C0B /* Cell2.m */; };
+		C78D6B141D78607600F86C0B /* Header1.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D6B131D78607600F86C0B /* Header1.xib */; };
+		C78D6B161D7860A300F86C0B /* Header2.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D6B151D7860A300F86C0B /* Header2.xib */; };
 		D96169E6BE8AD441752CAB0A /* Pods_MAGTablesCollections_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8FB40D61721BEB1ACBBB0F /* Pods_MAGTablesCollections_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +89,19 @@
 		C78D6AFA1D7828AF00F86C0B /* CollectionManager1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionManager1.m; sourceTree = "<group>"; };
 		C78D6AFC1D782D1B00F86C0B /* CollectionCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionCell1.h; sourceTree = "<group>"; };
 		C78D6AFD1D782D1B00F86C0B /* CollectionCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionCell1.m; sourceTree = "<group>"; };
+		C78D6B011D7857DD00F86C0B /* TableViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController1.h; sourceTree = "<group>"; };
+		C78D6B021D7857DD00F86C0B /* TableViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController1.m; sourceTree = "<group>"; };
+		C78D6B041D78585100F86C0B /* TableViewController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController1.xib; sourceTree = "<group>"; };
+		C78D6B061D78588B00F86C0B /* TableManager1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableManager1.h; sourceTree = "<group>"; };
+		C78D6B071D78588B00F86C0B /* TableManager1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableManager1.m; sourceTree = "<group>"; };
+		C78D6B091D7858EF00F86C0B /* Cell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell1.h; sourceTree = "<group>"; };
+		C78D6B0A1D7858EF00F86C0B /* Cell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell1.m; sourceTree = "<group>"; };
+		C78D6B0C1D7858F900F86C0B /* Cell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell1.xib; sourceTree = "<group>"; };
+		C78D6B0E1D7859D200F86C0B /* Cell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell2.xib; sourceTree = "<group>"; };
+		C78D6B101D7859DC00F86C0B /* Cell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell2.h; sourceTree = "<group>"; };
+		C78D6B111D7859DC00F86C0B /* Cell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell2.m; sourceTree = "<group>"; };
+		C78D6B131D78607600F86C0B /* Header1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Header1.xib; sourceTree = "<group>"; };
+		C78D6B151D7860A300F86C0B /* Header2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Header2.xib; sourceTree = "<group>"; };
 		D369BC9CFD346789C63528B6 /* Pods_MAGTablesCollections_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAGTablesCollections_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F6904F1D7EDF1BA6D4FCDB /* Pods-MAGTablesCollections_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGTablesCollections_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAGTablesCollections_Tests/Pods-MAGTablesCollections_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +173,7 @@
 				6003F59C195388D20070C39A /* MAGAppDelegate.h */,
 				6003F59D195388D20070C39A /* MAGAppDelegate.m */,
 				C78D6AFF1D782D3700F86C0B /* CollectionExample1 */,
+				C78D6B001D7857B600F86C0B /* TableExample1 */,
 				C78D6AF11D78268E00F86C0B /* MainViewController.h */,
 				C78D6AF21D78268E00F86C0B /* MainViewController.m */,
 				C78D6AF31D78268E00F86C0B /* MainViewController.xib */,
@@ -237,6 +260,26 @@
 			name = CollectionExample1;
 			sourceTree = "<group>";
 		};
+		C78D6B001D7857B600F86C0B /* TableExample1 */ = {
+			isa = PBXGroup;
+			children = (
+				C78D6B011D7857DD00F86C0B /* TableViewController1.h */,
+				C78D6B021D7857DD00F86C0B /* TableViewController1.m */,
+				C78D6B041D78585100F86C0B /* TableViewController1.xib */,
+				C78D6B061D78588B00F86C0B /* TableManager1.h */,
+				C78D6B071D78588B00F86C0B /* TableManager1.m */,
+				C78D6B0C1D7858F900F86C0B /* Cell1.xib */,
+				C78D6B091D7858EF00F86C0B /* Cell1.h */,
+				C78D6B0A1D7858EF00F86C0B /* Cell1.m */,
+				C78D6B0E1D7859D200F86C0B /* Cell2.xib */,
+				C78D6B101D7859DC00F86C0B /* Cell2.h */,
+				C78D6B111D7859DC00F86C0B /* Cell2.m */,
+				C78D6B131D78607600F86C0B /* Header1.xib */,
+				C78D6B151D7860A300F86C0B /* Header2.xib */,
+			);
+			name = TableExample1;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -321,12 +364,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C78D6AEC1D780E4800F86C0B /* MAGComfortTextInput.gif in Resources */,
+				C78D6B051D78585100F86C0B /* TableViewController1.xib in Resources */,
 				C78D6AE91D780D9D00F86C0B /* NOTICE in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 				C78D6AF61D78268E00F86C0B /* CollectionViewController1.xib in Resources */,
 				C78D6AF81D78268E00F86C0B /* MainViewController.xib in Resources */,
+				C78D6B0D1D7858F900F86C0B /* Cell1.xib in Resources */,
+				C78D6B0F1D7859D200F86C0B /* Cell2.xib in Resources */,
+				C78D6B141D78607600F86C0B /* Header1.xib in Resources */,
 				C78D6AF41D78268E00F86C0B /* CollectionCell1.xib in Resources */,
+				C78D6B161D7860A300F86C0B /* Header2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,11 +486,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C78D6B0B1D7858EF00F86C0B /* Cell1.m in Sources */,
+				C78D6B031D7857DD00F86C0B /* TableViewController1.m in Sources */,
+				C78D6B121D7859DC00F86C0B /* Cell2.m in Sources */,
 				6003F59E195388D20070C39A /* MAGAppDelegate.m in Sources */,
 				C78D6AF51D78268E00F86C0B /* CollectionViewController1.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				C78D6AFE1D782D1B00F86C0B /* CollectionCell1.m in Sources */,
 				C78D6AFB1D7828AF00F86C0B /* CollectionManager1.m in Sources */,
+				C78D6B081D78588B00F86C0B /* TableManager1.m in Sources */,
 				C78D6AF71D78268E00F86C0B /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

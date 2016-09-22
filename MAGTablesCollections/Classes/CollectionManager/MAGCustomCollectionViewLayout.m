@@ -120,7 +120,7 @@
     
     self.lastCalculatedContentSizeValue = nil;
     
-    NSLog(@"self fraaaaame %@",NSStringFromCGRect(self.collectionView.frame));
+//    NSLog(@"collection view frame before layout %@",NSStringFromCGRect(self.collectionView.frame));
     [self.cachedFramesDict removeAllObjects];
     
     self.summaryHeightPoints = 0;

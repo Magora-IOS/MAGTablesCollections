@@ -9,6 +9,7 @@
 
 #import "MainViewController.h"
 #import "CollectionViewController1.h"
+#import "TableViewController1.h"
 
 @interface MainViewController ()
 
@@ -20,7 +21,7 @@
     [super viewDidLoad];
     
     self.title = @"Select demo";
-    [self collection1Action];
+//    [self table1Action];
 }
 
 - (IBAction)collection1Action {
@@ -29,9 +30,8 @@
 }
 
 - (IBAction)table1Action {
-//    TableViewInputController *vc = [[TableViewInputController alloc] initWithNibName:@"TableViewInputController" bundle:nil];
-//    [self.navigationController pushViewController:vc animated:YES];
+    TableViewController1 *vc = [[TableViewController1 alloc] initWithNibName:@"TableViewController1" bundle:nil];
+    [self.navigationController pushViewController:vc animated:NO];
 }
-
 
 @end
