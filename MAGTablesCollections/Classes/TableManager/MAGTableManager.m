@@ -198,7 +198,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    RUN_BLOCK(self.didSelectedCellWithItemBlock, [self itemByIndexPath:indexPath]);
+    RUN_BLOCK(self.didDeselectedCellWithItemBlock, [self itemByIndexPath:indexPath]);
     RUN_BLOCK(self.didSelectionCellChangedWithItemBlock, [self itemByIndexPath:indexPath]);
 }
 
