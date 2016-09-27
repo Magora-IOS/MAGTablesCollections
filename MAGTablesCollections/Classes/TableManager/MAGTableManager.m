@@ -194,6 +194,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     RUN_BLOCK(self.didSelectedCellWithItemBlock, [self itemByIndexPath:indexPath]);
+    RUN_BLOCK(self.didSelectionCellChangedWithItemBlock, [self itemByIndexPath:indexPath]);
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    RUN_BLOCK(self.didSelectedCellWithItemBlock, [self itemByIndexPath:indexPath]);
+    RUN_BLOCK(self.didSelectionCellChangedWithItemBlock, [self itemByIndexPath:indexPath]);
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{

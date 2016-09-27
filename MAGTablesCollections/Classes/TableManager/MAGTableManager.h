@@ -15,6 +15,9 @@ typedef void (^RCTableItemBlock) (id item);
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (copy, nonatomic) RCTableItemBlock didSelectedCellWithItemBlock;
+@property (copy, nonatomic) RCTableItemBlock didDeselectedCellWithItemBlock;
+@property (copy, nonatomic) RCTableItemBlock didSelectionCellChangedWithItemBlock;
+
 @property (copy, nonatomic) NSArray *items;//      for single section
 @property (strong, nonatomic) NSArray<MAGTableSection *> *sections;
 
