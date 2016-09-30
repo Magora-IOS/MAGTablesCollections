@@ -38,6 +38,7 @@ typedef void (^RCTableItemBlock) (id item);
 
 - (void)selectFirstRowWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition;
 - (void)selectAllRowsWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition;
+- (void)clearSelection;
 
 - (NSArray *)selectedItems;
 

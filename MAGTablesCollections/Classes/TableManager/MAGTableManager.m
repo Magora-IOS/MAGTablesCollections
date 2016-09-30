@@ -355,4 +355,10 @@
     }
 }
 
+- (void)clearSelection {
+    for (NSIndexPath *index in self.tableView.indexPathsForSelectedRows) {
+        [self.tableView deselectRowAtIndexPath:index animated:NO];
+    }
+}
+
 @end
