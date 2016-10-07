@@ -169,11 +169,15 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *cellId = [self cellIdentifierForItem:[self itemByIndexPath:indexPath] atIndexPath:indexPath];
     UITableViewCell *cell = nil;
     @try {
-        cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-        [self configureCell:cell withItem:[self itemByIndexPath:indexPath] atIndexPath:indexPath];
+        id item = [self itemByIndexPath:indexPath];
+        cell = [self permanentCellForItem:item atIndexPath:indexPath];
+        if (!cell) {
+            NSString *cellId = [self cellIdentifierForItem:[self itemByIndexPath:indexPath] atIndexPath:indexPath];
+            cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+            [self configureCell:cell withItem:item atIndexPath:indexPath];
+        }
     }
     @catch (NSException *exception) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"some not real cell id"];
@@ -304,6 +308,10 @@
 
 - (CGFloat)heightForFooterViewOfSection:(MAGTableSection *)section {
     return 0.00001;
+}
+
+- (UITableViewCell *)permanentCellForItem:(id)item atIndexPath:(NSIndexPath *)indexPath {
+    return nil;
 }
 
 - (NSString *)cellIdentifierForItem:(id)item atIndexPath:(NSIndexPath *)indexPath {
