@@ -18,9 +18,12 @@ typedef void (^RCTableItemBlock) (id item);
 @property (copy, nonatomic) RCTableItemBlock didDeselectedCellWithItemBlock;
 @property (copy, nonatomic) RCTableItemBlock didSelectionCellChangedWithItemBlock;
 
+@property (nonatomic) BOOL itemsOrSectionsWasFilledByUser;
+
 @property (copy, nonatomic) NSArray *items;//      for single section
 @property (strong, nonatomic) NSArray<MAGTableSection *> *sections;
 
+@property (strong, nonatomic) NSArray *selectedItems;//     if set, all this items will displayed as selected at first or after appearing on screen. After selection's changing by user, it will contains correct selected items. WARN Be careful when some sections contains the same utem!
 @property (nonatomic) BOOL useSeparatorsZeroInset;
 
 - (instancetype)init NS_UNAVAILABLE;
@@ -40,7 +43,6 @@ typedef void (^RCTableItemBlock) (id item);
 - (void)selectAllRowsWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition;
 - (void)clearSelection;
 
-- (NSArray *)selectedItems;
 
 //      might be override
 

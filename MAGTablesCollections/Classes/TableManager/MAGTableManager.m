@@ -9,6 +9,8 @@
 
 @implementation MAGTableManager
 
+//@synthesize selectedItems = _selectedItems;
+
 #pragma mark - LifeStyle
 
 - (instancetype)initWithTableView:(UITableView *)tableView {
@@ -32,7 +34,9 @@
         MAGTableSection *section = [MAGTableSection new];
         section.items = items;
         _sections = @[section];
-    } 
+    }
+    _selectedItems = @[];
+    self.itemsOrSectionsWasFilledByUser = YES;
     [self reloadData];
 }
 
@@ -45,19 +49,29 @@
     return result;
 }
 
-- (NSArray *)selectedItems {
-    NSMutableArray *result = [@[] mutableCopy];
-    NSArray *selectedIndexPaths = [self.tableView indexPathsForSelectedRows];
-    for (NSIndexPath *indexPath in selectedIndexPaths) {
-        MAGTableSection *section = self.sections[indexPath.section];
-        id item = section.items[indexPath.row];
-        [result addObject:item];
+- (void)setSelectedItems:(NSArray *)selectedItems {
+    if (selectedItems) {
+        _selectedItems = selectedItems;
+        for (MAGTableSection *section in self.sections) {
+            for (id item in section.items) {
+                BOOL contains = [selectedItems containsObject:item];
+                if (contains) {
+                    NSArray *itemIndexPaths = [self indexPathsOfItem:item inSections:self.sections];
+                    for (NSIndexPath *indexpath in itemIndexPaths) {
+                        [self.tableView selectRowAtIndexPath:indexpath animated:NO scrollPosition:UITableViewScrollPositionNone];
+                    }
+                }
+            }
+        }
+    } else {
+        _selectedItems = @[];
     }
-    return result;
 }
 
 - (void)setSections:(NSArray *)sections {
     _sections = [sections copy];
+    _selectedItems = @[];
+    self.itemsOrSectionsWasFilledByUser = YES;
     [self.tableView reloadData];
 }
 
@@ -170,8 +184,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = nil;
+    id item;
     @try {
-        id item = [self itemByIndexPath:indexPath];
+        item = [self itemByIndexPath:indexPath];
         cell = [self permanentCellForItem:item atIndexPath:indexPath];
         if (!cell) {
             NSString *cellId = [self cellIdentifierForItem:[self itemByIndexPath:indexPath] atIndexPath:indexPath];
@@ -197,13 +212,22 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    RUN_BLOCK(self.didSelectedCellWithItemBlock, [self itemByIndexPath:indexPath]);
-    RUN_BLOCK(self.didSelectionCellChangedWithItemBlock, [self itemByIndexPath:indexPath]);
+    id item = [self itemByIndexPath:indexPath];
+    NSMutableArray *array = [self.selectedItems mutableCopy];
+    [array removeObject:item];// bcs some sections might contains this item, so we need avoid duplicates
+    [array addObject:item];
+    _selectedItems = array;
+    RUN_BLOCK(self.didSelectedCellWithItemBlock, item);
+    RUN_BLOCK(self.didSelectionCellChangedWithItemBlock, item);
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    RUN_BLOCK(self.didDeselectedCellWithItemBlock, [self itemByIndexPath:indexPath]);
-    RUN_BLOCK(self.didSelectionCellChangedWithItemBlock, [self itemByIndexPath:indexPath]);
+    id item = [self itemByIndexPath:indexPath];
+    NSMutableArray *array = [self.selectedItems mutableCopy];
+    [array removeObject:item];
+    _selectedItems = array;
+    RUN_BLOCK(self.didDeselectedCellWithItemBlock, item);
+    RUN_BLOCK(self.didSelectionCellChangedWithItemBlock, item);
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -222,6 +246,11 @@
         if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
             [cell setLayoutMargins:UIEdgeInsetsZero];
         }
+    }
+    id item = [self itemByIndexPath:indexPath];
+    BOOL contains = [self.selectedItems containsObject:item];
+    if (contains) {
+        [cell setSelected:YES animated:NO];
     }
 }
 
