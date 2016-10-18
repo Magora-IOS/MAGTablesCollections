@@ -5,6 +5,9 @@
 
 @interface MAGTableManager ()
 
+@property (readonly, weak, nonatomic) UIView *emptyView;//      weak bcs added as subview
+@property (assign) BOOL originallyBouncesEnabled;
+
 @end
 
 @implementation MAGTableManager
@@ -24,6 +27,9 @@
 }
 
 - (void)reloadData {
+    [self recreateEmptyLabel];
+    [self updateEmptyLabel];
+    
     [self.tableView reloadData];
 }
 
@@ -72,7 +78,8 @@
     _sections = [sections copy];
     _selectedItems = @[];
     self.itemsOrSectionsWasFilledByUser = YES;
-    [self.tableView reloadData];
+    
+    [self reloadData];
 }
 
 - (void)setTableView:(UITableView *)tableView {
@@ -106,6 +113,55 @@
     
     _tableView.dataSource = self;
     _tableView.delegate = self;
+    
+    self.originallyBouncesEnabled = self.tableView.bounces;
+    [self recreateEmptyLabel];
+}
+
+- (void)recreateEmptyLabel {
+    if (self.emptyView) {
+        [self.emptyView removeFromSuperview];
+        _emptyView = nil;
+    }
+    if (self.classnameForEmptyView.length) {
+        Class emptyViewClass = NSClassFromString(self.classnameForEmptyView);
+        _emptyView = [emptyViewClass mag_loadFromNib];
+    }
+    if (self.emptyView) {
+        _emptyView.hidden = YES;
+        
+        [self.tableView mag_inscribeSubview:self.emptyView];
+        self.emptyView.y = 0;
+        RUN_BLOCK(self.emptyViewCustomizationBlock, self.emptyView);
+    }
+}
+
+- (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock {
+    _displayEmptyViewWhenDataIsEmpty = displayEmptyViewWhenDataIsEmpty;
+    _classnameForEmptyView = classnameForEmptyView;
+    _emptyViewCustomizationBlock = emptyViewCustomizationBlock;
+    
+    [self recreateEmptyLabel];
+    [self updateEmptyLabel];
+}
+
+- (void)updateEmptyLabel {
+    if (self.emptyView) {
+        if (self.displayEmptyViewWhenDataIsEmpty) {
+            NSInteger count = 0;
+            for (MAGTableSection *section in self.sections) {
+                count += section.items.count;
+            }
+            self.emptyView.hidden = CORRECTED_BOOL(count > 0);
+        } else {
+            self.emptyView.hidden = YES;
+        }
+    }
+    if (self.emptyView.hidden) {
+        self.tableView.bounces =  self.originallyBouncesEnabled;
+    } else {
+        self.tableView.bounces = NO;//        not bounces when EmptyLabel is visible
+    }
 }
 
 //      this and next method for dispaying of default table separators with UIEdgeInsetsZero
@@ -134,24 +190,29 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    CGFloat result;
-    MAGTableSection *tableSection;
-    if (section < self.sections.count) {
-        tableSection = self.sections[section];
-        result = [self heightForHeaderViewOfSection:tableSection];
+    CGFloat result = 0.00001;
+    if (self.emptyView.hidden) {
+        MAGTableSection *tableSection;
+        if (section < self.sections.count) {
+            tableSection = self.sections[section];
+            result = [self heightForHeaderViewOfSection:tableSection];
+        }
     }
     return result;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *result;
-    MAGTableSection *tableSection;
-    if (section < self.sections.count) {
-        tableSection = self.sections[section];
-        NSString *headerIdentifier = [self headerIdentifierForSection:tableSection];
-        if (headerIdentifier) {
-            result = [UIView mag_loadFromNib:headerIdentifier];
-            [self configureHeaderView:result forSection:tableSection];
+    if (self.emptyView.hidden) {
+        MAGTableSection *tableSection;
+        if (section < self.sections.count) {
+            tableSection = self.sections[section];
+            NSString *headerIdentifier = [self headerIdentifierForSection:tableSection];
+            if (headerIdentifier) {
+                Class headerViewClass = NSClassFromString(headerIdentifier);
+                result = [headerViewClass mag_loadFromNib:headerIdentifier];
+                [self configureHeaderView:result forSection:tableSection];
+            }
         }
     }
     return result;
@@ -159,24 +220,29 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UIView *result;
-    MAGTableSection *tableSection;
-    if (section < self.sections.count) {
-        tableSection = self.sections[section];
-        NSString *footerIdentifier = [self footerIdentifierForSection:tableSection];
-        if (footerIdentifier) {
-            result = [UIView mag_loadFromNib:footerIdentifier];
-            [self configureFooterView:result forSection:tableSection];
+    if (self.emptyView.hidden) {
+        MAGTableSection *tableSection;
+        if (section < self.sections.count) {
+            tableSection = self.sections[section];
+            NSString *footerIdentifier = [self footerIdentifierForSection:tableSection];
+            if (footerIdentifier) {
+                Class footerViewClass = NSClassFromString(footerIdentifier);
+                result = [footerViewClass mag_loadFromNib:footerIdentifier];
+                [self configureFooterView:result forSection:tableSection];
+            }
         }
     }
     return result;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    CGFloat result;
-    MAGTableSection *tableSection;
-    if (section < self.sections.count) {
-        tableSection = self.sections[section];
-        result = [self heightForFooterViewOfSection:tableSection];
+    CGFloat result = 0.00001;
+    if (self.emptyView.hidden) {
+        MAGTableSection *tableSection;
+        if (section < self.sections.count) {
+            tableSection = self.sections[section];
+            result = [self heightForFooterViewOfSection:tableSection];
+        }
     }
     return result;
 }

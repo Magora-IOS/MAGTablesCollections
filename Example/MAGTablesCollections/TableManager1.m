@@ -12,6 +12,7 @@
 #import "NSObject+MAGMore.h"
 #import "Cell1.h"
 #import "Cell2.h"
+#import "MAGCommonDefines.h"
 
 @interface TableManager1 ()
 
@@ -56,7 +57,7 @@
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+- (CGFloat)heightForHeaderViewOfSection:(MAGTableSection *)section {
     CGFloat result;
     if (!self.header1) {
         self.header1 = [[[NSBundle mainBundle] loadNibNamed:@"Header1" owner:nil options:0] firstObject];
@@ -65,12 +66,23 @@
         self.header2 = [[[NSBundle mainBundle] loadNibNamed:@"Header2" owner:nil options:0] firstObject];
     }
     
-    if (section == 0) {
+    if (EQUAL(section.name, @"section1")) {
         result = self.header1.height;
     } else {
         result = self.header2.height;
     }
-    NSLog(@"result header height %@ %@",@(section).stringValue, @(result).stringValue);
+//    NSLog(@"result header height %@ %@",@(section).stringValue, @(result).stringValue);
+    return result;
+
+}
+
+- (NSString *)headerIdentifierForSection:(MAGTableSection *)section {
+    NSString *result;
+    if (EQUAL(section.name, @"section1")) {
+        result = @"Header1";
+    } else {
+        result = @"Header2";
+    }
     return result;
 }
 
@@ -104,20 +116,8 @@
     return result;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return [self cellForAccountsHeaderInSection:section];
-}
+- (void)configureHeaderView:(UIView *)view forSection:(MAGTableSection *)section {
 
-- (UITableViewCell *)cellForAccountsHeaderInSection:(NSInteger)section {
-    UITableViewCell *result;
-    
-    if (section == 0) {
-        result = self.header1;
-    } else {
-        result = self.header2;
-    }
-    
-    return result;
 }
 
 @end

@@ -20,6 +20,10 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		6FD5D8F5257C1EF097DB0565 /* Pods_MAGTablesCollections_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D369BC9CFD346789C63528B6 /* Pods_MAGTablesCollections_Example.framework */; };
+		C70ACB0C1DB5F156000BDA01 /* EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C70ACB0A1DB5F156000BDA01 /* EmptyView.m */; };
+		C70ACB0D1DB5F156000BDA01 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C70ACB0B1DB5F156000BDA01 /* EmptyView.xib */; };
+		C70ACB101DB60BB2000BDA01 /* Header1.m in Sources */ = {isa = PBXBuildFile; fileRef = C70ACB0F1DB60BB2000BDA01 /* Header1.m */; };
+		C70ACB131DB60BC3000BDA01 /* Header2.m in Sources */ = {isa = PBXBuildFile; fileRef = C70ACB121DB60BC3000BDA01 /* Header2.m */; };
 		C78D6AE91D780D9D00F86C0B /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = C78D6AE81D780D9D00F86C0B /* NOTICE */; };
 		C78D6AEC1D780E4800F86C0B /* MAGComfortTextInput.gif in Resources */ = {isa = PBXBuildFile; fileRef = C78D6AEB1D780E4800F86C0B /* MAGComfortTextInput.gif */; };
 		C78D6AF41D78268E00F86C0B /* CollectionCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D6AED1D78268E00F86C0B /* CollectionCell1.xib */; };
@@ -76,6 +80,13 @@
 		98F7B9DA7FB5033A9476539E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9B494E0705C044F031ACC49F /* Pods-MAGTablesCollections_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGTablesCollections_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAGTablesCollections_Example/Pods-MAGTablesCollections_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AE82A912FE3291F449F03EF7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C70ACB091DB5F156000BDA01 /* EmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyView.h; sourceTree = "<group>"; };
+		C70ACB0A1DB5F156000BDA01 /* EmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyView.m; sourceTree = "<group>"; };
+		C70ACB0B1DB5F156000BDA01 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		C70ACB0E1DB60BB2000BDA01 /* Header1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header1.h; sourceTree = "<group>"; };
+		C70ACB0F1DB60BB2000BDA01 /* Header1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Header1.m; sourceTree = "<group>"; };
+		C70ACB111DB60BC3000BDA01 /* Header2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header2.h; sourceTree = "<group>"; };
+		C70ACB121DB60BC3000BDA01 /* Header2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Header2.m; sourceTree = "<group>"; };
 		C78D6AE81D780D9D00F86C0B /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NOTICE; path = ../NOTICE; sourceTree = "<group>"; };
 		C78D6AEB1D780E4800F86C0B /* MAGComfortTextInput.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = MAGComfortTextInput.gif; sourceTree = "<group>"; };
 		C78D6AED1D78268E00F86C0B /* CollectionCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell1.xib; sourceTree = "<group>"; };
@@ -172,6 +183,9 @@
 			children = (
 				6003F59C195388D20070C39A /* MAGAppDelegate.h */,
 				6003F59D195388D20070C39A /* MAGAppDelegate.m */,
+				C70ACB091DB5F156000BDA01 /* EmptyView.h */,
+				C70ACB0A1DB5F156000BDA01 /* EmptyView.m */,
+				C70ACB0B1DB5F156000BDA01 /* EmptyView.xib */,
 				C78D6AFF1D782D3700F86C0B /* CollectionExample1 */,
 				C78D6B001D7857B600F86C0B /* TableExample1 */,
 				C78D6AF11D78268E00F86C0B /* MainViewController.h */,
@@ -274,7 +288,11 @@
 				C78D6B0E1D7859D200F86C0B /* Cell2.xib */,
 				C78D6B101D7859DC00F86C0B /* Cell2.h */,
 				C78D6B111D7859DC00F86C0B /* Cell2.m */,
+				C70ACB0E1DB60BB2000BDA01 /* Header1.h */,
+				C70ACB0F1DB60BB2000BDA01 /* Header1.m */,
 				C78D6B131D78607600F86C0B /* Header1.xib */,
+				C70ACB111DB60BC3000BDA01 /* Header2.h */,
+				C70ACB121DB60BC3000BDA01 /* Header2.m */,
 				C78D6B151D7860A300F86C0B /* Header2.xib */,
 			);
 			name = TableExample1;
@@ -372,6 +390,7 @@
 				C78D6AF81D78268E00F86C0B /* MainViewController.xib in Resources */,
 				C78D6B0D1D7858F900F86C0B /* Cell1.xib in Resources */,
 				C78D6B0F1D7859D200F86C0B /* Cell2.xib in Resources */,
+				C70ACB0D1DB5F156000BDA01 /* EmptyView.xib in Resources */,
 				C78D6B141D78607600F86C0B /* Header1.xib in Resources */,
 				C78D6AF41D78268E00F86C0B /* CollectionCell1.xib in Resources */,
 				C78D6B161D7860A300F86C0B /* Header2.xib in Resources */,
@@ -489,8 +508,11 @@
 				C78D6B0B1D7858EF00F86C0B /* Cell1.m in Sources */,
 				C78D6B031D7857DD00F86C0B /* TableViewController1.m in Sources */,
 				C78D6B121D7859DC00F86C0B /* Cell2.m in Sources */,
+				C70ACB0C1DB5F156000BDA01 /* EmptyView.m in Sources */,
 				6003F59E195388D20070C39A /* MAGAppDelegate.m in Sources */,
 				C78D6AF51D78268E00F86C0B /* CollectionViewController1.m in Sources */,
+				C70ACB131DB60BC3000BDA01 /* Header2.m in Sources */,
+				C70ACB101DB60BB2000BDA01 /* Header1.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				C78D6AFE1D782D1B00F86C0B /* CollectionCell1.m in Sources */,
 				C78D6AFB1D7828AF00F86C0B /* CollectionManager1.m in Sources */,

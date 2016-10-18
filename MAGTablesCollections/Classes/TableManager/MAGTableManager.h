@@ -6,6 +6,8 @@
 typedef void (^RCTableItemBlock) (id item);
 typedef void (^RCTableItemBlock) (id item);
 
+typedef void (^MAGViewBlock) (UIView *view);
+
 /**
         @warn TableManager shoudn't contains some of identical section objects at single time!
  */
@@ -26,6 +28,10 @@ typedef void (^RCTableItemBlock) (id item);
 @property (strong, nonatomic) NSArray *selectedItems;//     if set, all this items will displayed as selected at first or after appearing on screen. After selection's changing by user, it will contains correct selected items. WARN Be careful when some sections contains the same utem!
 @property (nonatomic) BOOL useSeparatorsZeroInset;
 
+@property (readonly, nonatomic) BOOL displayEmptyViewWhenDataIsEmpty;
+@property (readonly, strong, nonatomic) NSString *classnameForEmptyView;
+@property (readonly, strong, nonatomic) MAGViewBlock emptyViewCustomizationBlock;
+
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithTableView:(UITableView *)tableView NS_DESIGNATED_INITIALIZER;
 
@@ -43,6 +49,7 @@ typedef void (^RCTableItemBlock) (id item);
 - (void)selectAllRowsWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition;
 - (void)clearSelection;
 
+- (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock;
 
 //      might be override
 
