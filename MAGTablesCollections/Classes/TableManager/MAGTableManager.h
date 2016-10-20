@@ -25,6 +25,8 @@ typedef void (^MAGViewBlock) (UIView *view);
 @property (copy, nonatomic) NSArray *items;//      for single section
 @property (strong, nonatomic) NSArray<MAGTableSection *> *sections;
 
+@property (nonatomic) BOOL deselectLastSelectedItemOnce;
+
 @property (strong, nonatomic) NSArray *selectedItems;//     if set, all this items will displayed as selected at first or after appearing on screen. After selection's changing by user, it will contains correct selected items. WARN Be careful when some sections contains the same utem!
 @property (nonatomic) BOOL useSeparatorsZeroInset;
 
@@ -45,8 +47,9 @@ typedef void (^MAGViewBlock) (UIView *view);
 
 - (void)reloadData;
 
-- (void)selectFirstRowWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition;
+//- (void)selectFirstRowWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition;
 - (void)selectAllRowsWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition;
+- (void)deselectAllRowsWithItem:(id)item animated:(BOOL)animated;
 - (void)clearSelection;
 
 - (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock;

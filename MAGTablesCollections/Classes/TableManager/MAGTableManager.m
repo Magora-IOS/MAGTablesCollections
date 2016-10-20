@@ -279,12 +279,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     id item = [self itemByIndexPath:indexPath];
+    if (self.deselectLastSelectedItemOnce) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+        [self tableView:tableView didDeselectRowAtIndexPath:indexPath];
+    } else {
+        [self addItemToSelectedItems:item];
+    }
+    RUN_BLOCK(self.didSelectedCellWithItemBlock, item);
+    RUN_BLOCK(self.didSelectionCellChangedWithItemBlock, item);
+}
+
+- (void)addItemToSelectedItems:(id)item {
     NSMutableArray *array = [self.selectedItems mutableCopy];
     [array removeObject:item];// bcs some sections might contains this item, so we need avoid duplicates
     [array addObject:item];
     _selectedItems = array;
-    RUN_BLOCK(self.didSelectedCellWithItemBlock, item);
-    RUN_BLOCK(self.didSelectionCellChangedWithItemBlock, item);
+}
+
+- (void)removeItemFromSelectedItems:(id)item {
+    NSMutableArray *array = [self.selectedItems mutableCopy];
+    [array removeObject:item];// bcs some sections might contains this item, so we need avoid duplicates
+    _selectedItems = array;
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -443,22 +458,33 @@
     return YES;
 }
 
-- (void)selectFirstRowWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition {
-    NSArray *indexPaths = [self indexPathsOfItem:item inSections:self.sections];
-    if (indexPaths.count > 0) {
-        NSIndexPath *first = [indexPaths firstObject];
-        [self.tableView selectRowAtIndexPath:first animated:animated scrollPosition:scrollPosition];
-    }
-}
+//- (void)selectFirstRowWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition {
+//    NSArray *indexPaths = [self indexPathsOfItem:item inSections:self.sections];
+//    if (indexPaths.count > 0) {
+//        NSIndexPath *first = [indexPaths firstObject];
+//        [self.tableView selectRowAtIndexPath:first animated:animated scrollPosition:scrollPosition];
+//        [self addItemToSelectedItems:item];
+//    }
+//}
 
 - (void)selectAllRowsWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition {
+    [self addItemToSelectedItems:item];
     NSArray *indexPaths = [self indexPathsOfItem:item inSections:self.sections];
     for (NSIndexPath *indexPath in indexPaths) {
         [self.tableView selectRowAtIndexPath:indexPath animated:animated scrollPosition:scrollPosition];
     }
 }
 
+- (void)deselectAllRowsWithItem:(id)item animated:(BOOL)animated {
+    [self removeItemFromSelectedItems:item];
+    NSArray *indexPaths = [self indexPathsOfItem:item inSections:self.sections];
+    for (NSIndexPath *indexPath in indexPaths) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:animated];
+    }
+}
+
 - (void)clearSelection {
+    self.selectedItems = @[];
     for (NSIndexPath *index in self.tableView.indexPathsForSelectedRows) {
         [self.tableView deselectRowAtIndexPath:index animated:NO];
     }
