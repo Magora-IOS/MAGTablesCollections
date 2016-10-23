@@ -115,6 +115,8 @@
     _tableView.delegate = self;
     
     self.originallyBouncesEnabled = self.tableView.bounces;
+
+//    NSLog(@"ENABLED %@",@(self.originallyBouncesEnabled).stringValue);
     [self recreateEmptyLabel];
 }
 
@@ -156,11 +158,11 @@
         } else {
             self.emptyView.hidden = YES;
         }
-    }
-    if (self.emptyView.hidden) {
-        self.tableView.bounces =  self.originallyBouncesEnabled;
-    } else {
-        self.tableView.bounces = NO;//        not bounces when EmptyLabel is visible
+        if (self.emptyView.hidden) {
+            self.tableView.bounces =  self.originallyBouncesEnabled;
+        } else {
+            self.tableView.bounces = NO;//        not bounces when EmptyLabel is visible
+        }
     }
 }
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MAGTablesCollections'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'Framework for very convenient work with UITableView and UICollectionView'
 
 # This description is used to generate tags and improve search results.
