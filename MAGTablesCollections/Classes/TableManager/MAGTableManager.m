@@ -154,7 +154,8 @@
             for (MAGTableSection *section in self.sections) {
                 count += section.items.count;
             }
-            self.emptyView.hidden = CORRECTED_BOOL(count > 0);
+            BOOL willDisplayEmptyView = self.itemsOrSectionsWasFilledByUser && CORRECTED_BOOL(count == 0);
+            self.emptyView.hidden = !willDisplayEmptyView;
         } else {
             self.emptyView.hidden = YES;
         }

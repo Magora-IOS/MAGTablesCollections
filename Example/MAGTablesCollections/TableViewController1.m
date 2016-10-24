@@ -30,8 +30,8 @@
         EmptyView *emptyView = (EmptyView *)view;
         emptyView.emptyLabel.text = @"Списочек пуст111";
     }];
-    self.tm.items = @[];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//    self.tm.items = @[];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSMutableArray *items1 = [@[] mutableCopy];
         for (NSInteger i = 0; i < 20; ++i) {
             [items1 addObject:@(i).stringValue];
@@ -52,7 +52,7 @@
         
         [self.tm setSections:@[section1,section2]];
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(30 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             self.tm.items = @[];
         });
     });
