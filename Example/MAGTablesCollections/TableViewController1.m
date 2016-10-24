@@ -13,6 +13,7 @@
 #import "UIView+MAGMore.h"
 #import "EmptyView.h"
 #import "NSObject+MAGMore.h"
+#import "MAGSeparatorView.h"
 
 @interface TableViewController1 ()
 
@@ -26,10 +27,13 @@
     [super viewDidLoad];
     
     
+
     [self.tm setDisplayEmptyViewWhenDataIsEmpty:YES classnameForEmptyView:[EmptyView mag_className] emptyViewCustomizationBlock:^(UIView *view) {
         EmptyView *emptyView = (EmptyView *)view;
         emptyView.emptyLabel.text = @"Списочек пуст111";
     }];
+    
+    [self.tm setUseSeparatorViewInsteadOfFooterView:YES footerSeparatorViewColor:[UIColor redColor]];
 //    self.tm.items = @[];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSMutableArray *items1 = [@[] mutableCopy];

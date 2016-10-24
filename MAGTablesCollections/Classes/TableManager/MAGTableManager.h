@@ -2,6 +2,7 @@
 #import <Foundation/Foundation.h>
 
 #import "MAGTableSection.h"
+#import "MAGSeparatorView.h"
 
 typedef void (^RCTableItemBlock) (id item);
 typedef void (^RCTableItemBlock) (id item);
@@ -34,6 +35,9 @@ typedef void (^MAGViewBlock) (UIView *view);
 @property (readonly, strong, nonatomic) NSString *classnameForEmptyView;
 @property (readonly, strong, nonatomic) MAGViewBlock emptyViewCustomizationBlock;
 
+@property (readonly, nonatomic) BOOL useSeparatorViewInsteadOfFooterView;
+@property (readonly, strong, nonatomic) MAGSeparatorView *footerSeparatorView;
+
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithTableView:(UITableView *)tableView NS_DESIGNATED_INITIALIZER;
 
@@ -53,6 +57,7 @@ typedef void (^MAGViewBlock) (UIView *view);
 - (void)clearSelection;
 
 - (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock;
+- (void)setUseSeparatorViewInsteadOfFooterView:(BOOL)useSeparatorInsteadOfFooterView footerSeparatorViewColor:(UIColor *)separatorViewColor;
 
 //      might be override
 

@@ -69,6 +69,8 @@
 		C21F8A864351F3EC5CBA9012444CCE0F /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1E1246934E6E7C76D24A8B6D8FB8FC /* Masonry.framework */; };
 		C2D3070B4F41AF5C92912C408A23B1EB /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA3F1121F1549C8F98EBBA70D745988D /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3EC2F629CD35BAC8CCD613184B8BBFA /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 53A5F2083EE60C3BF697FD4E69E2C7C9 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C723801B1DBDDC1F00AB06A5 /* MAGSeparatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = C72380191DBDDC1F00AB06A5 /* MAGSeparatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C723801C1DBDDC1F00AB06A5 /* MAGSeparatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C723801A1DBDDC1F00AB06A5 /* MAGSeparatorView.m */; };
 		C7A3EB5B1D9A3D9900854B07 /* MAGTablesCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = C7A3EB5A1D9A3D9900854B07 /* MAGTablesCollections.h */; };
 		C955ABF6EB4F0500CAE2BC2830EF9F62 /* UIView+MAGMore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3198D7FE6D485B9980F950459E7FBFD7 /* UIView+MAGMore.m */; };
 		CC4B12BDE9FFAC2E44DCAAFE42C14756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A765E1AACB4DEEC2EB6837B644C69EBD /* Foundation.framework */; };
@@ -247,6 +249,8 @@
 		C1036D2A69E0FBBA6BFC8C97B7C93999 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C20350BB28F2DA4C2C68AAC9311F2443 /* EXTNil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTNil.m; path = extobjc/EXTNil.m; sourceTree = "<group>"; };
 		C4F8D35AF342CC7B17B42C5A1FE44FB3 /* EXTScope.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTScope.m; path = extobjc/EXTScope.m; sourceTree = "<group>"; };
+		C72380191DBDDC1F00AB06A5 /* MAGSeparatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGSeparatorView.h; sourceTree = "<group>"; };
+		C723801A1DBDDC1F00AB06A5 /* MAGSeparatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGSeparatorView.m; sourceTree = "<group>"; };
 		C7A3EB5A1D9A3D9900854B07 /* MAGTablesCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGTablesCollections.h; sourceTree = "<group>"; };
 		C862D55305F7B034D4D099324E289BD3 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTRuntimeExtensions.m; path = extobjc/EXTRuntimeExtensions.m; sourceTree = "<group>"; };
 		CC1B850F429B377F4C060C90F027C48A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -534,6 +538,8 @@
 		95D2D071FF9C8E2FCD9904C32BC0C635 /* TableManager */ = {
 			isa = PBXGroup;
 			children = (
+				C72380191DBDDC1F00AB06A5 /* MAGSeparatorView.h */,
+				C723801A1DBDDC1F00AB06A5 /* MAGSeparatorView.m */,
 				BFAC39E7D82D13619D15D359349BEA21 /* MAGTableManager.h */,
 				CEA7893E1C3C677BB2C42CB75D997966 /* MAGTableManager.m */,
 				EA17218F1EC06202B28B65E86B899DD0 /* MAGTableSection.h */,
@@ -757,6 +763,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A67F97FC3ADFF165336CF87D5A90F4BA /* MAGCollectionManager.h in Headers */,
+				C723801B1DBDDC1F00AB06A5 /* MAGSeparatorView.h in Headers */,
 				C7A3EB5B1D9A3D9900854B07 /* MAGTablesCollections.h in Headers */,
 				24D4C188D62353CA6CA89A056EB509CA /* MAGCustomCollectionViewLayout.h in Headers */,
 				8C08F94E84A0719C96BF3EBEB76B8E62 /* MAGTableManager.h in Headers */,
@@ -971,6 +978,7 @@
 				8802A4B9409AE9C886D93564E6035D1F /* MAGTableManager.m in Sources */,
 				A0409DB693ABC071C111A890CF7B3647 /* MAGTablesCollections-dummy.m in Sources */,
 				EBC6B5B576D43A8DAD1457EFED472FAB /* MAGTableSection.m in Sources */,
+				C723801C1DBDDC1F00AB06A5 /* MAGSeparatorView.m in Sources */,
 				CCEF2C4E31A60AD32D388B9D23996E59 /* UICollectionViewCell+MAGMore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

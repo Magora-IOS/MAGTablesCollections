@@ -29,6 +29,7 @@
 - (void)reloadData {
     [self recreateEmptyLabel];
     [self updateEmptyLabel];
+    [self spoofFooterViewIfNeeded];
     
     [self.tableView reloadData];
 }
@@ -115,9 +116,11 @@
     _tableView.delegate = self;
     
     self.originallyBouncesEnabled = self.tableView.bounces;
-
-//    NSLog(@"ENABLED %@",@(self.originallyBouncesEnabled).stringValue);
+    
+    //    NSLog(@"ENABLED %@",@(self.originallyBouncesEnabled).stringValue);
     [self recreateEmptyLabel];
+    
+    [self spoofFooterViewIfNeeded];
 }
 
 - (void)recreateEmptyLabel {
@@ -138,6 +141,17 @@
     }
 }
 
+- (void)spoofFooterViewIfNeeded {
+    BOOL hasAnyItems = [self hasAnyItems];
+    BOOL willDisplayFakeEmptyFooterForAvoidStandardStupidZebra = (!self.tableView.tableFooterView && !self.useSeparatorViewInsteadOfFooterView) || !hasAnyItems;
+    if (willDisplayFakeEmptyFooterForAvoidStandardStupidZebra) {//        add footer for skip visible of stupid standard zebra after last displayed
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.width, 0)];
+        self.tableView.tableFooterView = view;
+    } else {
+        self.tableView.tableFooterView = self.footerSeparatorView;
+    }
+}
+
 - (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock {
     _displayEmptyViewWhenDataIsEmpty = displayEmptyViewWhenDataIsEmpty;
     _classnameForEmptyView = classnameForEmptyView;
@@ -147,14 +161,18 @@
     [self updateEmptyLabel];
 }
 
+- (void)setUseSeparatorViewInsteadOfFooterView:(BOOL)useSeparatorInsteadOfFooterView footerSeparatorViewColor:(UIColor *)separatorViewColor {
+    _useSeparatorViewInsteadOfFooterView = useSeparatorInsteadOfFooterView;
+    _footerSeparatorView = [[MAGSeparatorView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.width, 1)];
+    self.footerSeparatorView.color = separatorViewColor;
+    [self spoofFooterViewIfNeeded];
+}
+
 - (void)updateEmptyLabel {
     if (self.emptyView) {
         if (self.displayEmptyViewWhenDataIsEmpty) {
-            NSInteger count = 0;
-            for (MAGTableSection *section in self.sections) {
-                count += section.items.count;
-            }
-            BOOL willDisplayEmptyView = self.itemsOrSectionsWasFilledByUser && CORRECTED_BOOL(count == 0);
+            BOOL hasAnyItems = [self hasAnyItems];
+            BOOL willDisplayEmptyView = self.itemsOrSectionsWasFilledByUser && !hasAnyItems;
             self.emptyView.hidden = !willDisplayEmptyView;
         } else {
             self.emptyView.hidden = YES;
@@ -165,6 +183,17 @@
             self.tableView.bounces = NO;//        not bounces when EmptyLabel is visible
         }
     }
+}
+
+//      PLEASE CALL THIS RARELY FOR AVOID LAGS !!!
+- (BOOL)hasAnyItems {
+    BOOL result;
+    NSInteger count = 0;
+    for (MAGTableSection *section in self.sections) {
+        count += section.items.count;
+    }
+    result = CORRECTED_BOOL(count > 0);
+    return result;
 }
 
 //      this and next method for dispaying of default table separators with UIEdgeInsetsZero
