@@ -33,15 +33,17 @@
         emptyView.emptyLabel.text = @"Списочек пуст111";
     }];
     
-    [self.tm setUseSeparatorViewInsteadOfFooterView:YES footerSeparatorViewColor:[UIColor redColor]];
-//    self.tm.items = @[];
+    self.tm.separatorsColor = [UIColor blueColor];
+    
+    [self.tm setCloseTableBottomWithSeparatorViewInsteadOfFooterView:YES];
+
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSMutableArray *items1 = [@[] mutableCopy];
-        for (NSInteger i = 0; i < 20; ++i) {
+        for (NSInteger i = 0; i < 10; ++i) {
             [items1 addObject:@(i).stringValue];
         }
         NSMutableArray *items2 = [@[] mutableCopy];
-        for (NSInteger i = 0; i < 20; ++i) {
+        for (NSInteger i = 0; i < 10; ++i) {
             [items2 addObject:[NSString stringWithFormat:@"%@ string",@(i).stringValue]];
         }
         

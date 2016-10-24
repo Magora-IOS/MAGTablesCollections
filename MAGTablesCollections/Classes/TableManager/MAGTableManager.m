@@ -141,17 +141,6 @@
     }
 }
 
-- (void)spoofFooterViewIfNeeded {
-    BOOL hasAnyItems = [self hasAnyItems];
-    BOOL willDisplayFakeEmptyFooterForAvoidStandardStupidZebra = (!self.tableView.tableFooterView && !self.useSeparatorViewInsteadOfFooterView) || !hasAnyItems;
-    if (willDisplayFakeEmptyFooterForAvoidStandardStupidZebra) {//        add footer for skip visible of stupid standard zebra after last displayed
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.width, 0)];
-        self.tableView.tableFooterView = view;
-    } else {
-        self.tableView.tableFooterView = self.footerSeparatorView;
-    }
-}
-
 - (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock {
     _displayEmptyViewWhenDataIsEmpty = displayEmptyViewWhenDataIsEmpty;
     _classnameForEmptyView = classnameForEmptyView;
@@ -159,13 +148,6 @@
     
     [self recreateEmptyLabel];
     [self updateEmptyLabel];
-}
-
-- (void)setUseSeparatorViewInsteadOfFooterView:(BOOL)useSeparatorInsteadOfFooterView footerSeparatorViewColor:(UIColor *)separatorViewColor {
-    _useSeparatorViewInsteadOfFooterView = useSeparatorInsteadOfFooterView;
-    _footerSeparatorView = [[MAGSeparatorView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.width, 1)];
-    self.footerSeparatorView.color = separatorViewColor;
-    [self spoofFooterViewIfNeeded];
 }
 
 - (void)updateEmptyLabel {
@@ -185,8 +167,40 @@
     }
 }
 
-//      PLEASE CALL THIS RARELY FOR AVOID LAGS !!!
-- (BOOL)hasAnyItems {
+- (void)setCloseTableBottomWithSeparatorViewInsteadOfFooterView:(BOOL)closeTableBottomWithSeparatorViewInsteadOfFooterView {
+    _closeTableBottomWithSeparatorViewInsteadOfFooterView = closeTableBottomWithSeparatorViewInsteadOfFooterView;
+    _footerSeparatorView = [[MAGSeparatorView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.width, 1)];
+    [self spoofFooterViewIfNeeded];
+}
+
+- (void)spoofFooterViewIfNeeded {
+    BOOL hasAnyItems = [self hasAnyItems];
+    BOOL willDisplayFakeEmptyFooterForAvoidStandardStupidZebra = !self.tableView.tableFooterView || self.closeTableBottomWithSeparatorViewInsteadOfFooterView;//      add footer for skip visible of stupid standard zebra after last displayed
+    if (willDisplayFakeEmptyFooterForAvoidStandardStupidZebra) {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.width, 1)];
+        BOOL willAddSeparatorView = self.closeTableBottomWithSeparatorViewInsteadOfFooterView && hasAnyItems;
+        if (willAddSeparatorView) {
+            MAGSeparatorView *separatorView = [MAGSeparatorView new];
+            [view addSubview:separatorView];
+            separatorView.frame = view.bounds;
+            separatorView.y = -[MAGSeparatorView mostThinLineWidth];
+            
+            separatorView.contentMode = UIViewContentModeTop;
+            separatorView.color = self.tableView.separatorColor;
+            view.backgroundColor = [UIColor clearColor];
+        }
+        self.tableView.tableFooterView = view;
+        view.clipsToBounds = NO;
+    }
+}
+
+- (void)setSeparatorsColor:(UIColor *)separatorsColor {
+    _separatorsColor = separatorsColor;
+    self.tableView.separatorColor = separatorsColor;
+    self.footerSeparatorView.color = separatorsColor;
+}
+
+- (BOOL)hasAnyItems {//      PLEASE CALL THIS RARELY FOR AVOID LAGS !!!
     BOOL result;
     NSInteger count = 0;
     for (MAGTableSection *section in self.sections) {
