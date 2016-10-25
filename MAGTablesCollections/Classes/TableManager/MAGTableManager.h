@@ -21,12 +21,15 @@ typedef void (^MAGViewBlock) (UIView *view);
 @property (copy, nonatomic) RCTableItemBlock didDeselectedCellWithItemBlock;
 @property (copy, nonatomic) RCTableItemBlock didSelectionCellChangedWithItemBlock;
 
+@property (copy, nonatomic) RCTableItemBlock didTryChangeSelectionItemBlock;//       use it in pair with notChangeSelectionOnSelectionOrDeselectionEvent property
+
 @property (nonatomic) BOOL itemsOrSectionsWasFilledByUser;
 
 @property (copy, nonatomic) NSArray *items;//      for single section
 @property (strong, nonatomic) NSArray<MAGTableSection *> *sections;
 
-@property (nonatomic) BOOL deselectLastSelectedItemOnce;
+@property (nonatomic) BOOL clearSelectionOnce;
+@property (nonatomic) BOOL changingSelectionByUserTapsDisabled;//     but detect action you can via didTryChangeSelectionItemBlock
 
 @property (strong, nonatomic) NSArray *selectedItems;//     if set, all this items will displayed as selected at first or after appearing on screen. After selection's changing by user, it will contains correct selected items. WARN Be careful when some sections contains the same utem!
 @property (nonatomic) BOOL useSeparatorsZeroInset;

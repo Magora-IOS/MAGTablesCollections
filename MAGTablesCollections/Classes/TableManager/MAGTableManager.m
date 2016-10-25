@@ -293,7 +293,6 @@
     return result;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = nil;
     id item;
@@ -314,6 +313,10 @@
 
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
     BOOL result = [self shouldHighlightAndSelectCellAtIndexPath:indexPath];
+    if (self.changingSelectionByUserTapsDisabled) {
+        id item = [self itemByIndexPath:indexPath];
+        RUN_BLOCK(self.didTryChangeSelectionItemBlock, item);
+    }
     return result;
 }
 
@@ -325,14 +328,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     id item = [self itemByIndexPath:indexPath];
-    if (self.deselectLastSelectedItemOnce) {
-        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-        [self tableView:tableView didDeselectRowAtIndexPath:indexPath];
+    if (self.changingSelectionByUserTapsDisabled) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
     } else {
-        [self addItemToSelectedItems:item];
+        if (self.clearSelectionOnce) {
+            [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+            [self tableView:tableView didDeselectRowAtIndexPath:indexPath];
+        } else {
+            [self addItemToSelectedItems:item];
+        }
+        RUN_BLOCK(self.didSelectedCellWithItemBlock, item);
+        RUN_BLOCK(self.didSelectionCellChangedWithItemBlock, item);
     }
-    RUN_BLOCK(self.didSelectedCellWithItemBlock, item);
-    RUN_BLOCK(self.didSelectionCellChangedWithItemBlock, item);
 }
 
 - (void)addItemToSelectedItems:(id)item {
@@ -350,11 +357,15 @@
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     id item = [self itemByIndexPath:indexPath];
-    NSMutableArray *array = [self.selectedItems mutableCopy];
-    [array removeObject:item];
-    _selectedItems = array;
-    RUN_BLOCK(self.didDeselectedCellWithItemBlock, item);
-    RUN_BLOCK(self.didSelectionCellChangedWithItemBlock, item);
+    if (self.changingSelectionByUserTapsDisabled) {
+        [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+    } else {
+        NSMutableArray *array = [self.selectedItems mutableCopy];
+        [array removeObject:item];
+        _selectedItems = array;
+        RUN_BLOCK(self.didDeselectedCellWithItemBlock, item);
+        RUN_BLOCK(self.didSelectionCellChangedWithItemBlock, item);
+    }
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
