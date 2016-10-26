@@ -9,7 +9,6 @@
 
 #import "CollectionManager1.h"
 #import "CollectionCell1.h"
-#import "NSObject+MAGMore.h"
 
 @implementation CollectionManager1
 

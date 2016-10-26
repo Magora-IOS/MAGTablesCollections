@@ -14,5 +14,7 @@
     @import UIKit;
     @import Foundation;
 
-//    #import <MAGTablesCollections/MAGTablesCollections-umbrella.h>
+    #import <MAGTablesCollections/MAGTablesCollections.h>
+    #import <MAGMatveevReusable/MAGMatveevReusable.h>
 #endif
+

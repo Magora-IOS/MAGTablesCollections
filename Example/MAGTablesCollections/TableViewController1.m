@@ -8,12 +8,8 @@
 
 
 #import "TableViewController1.h"
-#import "MAGTableSection.h"
 #import "TableManager1.h"
-#import "UIView+MAGMore.h"
 #import "EmptyView.h"
-#import "NSObject+MAGMore.h"
-#import "MAGSeparatorView.h"
 
 @interface TableViewController1 ()
 

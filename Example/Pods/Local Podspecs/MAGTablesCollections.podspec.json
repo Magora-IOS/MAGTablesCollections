@@ -1,6 +1,6 @@
 {
   "name": "MAGTablesCollections",
-  "version": "0.1.0",
+  "version": "0.1.9",
   "summary": "Framework for very convenient work with UITableView and UICollectionView",
   "description": "Framework for very convenient work with UITableView and UICollectionView. Finish",
   "homepage": "https://github.com/Magora-IOS/MAGTablesCollections",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Magora-IOS/MAGTablesCollections.git",
-    "tag": "0.1.0"
+    "tag": "0.1.9"
   },
   "platforms": {
     "ios": "8.0"
@@ -21,7 +21,7 @@
   "source_files": "MAGTablesCollections/Classes/**/*",
   "dependencies": {
     "MAGMatveevReusable": [
-      "~> 0.1.1"
+      "~> 0.2.0"
     ],
     "Masonry": [
       "~> 1.0"

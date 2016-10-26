@@ -34,9 +34,9 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4.1)
   - libextobjc/UmbrellaHeader (0.4.1)
-  - MAGMatveevReusable (0.1.3)
-  - MAGTablesCollections (0.1.0):
-    - MAGMatveevReusable (~> 0.1.1)
+  - MAGMatveevReusable (0.2.0)
+  - MAGTablesCollections (0.1.9):
+    - MAGMatveevReusable (~> 0.2.0)
     - Masonry (~> 1.0)
   - Masonry (1.0.2)
 
@@ -54,15 +54,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   MAGMatveevReusable:
-    :commit: 5130d82a75a0f4cd843368edd180cb44032d5ff3
+    :commit: 2a7e7c65520a959591da70306257d0cdaea040e6
     :git: https://github.com/Magora-IOS/MAGMatveevReusable.git
 
 SPEC CHECKSUMS:
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
-  MAGMatveevReusable: eec90a0d85889e1a4f7c2b2f8f9bf27915f9019d
-  MAGTablesCollections: f1eb2b08d760766c0917162f1a0977c474cf561c
+  MAGMatveevReusable: d2de92be58811359b1cd675455fc0064ffa9b468
+  MAGTablesCollections: 846efc9380456d24db1cab342d50e58269574053
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
 
 PODFILE CHECKSUM: 52d9124dfe4a1112fe8bfd3d3666927959a47825
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.1.0

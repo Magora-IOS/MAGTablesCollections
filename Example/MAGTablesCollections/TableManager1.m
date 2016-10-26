@@ -8,11 +8,8 @@
 
 
 #import "TableManager1.h"
-#import "UIView+MAGMore.h"
-#import "NSObject+MAGMore.h"
 #import "Cell1.h"
 #import "Cell2.h"
-#import "MAGCommonDefines.h"
 
 @interface TableManager1 ()
 

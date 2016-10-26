@@ -1,7 +1,6 @@
 
 
 #import "CollectionViewController1.h"
-#import "MAGCustomCollectionViewLayout.h"
 #import "CollectionManager1.h"
 
 @interface CollectionViewController1 ()
