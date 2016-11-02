@@ -593,7 +593,7 @@
                 updatesHappened = YES;
                 [self.tableView beginUpdates];
                 
-                NSMutableArray *changedItems = section.items;
+                NSMutableArray *changedItems = [section.items mutableCopy];
                 [changedItems insertObject:item atIndex:position];
                 section.items = changedItems;
                 
@@ -645,37 +645,34 @@
     NSLog(@"DELETION ITEMS STARTED");
     UITableViewRowAnimation animation = UITableViewRowAnimationNone;
     if (animated) {
-        animation = UITableViewRowAnimationAutomatic;
+        animation = UITableViewRowAnimationBottom;
     }
-    [UIView performWithoutAnimation:^{
+    NSArray *indexpaths = [self indexPathsOfItem:item inSections:sections];
+    if (indexpaths.count) {
+        [self.tableView beginUpdates];
+        [self.tableView deleteRowsAtIndexPaths:indexpaths withRowAnimation:animation];
         
-        NSArray *indexpaths = [self indexPathsOfItem:item inSections:sections];
-        if (indexpaths.count) {
-            [self.tableView beginUpdates];
-            [self.tableView deleteRowsAtIndexPaths:indexpaths withRowAnimation:animation];
-            
-            for (MAGTableSection *section in sections) {
-                NSUInteger itemIndex = [section.items indexOfObject:item];
-                if (itemIndex != NSNotFound) {
-                    NSMutableArray *changedItems = [section.items mutableCopy];
-                    [changedItems removeObject:item];
-                    section.items = changedItems;
-                }
+        for (MAGTableSection *section in sections) {
+            NSUInteger itemIndex = [section.items indexOfObject:item];
+            if (itemIndex != NSNotFound) {
+                NSMutableArray *changedItems = [section.items mutableCopy];
+                [changedItems removeObject:item];
+                section.items = changedItems;
             }
-            [self.tableView endUpdates];
-            
-            NSInteger affectedItemCount = indexpaths.count;
-            if (animation) {
-                RUN_BLOCK(completion, affectedItemCount);
-            } else {
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kMAGTableManagerAnimationTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    RUN_BLOCK(completion, affectedItemCount);
-                });
-            }
-        } else {
-            RUN_BLOCK(completion, 0)
         }
-    }];
+        [self.tableView endUpdates];
+        
+        NSInteger affectedItemCount = indexpaths.count;
+        if (animation) {
+            RUN_BLOCK(completion, affectedItemCount);
+        } else {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kMAGTableManagerAnimationTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                RUN_BLOCK(completion, affectedItemCount);
+            });
+        }
+    } else {
+        RUN_BLOCK(completion, 0)
+    }
 }
 
 @end
