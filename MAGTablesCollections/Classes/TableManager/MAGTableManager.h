@@ -4,11 +4,11 @@
 #import "MAGTableSection.h"
 #import "MAGSeparatorView.h"
 
-typedef void (^RCTableItemBlock) (id item);
-typedef void (^RCTableItemBlock) (id item);
+typedef void (^MAGTableItemBlock) (id item);
 
 typedef void (^MAGViewBlock) (UIView *view);
 
+typedef void (^MAGIntegerBlock) (NSInteger affectedItemCount);
 /**
         @warn TableManager shoudn't contains some of identical section objects at single time!
  */
@@ -17,11 +17,11 @@ typedef void (^MAGViewBlock) (UIView *view);
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (copy, nonatomic) RCTableItemBlock didSelectedCellWithItemBlock;
-@property (copy, nonatomic) RCTableItemBlock didDeselectedCellWithItemBlock;
-@property (copy, nonatomic) RCTableItemBlock didSelectionCellChangedWithItemBlock;
+@property (copy, nonatomic) MAGTableItemBlock didSelectedCellWithItemBlock;
+@property (copy, nonatomic) MAGTableItemBlock didDeselectedCellWithItemBlock;
+@property (copy, nonatomic) MAGTableItemBlock didSelectionCellChangedWithItemBlock;
 
-@property (copy, nonatomic) RCTableItemBlock didTryChangeSelectionItemBlock;//       use it in pair with notChangeSelectionOnSelectionOrDeselectionEvent property
+@property (copy, nonatomic) MAGTableItemBlock didTryChangeSelectionItemBlock;//       use it in pair with notChangeSelectionOnSelectionOrDeselectionEvent property
 
 @property (nonatomic) BOOL itemsOrSectionsWasFilledByUser;
 
@@ -52,14 +52,17 @@ typedef void (^MAGViewBlock) (UIView *view);
 - (NSArray *)indexPathsOfItem:(id)item inSections:(NSArray <MAGTableSection *> *)sections;
 - (NSArray <MAGTableSection *> *)sectionsContainingItem:(id)item;//      some sections might contains same item
 
-- (void)reloadItemAtIndexPath:(NSIndexPath *)indexPath animation:(UITableViewRowAnimation)animation;
-
 - (void)reloadData;
 
 //- (void)selectFirstRowWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition;
 - (void)selectAllRowsWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition;
 - (void)deselectAllRowsWithItem:(id)item animated:(BOOL)animated;
 - (void)clearSelection;
+
+
+- (void)insertItem:(id)item inSection:(MAGTableSection *)section inPosition:(NSInteger)position animated:(BOOL)animated completion:(MAGIntegerBlock)completion;
+- (void)reloadAllRowsWithItem:(id)item inSections:(NSArray<MAGTableSection *> *)sections animated:(BOOL)animated completion:(MAGIntegerBlock)completion;
+- (void)deleteAllItemOccurencies:(id)item inSections:(NSArray<MAGTableSection *> *)sections animated:(BOOL)animated completion:(MAGIntegerBlock)completion;
 
 - (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock;
 - (void)setCloseTableBottomWithSeparatorViewInsteadOfFooterView:(BOOL)closeTableBottomWithSeparatorViewInsteadOfFooterView;
