@@ -602,12 +602,12 @@
                 [self.tableView endUpdates];
                 
                 NSInteger affectedItemCount = indexpaths.count;
-                if (animation) {
-                    RUN_BLOCK(completion, affectedItemCount);
-                } else {
+                if (animated) {
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kMAGTableManagerAnimationTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                         RUN_BLOCK(completion, affectedItemCount);
                     });
+                } else {
+                        RUN_BLOCK(completion, affectedItemCount);
                 }
             }
         }
@@ -629,12 +629,12 @@
         [self.tableView reloadRowsAtIndexPaths:indexpaths withRowAnimation:animation];
         [self.tableView endUpdates];
         NSInteger affectedItemCount = indexpaths.count;
-        if (animation) {
-            RUN_BLOCK(completion, affectedItemCount);
-        } else {
+        if (animated) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kMAGTableManagerAnimationTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 RUN_BLOCK(completion, affectedItemCount);
             });
+        } else {
+            RUN_BLOCK(completion, affectedItemCount);
         }
     } else {
         RUN_BLOCK(completion, 0);
@@ -663,12 +663,12 @@
         [self.tableView endUpdates];
         
         NSInteger affectedItemCount = indexpaths.count;
-        if (animation) {
-            RUN_BLOCK(completion, affectedItemCount);
-        } else {
+        if (animated) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kMAGTableManagerAnimationTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 RUN_BLOCK(completion, affectedItemCount);
             });
+        } else {
+            RUN_BLOCK(completion, affectedItemCount);
         }
     } else {
         RUN_BLOCK(completion, 0)
