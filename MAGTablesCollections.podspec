@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MAGTablesCollections'
-  s.version          = '0.2.3'
+  s.version          = '0.2.4'
   s.summary          = 'Framework for very convenient work with UITableView and UICollectionView'
 
 # This description is used to generate tags and improve search results.
@@ -36,6 +36,6 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-    s.dependency 'MAGMatveevReusable', '~> 0.2.0'
+    s.dependency 'MAGMatveevReusable', '~> 0.2.6'
     s.dependency 'Masonry', '~> 1.0'
 end
