@@ -21,9 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
+	
     [self.tm setDisplayEmptyViewWhenDataIsEmpty:YES classnameForEmptyView:[EmptyView mag_className] emptyViewCustomizationBlock:^(UIView *view) {
         EmptyView *emptyView = (EmptyView *)view;
         emptyView.emptyLabel.text = @"Списочек пуст111";
@@ -31,7 +29,7 @@
     
     self.tm.separatorsColor = [UIColor blueColor];
     
-    [self.tm setCloseTableBottomWithSeparatorViewInsteadOfFooterView:YES];
+    self.tm.useFooterSeparatorViewInsteadOfEmptyTableFooterView = YES;
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSMutableArray *items1 = [@[] mutableCopy];

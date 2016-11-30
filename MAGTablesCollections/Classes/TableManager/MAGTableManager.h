@@ -38,8 +38,9 @@ typedef void (^MAGIntegerBlock) (NSInteger affectedItemCount);
 @property (readonly, strong, nonatomic) NSString *classnameForEmptyView;
 @property (readonly, strong, nonatomic) MAGViewBlock emptyViewCustomizationBlock;
 
-@property (readonly, nonatomic) NSNumber *useFooterSeparatorViewInsteadOfEmptyTableFooterView;//        @(NO) or @(YES)
+@property (nonatomic) BOOL useFooterSeparatorViewInsteadOfEmptyTableFooterView;
 @property (readonly, strong, nonatomic) MAGSeparatorView *footerSeparatorView;
+@property (readonly, strong, nonatomic) UIView *footerSeparatorFundamentView;
 
 @property (strong, nonatomic) UIColor *separatorsColor;
 
@@ -65,7 +66,6 @@ typedef void (^MAGIntegerBlock) (NSInteger affectedItemCount);
 - (void)deleteAllItemOccurencies:(id)item inSections:(NSArray<MAGTableSection *> *)sections animated:(BOOL)animated completion:(MAGIntegerBlock)completion;
 
 - (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock;
-- (void)setUseFooterSeparatorViewInsteadOfEmptyTableFooterView:(NSNumber *)use;
 
 //      might be override
 
