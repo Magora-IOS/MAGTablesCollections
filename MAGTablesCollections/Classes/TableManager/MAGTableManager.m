@@ -91,9 +91,7 @@
     
     
     _tableView = tableView;
-    
-	_useFooterSeparatorViewInsteadOfEmptyTableFooterView = NO;//      SET BY DEFAULT
-    
+        
     self.useSeparatorsZeroInset = YES;
     _tableView.delaysContentTouches = NO;
     
@@ -181,7 +179,7 @@
     //      displaying of footerSeparatorFundamentView will hide standard zebra. We have to not display footerSeparatorView on it if we haven't any items. So we shouldn't display separator always when footerSeparatorFundamentView is visible
     //      displaying of footerSeparatorView needed when we have any items and then we want to close last item with separator
     BOOL hasAnyItems = [self hasAnyItems];
-    BOOL willDisplayFakeEmptyFooterForAvoidStandardStupidZebra = (self.useFooterSeparatorViewInsteadOfEmptyTableFooterView && (!self.tableView.tableFooterView || EQUAL(self.tableView.tableFooterView, self.footerSeparatorFundamentView)));//      add footer for skip visible of stupid standard zebra after last displayed
+    BOOL willDisplayFakeEmptyFooterForAvoidStandardStupidZebra = self.tableView && (self.useFooterSeparatorViewInsteadOfEmptyTableFooterView && (!self.tableView.tableFooterView || EQUAL(self.tableView.tableFooterView, self.footerSeparatorFundamentView)));//      add footer for skip visible of stupid standard zebra after last displayed
     if (willDisplayFakeEmptyFooterForAvoidStandardStupidZebra) {//      we will display view may be without separator view. This needed for hide stupid zebra
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.width, 1)];
         view.backgroundColor = [UIColor clearColor];
