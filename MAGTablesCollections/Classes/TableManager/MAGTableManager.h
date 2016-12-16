@@ -4,6 +4,13 @@
 #import "MAGTableSection.h"
 #import "MAGSeparatorView.h"
 
+#import "MAGInsertOperation.h"
+#import "MAGReloadOperation.h"
+#import "MAGDeleteOperation.h"
+#import "MAGMoveOperation.h"
+
+#define kMAGTableManagerAnimationTimeInterval       0.3//       for covering of 0.25 timeinterval
+
 typedef void (^MAGTableItemBlock) (id item);
 
 typedef void (^MAGViewBlock) (UIView *view);
@@ -61,9 +68,9 @@ typedef void (^MAGIntegerBlock) (NSInteger affectedItemCount);
 - (void)clearSelection;
 
 
-- (void)insertItem:(id)item inSection:(MAGTableSection *)section inPosition:(NSInteger)position animated:(BOOL)animated completion:(MAGIntegerBlock)completion;
-- (void)reloadAllRowsWithItem:(id)item inSections:(NSArray<MAGTableSection *> *)sections animated:(BOOL)animated completion:(MAGIntegerBlock)completion;
-- (void)deleteAllItemOccurencies:(id)item inSections:(NSArray<MAGTableSection *> *)sections animated:(BOOL)animated completion:(MAGIntegerBlock)completion;
+- (void)makeInsertOperations:(NSArray <MAGInsertOperation *> *)operations animated:(BOOL)animated completion:(MAGIntegerBlock)completion;
+- (void)makeReloadOperations:(NSArray <MAGReloadOperation *> *)operations animated:(BOOL)animated completion:(MAGIntegerBlock)completion;
+- (void)makeAllItemOccurenciesDeleteOperations:(NSArray <MAGDeleteOperation *> *)operations animated:(BOOL)animated completion:(MAGIntegerBlock)completion;
 
 - (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock;
 

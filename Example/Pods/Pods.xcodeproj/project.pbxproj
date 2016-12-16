@@ -76,6 +76,14 @@
 		C5E65643DFB805AAFCA78592B4DF03A6 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB7C288BC9CE561AFE095C30003DBC /* MASViewConstraint.m */; };
 		C5F0080C20BD4E51DCA8D1319056E583 /* MAGMatveevReusable.h in Headers */ = {isa = PBXBuildFile; fileRef = 01EB66C51BFCFD19868AF28FD7627892 /* MAGMatveevReusable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C666E69B78545F4A4FD0F27007FAE15D /* MAGMatveevReusable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC830D9DA435EC219F0E22DC5937CBE /* MAGMatveevReusable-dummy.m */; };
+		C7166C671E02E16B00AEA8CD /* MAGInsertOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C7166C651E02E16B00AEA8CD /* MAGInsertOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7166C681E02E16B00AEA8CD /* MAGInsertOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7166C661E02E16B00AEA8CD /* MAGInsertOperation.m */; };
+		C7166C6B1E02E50100AEA8CD /* MAGReloadOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C7166C691E02E50100AEA8CD /* MAGReloadOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7166C6C1E02E50100AEA8CD /* MAGReloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7166C6A1E02E50100AEA8CD /* MAGReloadOperation.m */; };
+		C7166C6F1E02E54A00AEA8CD /* MAGDeleteOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C7166C6D1E02E54A00AEA8CD /* MAGDeleteOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7166C701E02E54A00AEA8CD /* MAGDeleteOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7166C6E1E02E54A00AEA8CD /* MAGDeleteOperation.m */; };
+		C7166C731E02E5DC00AEA8CD /* MAGMoveOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C7166C711E02E5DC00AEA8CD /* MAGMoveOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7166C741E02E5DC00AEA8CD /* MAGMoveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7166C721E02E5DC00AEA8CD /* MAGMoveOperation.m */; };
 		CA232749CC822514E2A07EF0497925E6 /* MAGTablesCollections-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB9F6091E72DD0CCE930FF2A2EFD7C0F /* MAGTablesCollections-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE01268DB5428CC7CF0BBF2B43987E73 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E04ED542E58026BDA15C507A781356F1 /* View+MASAdditions.m */; };
 		CE3615F9A992D5DBEE037E21CB32F796 /* UITextView+MAGMore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF25BFC82FC88F2D5ED38A44ABA9892 /* UITextView+MAGMore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -258,6 +266,14 @@
 		BF73F33C06315A228DBF02DFF6FDB6E0 /* Pods-MAGTablesCollections_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MAGTablesCollections_Tests-dummy.m"; sourceTree = "<group>"; };
 		C0F6555680F80139A8DF7CCA123B2E61 /* MAGCommonDefines.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MAGCommonDefines.m; path = MAGMatveevReusable/Classes/MAGCommonDefines.m; sourceTree = "<group>"; };
 		C48B966F144CD2184913A6A99E4CC08C /* EXTScope.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXTScope.m; path = extobjc/EXTScope.m; sourceTree = "<group>"; };
+		C7166C651E02E16B00AEA8CD /* MAGInsertOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGInsertOperation.h; sourceTree = "<group>"; };
+		C7166C661E02E16B00AEA8CD /* MAGInsertOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGInsertOperation.m; sourceTree = "<group>"; };
+		C7166C691E02E50100AEA8CD /* MAGReloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGReloadOperation.h; sourceTree = "<group>"; };
+		C7166C6A1E02E50100AEA8CD /* MAGReloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGReloadOperation.m; sourceTree = "<group>"; };
+		C7166C6D1E02E54A00AEA8CD /* MAGDeleteOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGDeleteOperation.h; sourceTree = "<group>"; };
+		C7166C6E1E02E54A00AEA8CD /* MAGDeleteOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGDeleteOperation.m; sourceTree = "<group>"; };
+		C7166C711E02E5DC00AEA8CD /* MAGMoveOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGMoveOperation.h; sourceTree = "<group>"; };
+		C7166C721E02E5DC00AEA8CD /* MAGMoveOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGMoveOperation.m; sourceTree = "<group>"; };
 		CC1B850F429B377F4C060C90F027C48A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1747D7EF3296BBEDD5C694E2186096A /* MAGCollectionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAGCollectionManager.h; sourceTree = "<group>"; };
 		D45EDBF655782050C496A7709FDBBD39 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
@@ -385,6 +401,14 @@
 				1EB9A04D6A01108BEBFB5A47E1A73F79 /* MAGTableManager.m */,
 				AC523DB30453B46877DC4ED13A746E80 /* MAGTableSection.h */,
 				410FED622E51E826E4B54FDFAC933A05 /* MAGTableSection.m */,
+				C7166C651E02E16B00AEA8CD /* MAGInsertOperation.h */,
+				C7166C661E02E16B00AEA8CD /* MAGInsertOperation.m */,
+				C7166C691E02E50100AEA8CD /* MAGReloadOperation.h */,
+				C7166C6A1E02E50100AEA8CD /* MAGReloadOperation.m */,
+				C7166C6D1E02E54A00AEA8CD /* MAGDeleteOperation.h */,
+				C7166C6E1E02E54A00AEA8CD /* MAGDeleteOperation.m */,
+				C7166C711E02E5DC00AEA8CD /* MAGMoveOperation.h */,
+				C7166C721E02E5DC00AEA8CD /* MAGMoveOperation.m */,
 			);
 			path = TableManager;
 			sourceTree = "<group>";
@@ -780,9 +804,13 @@
 				F4764267337F129B143D005A1D579AB9 /* MAGSeparatorView.h in Headers */,
 				6A174035BCFCE75FFB9ABC10825FEC97 /* MAGTableManager.h in Headers */,
 				CA232749CC822514E2A07EF0497925E6 /* MAGTablesCollections-umbrella.h in Headers */,
+				C7166C731E02E5DC00AEA8CD /* MAGMoveOperation.h in Headers */,
 				2F145E3CFD4F2F2D26C0BF1AE606F704 /* MAGTablesCollections.h in Headers */,
+				C7166C6F1E02E54A00AEA8CD /* MAGDeleteOperation.h in Headers */,
+				C7166C671E02E16B00AEA8CD /* MAGInsertOperation.h in Headers */,
 				D055E67E4CD2382927A9971787063DD1 /* MAGTableSection.h in Headers */,
 				3E51AE9994C74A7928047EFCE8942ADE /* UICollectionViewCell+MAGMore.h in Headers */,
+				C7166C6B1E02E50100AEA8CD /* MAGReloadOperation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1005,11 +1033,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7166C701E02E54A00AEA8CD /* MAGDeleteOperation.m in Sources */,
 				19FDDD1DC5FAE2786A2E933BCC6225C2 /* MAGCollectionManager.m in Sources */,
 				E87BBE428D0E4216456732B5C6D4BC97 /* MAGCustomCollectionViewLayout.m in Sources */,
 				9E89B13CFFFE01D289230B76FA018CA8 /* MAGSeparatorView.m in Sources */,
+				C7166C6C1E02E50100AEA8CD /* MAGReloadOperation.m in Sources */,
 				9C28B083178C4A4820371A566399BD15 /* MAGTableManager.m in Sources */,
 				56C6D5E25712DC39D5441C7E786E341A /* MAGTablesCollections-dummy.m in Sources */,
+				C7166C741E02E5DC00AEA8CD /* MAGMoveOperation.m in Sources */,
+				C7166C681E02E16B00AEA8CD /* MAGInsertOperation.m in Sources */,
 				0DC0DF58406A087C01DCEDB7F95653E6 /* MAGTableSection.m in Sources */,
 				D6EFA4EB16F54EB8D6B89DC831446899 /* UICollectionViewCell+MAGMore.m in Sources */,
 			);
