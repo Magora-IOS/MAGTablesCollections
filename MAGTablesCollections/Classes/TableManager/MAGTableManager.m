@@ -286,7 +286,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     CGFloat result = 0.00001;
-    if (self.emptyView.hidden) {
+	BOOL emptyViewDisplayed = [self isEmptyViewDisplayed];
+    if (!emptyViewDisplayed) {
         MAGTableSection *tableSection;
         if (section < self.sections.count) {
             tableSection = self.sections[section];
@@ -298,7 +299,8 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *result;
-    if (self.emptyView.hidden) {
+	BOOL emptyViewDisplayed = [self isEmptyViewDisplayed];
+    if (!emptyViewDisplayed) {
         MAGTableSection *tableSection;
         if (section < self.sections.count) {
             tableSection = self.sections[section];
@@ -315,7 +317,8 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UIView *result;
-    if (self.emptyView.hidden) {
+	BOOL emptyViewDisplayed = [self isEmptyViewDisplayed];
+    if (!emptyViewDisplayed) {
         MAGTableSection *tableSection;
         if (section < self.sections.count) {
             tableSection = self.sections[section];
@@ -332,7 +335,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     CGFloat result = 0.00001;
-    if (self.emptyView.hidden) {
+	BOOL emptyViewDisplayed = [self isEmptyViewDisplayed];
+    if (!emptyViewDisplayed) {
         MAGTableSection *tableSection;
         if (section < self.sections.count) {
             tableSection = self.sections[section];
@@ -340,6 +344,10 @@
         }
     }
     return result;
+}
+
+- (BOOL)isEmptyViewDisplayed {
+	BOOL result = self.emptyView && !self.emptyView.hidden;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
