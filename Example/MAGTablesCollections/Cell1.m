@@ -19,7 +19,7 @@
 @implementation Cell1
 
 - (void)setItem:(id)item {
-    _item = item;
+	[super setItem:item];
     
     self.myTF.text = item;
 }

@@ -84,6 +84,8 @@
 		C7166C701E02E54A00AEA8CD /* MAGDeleteOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7166C6E1E02E54A00AEA8CD /* MAGDeleteOperation.m */; };
 		C7166C731E02E5DC00AEA8CD /* MAGMoveOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C7166C711E02E5DC00AEA8CD /* MAGMoveOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7166C741E02E5DC00AEA8CD /* MAGMoveOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7166C721E02E5DC00AEA8CD /* MAGMoveOperation.m */; };
+		C7EC00B91E082B6E003FFDD6 /* MAGBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7EC00B61E082B63003FFDD6 /* MAGBaseCell.m */; };
+		C7EC00BA1E082B74003FFDD6 /* MAGBaseCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C7EC00B51E082B63003FFDD6 /* MAGBaseCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA232749CC822514E2A07EF0497925E6 /* MAGTablesCollections-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB9F6091E72DD0CCE930FF2A2EFD7C0F /* MAGTablesCollections-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE01268DB5428CC7CF0BBF2B43987E73 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E04ED542E58026BDA15C507A781356F1 /* View+MASAdditions.m */; };
 		CE3615F9A992D5DBEE037E21CB32F796 /* UITextView+MAGMore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FF25BFC82FC88F2D5ED38A44ABA9892 /* UITextView+MAGMore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -274,6 +276,8 @@
 		C7166C6E1E02E54A00AEA8CD /* MAGDeleteOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGDeleteOperation.m; sourceTree = "<group>"; };
 		C7166C711E02E5DC00AEA8CD /* MAGMoveOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGMoveOperation.h; sourceTree = "<group>"; };
 		C7166C721E02E5DC00AEA8CD /* MAGMoveOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGMoveOperation.m; sourceTree = "<group>"; };
+		C7EC00B51E082B63003FFDD6 /* MAGBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAGBaseCell.h; sourceTree = "<group>"; };
+		C7EC00B61E082B63003FFDD6 /* MAGBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAGBaseCell.m; sourceTree = "<group>"; };
 		CC1B850F429B377F4C060C90F027C48A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1747D7EF3296BBEDD5C694E2186096A /* MAGCollectionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAGCollectionManager.h; sourceTree = "<group>"; };
 		D45EDBF655782050C496A7709FDBBD39 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
@@ -395,6 +399,8 @@
 		1A11565C5B1F0C0F49FCD1777934E0AE /* TableManager */ = {
 			isa = PBXGroup;
 			children = (
+				C7EC00B51E082B63003FFDD6 /* MAGBaseCell.h */,
+				C7EC00B61E082B63003FFDD6 /* MAGBaseCell.m */,
 				0B78CFED38CFA3AB951DD388E09D9AB1 /* MAGSeparatorView.h */,
 				2AEAAFA20FEDD21181AB1630627D84D2 /* MAGSeparatorView.m */,
 				0C7509835A852900E6AD588BFCF6AE0F /* MAGTableManager.h */,
@@ -800,6 +806,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7649603E76C94F5B4021A193513A1E84 /* MAGCollectionManager.h in Headers */,
+				C7EC00BA1E082B74003FFDD6 /* MAGBaseCell.h in Headers */,
 				E74878E377880CCC474C4C1A68238227 /* MAGCustomCollectionViewLayout.h in Headers */,
 				F4764267337F129B143D005A1D579AB9 /* MAGSeparatorView.h in Headers */,
 				6A174035BCFCE75FFB9ABC10825FEC97 /* MAGTableManager.h in Headers */,
@@ -1041,6 +1048,7 @@
 				9C28B083178C4A4820371A566399BD15 /* MAGTableManager.m in Sources */,
 				56C6D5E25712DC39D5441C7E786E341A /* MAGTablesCollections-dummy.m in Sources */,
 				C7166C741E02E5DC00AEA8CD /* MAGMoveOperation.m in Sources */,
+				C7EC00B91E082B6E003FFDD6 /* MAGBaseCell.m in Sources */,
 				C7166C681E02E16B00AEA8CD /* MAGInsertOperation.m in Sources */,
 				0DC0DF58406A087C01DCEDB7F95653E6 /* MAGTableSection.m in Sources */,
 				D6EFA4EB16F54EB8D6B89DC831446899 /* UICollectionViewCell+MAGMore.m in Sources */,

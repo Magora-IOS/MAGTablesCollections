@@ -86,13 +86,20 @@
 - (void)setTableView:(UITableView *)tableView {
     _tableView.dataSource = nil;
     _tableView.delegate = nil;
-    
-    
+	
+	
     _tableView = tableView;
-        
-    self.useSeparatorsZeroInset = YES;
+	
+	self.tableView.separatorColor = [UIColor clearColor];//		will use custom separators instead
+	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+	self.useSeparatorsZeroInset = YES;
+	if (!self.initialSeparatorInset) {
+		_initialSeparatorInset = 	[NSValue valueWithUIEdgeInsets:self.tableView.separatorInset];
+	}
     _tableView.delaysContentTouches = NO;
-    
+	
+	
     NSArray *cellClassNames = [self cellClassNamesForNibOrClassRegistering];
     //      at first try to register nib with same FileName's base as classname. else try to register class
     for (NSString *cellClassname in cellClassNames) {
@@ -189,7 +196,7 @@
             separatorView.y = -[MAGSeparatorView mostThinLineWidth];
             
             separatorView.contentMode = UIViewContentModeTop;
-            separatorView.color = self.tableView.separatorColor;
+            separatorView.color = self.separatorsColor;
             
             _footerSeparatorView = separatorView;
         }
@@ -207,7 +214,7 @@
 
 - (void)setSeparatorsColor:(UIColor *)separatorsColor {
     _separatorsColor = separatorsColor;
-    self.tableView.separatorColor = separatorsColor;
+//    self.tableView.separatorColor = separatorsColor;
     self.footerSeparatorView.color = separatorsColor;
 }
 
@@ -448,6 +455,31 @@
     if (contains) {
         [cell setSelected:YES animated:NO];
     }
+	if ([cell isKindOfClass:[MAGBaseCell class]]) {
+		MAGBaseCell *baseCell = (MAGBaseCell *)cell;
+		baseCell.separatorColor = self.separatorsColor;
+		UIColor *selectedBackgroundColor = [self selectedBackgroundColorForBaseCell:cell atIndexPath:indexPath];
+		baseCell.selectedBackgroundColor = selectedBackgroundColor;
+		SeparatorDisplayingMode normalStateSeparatorMode = [self separatorDisplayingModeForBaseCellNormalState:cell atIndexPath:indexPath];
+		SeparatorDisplayingMode selectedStateSeparatorMode = [self separatorDisplayingModeForBaseCellNormalState:cell atIndexPath:indexPath];
+		baseCell.separatorDisplayingMode = normalStateSeparatorMode;
+		baseCell.selectedStateSeparatorDisplayingMode = selectedStateSeparatorMode;
+	}
+}
+
+- (UIColor *)selectedBackgroundColorForBaseCell:(MAGBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+	UIColor *result = RGB(208,208,208);
+	return result;
+}
+
+- (SeparatorDisplayingMode)separatorDisplayingModeForBaseCellNormalState:(MAGBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+	SeparatorDisplayingMode result = SeparatorDisplayingModeBottom;
+	return result;
+}
+
+- (SeparatorDisplayingMode)separatorDisplayingModeForBaseCellSelectedState:(MAGBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+	SeparatorDisplayingMode result = SeparatorDisplayingModeNone;
+	return result;
 }
 
 #pragma mark - From Childs

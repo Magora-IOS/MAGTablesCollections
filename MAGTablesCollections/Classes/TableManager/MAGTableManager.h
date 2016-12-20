@@ -2,6 +2,7 @@
 #import <Foundation/Foundation.h>
 
 #import "MAGTableSection.h"
+#import "MAGBaseCell.h"
 #import "MAGSeparatorView.h"
 
 #import "MAGInsertOperation.h"
@@ -45,6 +46,8 @@ typedef void (^MAGIntegerBlock) (NSInteger affectedItemCount);
 @property (readonly, strong, nonatomic) NSString *classnameForEmptyView;
 @property (readonly, strong, nonatomic) MAGViewBlock emptyViewCustomizationBlock;
 
+@property (readonly, nonatomic) NSValue *initialSeparatorInset;
+
 @property (nonatomic) BOOL useFooterSeparatorViewInsteadOfEmptyTableFooterView;
 @property (readonly, strong, nonatomic) MAGSeparatorView *footerSeparatorView;
 @property (readonly, strong, nonatomic) UIView *footerSeparatorFundamentView;
@@ -74,6 +77,7 @@ typedef void (^MAGIntegerBlock) (NSInteger affectedItemCount);
 
 - (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock;
 
+
 //      might be override
 
 - (CGFloat)heightForItem:(id)item;
@@ -84,6 +88,10 @@ typedef void (^MAGIntegerBlock) (NSInteger affectedItemCount);
 - (NSString *)footerIdentifierForSection:(MAGTableSection *)section;
 
 - (BOOL)shouldHighlightAndSelectCellAtIndexPath:(NSIndexPath *)indexPath;
+- (UIColor *)selectedBackgroundColorForBaseCell:(MAGBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (SeparatorDisplayingMode)separatorDisplayingModeForBaseCellNormalState:(MAGBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (SeparatorDisplayingMode)separatorDisplayingModeForBaseCellSelectedState:(MAGBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+
 // must be override
 - (UITableViewCell *)permanentCellForItem:(id)item atIndexPath:(NSIndexPath *)indexPath;
 - (NSString *)cellIdentifierForItem:(id)item atIndexPath:(NSIndexPath *)indexPath;//        ! indexPath added bcs different sections can contains same item but display it in different cell types

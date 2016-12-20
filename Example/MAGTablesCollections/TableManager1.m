@@ -23,6 +23,12 @@
 
 @implementation TableManager1
 
+- (void)awakeFromNib {
+	[super awakeFromNib];;
+	
+	self.separatorsColor = [UIColor redColor];
+}
+
 - (NSString *)cellIdentifierForItem:(id)item atIndexPath:(NSIndexPath *)indexPath {
     NSString *result;
     switch (indexPath.section) {
@@ -115,6 +121,30 @@
 
 - (void)configureHeaderView:(UIView *)view forSection:(MAGTableSection *)section {
 
+}
+
+- (UIColor *)selectedBackgroundColorForBaseCell:(MAGBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+	UIColor *result = [UIColor orangeColor];
+	if (indexPath.row % 2 == 0) {
+		result = [UIColor lightGrayColor];
+	}
+	return result;
+}
+
+- (SeparatorDisplayingMode)separatorDisplayingModeForBaseCellNormalState:(MAGBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+	SeparatorDisplayingMode result = SeparatorDisplayingModeNone;
+	if (indexPath.row % 2 == 0) {
+		result = SeparatorDisplayingModeBottom;
+	}
+	return result;
+}
+
+- (SeparatorDisplayingMode)separatorDisplayingModeForBaseCellSelectedState:(MAGBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+	SeparatorDisplayingMode result = SeparatorDisplayingModeNone;
+//	if (indexPath.row % 2 == 0) {
+//		result = SeparatorDisplayingModeBottom;
+//	}
+	return result;
 }
 
 @end

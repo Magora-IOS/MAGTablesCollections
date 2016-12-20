@@ -12,6 +12,7 @@
 #import "MAGCollectionManager.h"
 #import "MAGCustomCollectionViewLayout.h"
 #import "UICollectionViewCell+MAGMore.h"
+#import "MAGBaseCell.h"
 #import "MAGTableManager.h"
 #import "MAGTableSection.h"
 #import "MAGSeparatorView.h"
