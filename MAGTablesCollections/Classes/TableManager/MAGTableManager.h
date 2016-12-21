@@ -77,6 +77,8 @@ typedef void (^MAGIntegerBlock) (NSInteger affectedItemCount);
 
 - (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock;
 
++ (void)setDefaultSelectionColor:(UIColor *)color;//       do it on start of application :)
++ (void)setDefaultSeparatorColor:(UIColor *)color;//       do it on start of application :)
 
 //      might be override
 
@@ -94,7 +96,7 @@ typedef void (^MAGIntegerBlock) (NSInteger affectedItemCount);
 
 // must be override
 - (UITableViewCell *)permanentCellForItem:(id)item atIndexPath:(NSIndexPath *)indexPath;
-- (NSString *)cellIdentifierForItem:(id)item atIndexPath:(NSIndexPath *)indexPath;//        ! indexPath added bcs different sections can contains same item but display it in different cell types
+- (NSString *)cellIdentifierForItem:(id)item atIndexPath:(NSIndexPath *)indexPath;//        ! indexPath added bcs different sections can contains same item but display it in different cell types. For avoid wrong behavior YOU MUSTNOT return here cell's identifier when you return permanentCell for this indexPath from - (UITableViewCell *)permanentCellForItem:(id)item atIndexPath:(NSIndexPath *)indexPath method.
 - (NSArray *)cellClassNamesForNibOrClassRegistering;//        for registering of nib or class (if nib not exists)
 - (void)configureCell:(__kindof UITableViewCell *)cell withItem:(id)item atIndexPath:(NSIndexPath *)indexPath;//     indexPath added for same reason
 - (void)configureHeaderView:(UIView *)view forSection:(MAGTableSection *)section;

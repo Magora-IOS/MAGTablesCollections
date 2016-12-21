@@ -3,6 +3,9 @@
 #import "MAGCommonDefines.h"
 #import "UIView+MAGMore.h"
 
+static UIColor *_defaultSelectionColorSTATIC;
+static UIColor *_defaultSeparatorColorSTATIC;
+
 @interface MAGTableManager ()
 
 @property (readonly, weak, nonatomic) UIView *emptyView;//      weak bcs added as subview
@@ -158,6 +161,14 @@
     [self updateEmptyLabel];
 }
 
++ (void)setDefaultSelectionColor:(UIColor *)color {
+    _defaultSelectionColorSTATIC = color;
+}
+
++ (void)setDefaultSeparatorColor:(UIColor *)color {
+    _defaultSeparatorColorSTATIC = color;
+}
+
 - (void)updateEmptyLabel {
     if (self.emptyView) {
         if (self.displayEmptyViewWhenDataIsEmpty) {
@@ -196,8 +207,8 @@
             separatorView.y = -[MAGSeparatorView mostThinLineWidth];
             
             separatorView.contentMode = UIViewContentModeTop;
-            separatorView.color = self.separatorsColor;
-            
+            separatorView.color = [self separatorColorForUsing];
+			
             _footerSeparatorView = separatorView;
         }
         _footerSeparatorFundamentView = view;
@@ -210,6 +221,14 @@
             _footerSeparatorView = nil;
         }
     }
+}
+
+- (UIColor *)separatorColorForUsing {
+	UIColor *result = self.separatorsColor;
+	if (!result) {
+		result = _defaultSeparatorColorSTATIC;
+	}
+	return result;
 }
 
 - (void)setSeparatorsColor:(UIColor *)separatorsColor {
@@ -457,7 +476,7 @@
     }
 	if ([cell isKindOfClass:[MAGBaseCell class]]) {
 		MAGBaseCell *baseCell = (MAGBaseCell *)cell;
-		baseCell.separatorColor = self.separatorsColor;
+		baseCell.separatorColor = [self separatorColorForUsing];
 		UIColor *selectedBackgroundColor = [self selectedBackgroundColorForBaseCell:cell atIndexPath:indexPath];
 		baseCell.selectedBackgroundColor = selectedBackgroundColor;
 		SeparatorDisplayingMode normalStateSeparatorMode = [self separatorDisplayingModeForBaseCellNormalState:cell atIndexPath:indexPath];

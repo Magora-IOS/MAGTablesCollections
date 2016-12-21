@@ -11,8 +11,6 @@
 #import "MAGSeparatorView.h"
 #import "UIView+MAGMore.h"
 
-static UIColor *_defaultSelectionColorSTATIC;
-
 @interface MAGBaseCell ()
 
 @property (strong, nonatomic) MAGSeparatorView *topSeparatorView;
@@ -24,10 +22,6 @@ static UIColor *_defaultSelectionColorSTATIC;
 @end
 
 @implementation MAGBaseCell
-
-+ (void)setDefaultSelectionColor:(UIColor *)color {
-    _defaultSelectionColorSTATIC = color;
-}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -71,14 +65,17 @@ static UIColor *_defaultSelectionColorSTATIC;
 	NSNumber *topMargin;
 	for (UIView *subview in self.contentView.subviews) {
 //		NSLog(@"SUBVIEW %@",subview);
-		if (subview.bottom > result) {
-			result = subview.bottom;
-		}
-		if (!topMargin) {
-			topMargin = @(subview.y);
-		} else {
-			if (subview.y < topMargin.doubleValue) {
+		BOOL isViewExternal = [self viewIsExternal:subview];
+		if (isViewExternal) {
+			if (subview.bottom > result) {
+				result = subview.bottom;
+			}
+			if (!topMargin) {
 				topMargin = @(subview.y);
+			} else {
+				if (subview.y < topMargin.doubleValue) {
+					topMargin = @(subview.y);
+				}
 			}
 		}
 	}
@@ -87,6 +84,11 @@ static UIColor *_defaultSelectionColorSTATIC;
 	} else {
 		result += self.bottomMargin;
 	}
+	return result;
+}
+
+- (BOOL)viewIsExternal:(UIView *)view {
+	BOOL result = (view != self.topSeparatorView) && (view != self.bottomSeparatorView) && (view != self.selectedTopSeparatorView) && (view != self.selectedBottomSeparatorView);
 	return result;
 }
 
@@ -158,14 +160,12 @@ static UIColor *_defaultSelectionColorSTATIC;
 		_topSeparatorView.contentMode = UIViewContentModeTop;
 		_topSeparatorView.backgroundColor = color;
 		[self.contentView addSubview:_topSeparatorView];
-//		[self.selectedBackgroundView addSubview:_topSeparatorView];
     }
 	if (!self.bottomSeparatorView && displayBottomSeparator) {
 		_bottomSeparatorView = [MAGSeparatorView new];
 		_bottomSeparatorView.contentMode = UIViewContentModeBottom;
 		_bottomSeparatorView.backgroundColor = color;
 		[self.contentView addSubview:_bottomSeparatorView];
-//		[self.selectedBackgroundView addSubview:_bottomSeparatorView];
     }
     _topSeparatorView.hidden = !displayTopSeparator;
     _bottomSeparatorView.hidden = !displayBottomSeparator;

@@ -34,8 +34,6 @@ typedef NS_ENUM(NSInteger, SeparatorDisplayingMode) {
 
 @property (strong, nonatomic) id item;
 
-+ (void)setDefaultSelectionColor:(UIColor *)color;//       do it on start of application :)
-
 - (CGFloat)requiredHeight;
 
 @end
