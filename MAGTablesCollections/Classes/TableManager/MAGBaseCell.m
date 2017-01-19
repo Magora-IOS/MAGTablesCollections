@@ -58,7 +58,7 @@
 //}
 
 - (CGFloat)requiredHeight {
-	CGFloat result;
+	CGFloat result = 0;
 	[self.contentView mag_relayout];
 //	NSLog(@"NEEDED HEIGHT:");
 
