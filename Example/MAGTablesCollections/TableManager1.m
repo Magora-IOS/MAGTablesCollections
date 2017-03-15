@@ -109,7 +109,7 @@
                 break;
                 
             case 1:
-                result = self.sampleCell2.height;
+                result = [self.sampleCell2 requiredHeight];
                 break;
                 
             default:
