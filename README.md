@@ -55,12 +55,10 @@ Or to know which sections contains your item:
 	makeReloadOperations: animated: completion:
 	makeAllItemOccurenciesDeleteOperations: animated: completion:
 			
-II Redefinition: Here exists category for redefinition of methods to get better control over tableManager: MAGTableManager+Redefinition
-		
-1 If you use MAGBaseCell as cells, then you have additional possibilities:
+II For better results use MAGBaseCell as cells, bcs then you will have additional possibilities:
 		
 1) Cells extended with good system of separators displaying inside cell
-2) Autocalculation of cell's height. To have it you should:
+2) Autocalculation of cell's height bypassing stupid system methods (which differs for iOS versions). To have it you should:
 	a) To know about "top view" is subview with minimal Y of cell's contentView's subviews (it is important far)
 	b) So you can specify that bottom margin should be equal to topView y: bottomMarginEqualToTopViewMargin = YES
 	c) else if you want custom bottom margin, then bottomMarginEqualToTopViewMargin = NO, bottomMargin = 15.0 (for example)
@@ -69,27 +67,27 @@ II Redefinition: Here exists category for redefinition of methods to get better 
 3) you can store any item inside of cell.
 		
 III EASY REQUIREMENTS:
-After subclassing of MAGTableManager you MUST redefine next methods:
+After subclassing of MAGTableManager you MUST redefine next methods (they contains inside category MAGTableManager+Redefinition):
 		
--cellClassNamesForNibOrClassRegistering return here array of cell class names for autoregistration on reusable of them. Example:
+1 -cellClassNamesForNibOrClassRegistering return here array of cell class names for autoregistration on reusable of them. Example:
 InfoCell, UserCell have InfoCell.xib and UserCell.xib
 ManagerCell haven't ManagerCell.xib
 So for addition all of them as reusable cells:
 @[[InfoCell class], [UserCell class], [Manager class]] - just return array of them's classes
  
 	
-		- permanentCellForItem:atIndexPath: - here you should return cells which mustn't be reusable and must be as constantly visible cells.
+2 - permanentCellForItem:atIndexPath: - here you should return cells which mustn't be reusable and must be as constantly visible cells.
  
-		- cellIdentifierForItem: atIndexPath: - return cellIdentifier for table might know which cell return for this indexPath ;//        indexPath added bcs different sections can contains same item but display it in different cell types. For avoid wrong behavior YOU MUSTNOT return here cell's identifier when you return permanentCell for this indexPath from - (UITableViewCell *)permanentCellForItem:(id)item atIndexPath:(NSIndexPath *)indexPath method.
+3 - cellIdentifierForItem: atIndexPath: - return cellIdentifier for table might know which cell return for this indexPath ;//        indexPath added bcs different sections can contains same item but display it in different cell types. For avoid wrong behavior YOU MUSTNOT return here cell's identifier when you return permanentCell for this indexPath from - (UITableViewCell *)permanentCellForItem:(id)item atIndexPath:(NSIndexPath *)indexPath method.
 
-		- configureCell: withItem: atIndexPath: - here you can configure your cell if needed
+4 - configureCell: withItem: atIndexPath: - here you can configure your cell if needed
 
-		- configureHeaderView: forSection: - is required bcs at any time you can add headerView
-		- configureFooterView: forSection:  - is required bcs at any time you can add footerView
+5 - configureHeaderView: forSection: - is required bcs at any time you can add headerView
+6 - configureFooterView: forSection:  - is required bcs at any time you can add footerView
 		
-		OPTIONALLY for increasing of control you can redefine next methods:
-			- heightForItem: - specify cell height for some item. Take in attention that some sections might contains the same item, so be careful!
-			- shouldHighlightAndSelectCellAtIndexPath: - you can specify indexpaths which yon wantn't to be highlightable and selectable
-			- selectedBackgroundColorForBaseCell: atIndexPath: - specify selected background color for concrete baseCells (it works with MAGBaseCell only!)
-			- separatorDisplayingModeForBaseCellNormalState: atIndexPath: - specify separatorDisplayingMode for normal state ob baseCell at indexPath (it works with MAGBaseCell only!)
-			- separatorDisplayingModeForBaseCellSelectedState: atIndexPath: - specify separatorDisplayingMode for selected state ob baseCell at indexPath (it works with MAGBaseCell only!)
+IV OPTIONALLY for increasing of features you can redefine next methods:
+- heightForItem: - specify cell height for some item. Take in attention that some sections might contains the same item, so be careful!
+- shouldHighlightAndSelectCellAtIndexPath: - you can specify indexpaths which yon wantn't to be highlightable and selectable
+- selectedBackgroundColorForBaseCell: atIndexPath: - specify selected background color for concrete baseCells (it works with MAGBaseCell only!)
+- separatorDisplayingModeForBaseCellNormalState: atIndexPath: - specify separatorDisplayingMode for normal state ob baseCell at indexPath (it works with MAGBaseCell only!)
+- separatorDisplayingModeForBaseCellSelectedState: atIndexPath: - specify separatorDisplayingMode for selected state ob baseCell at indexPath (it works with MAGBaseCell only!)
