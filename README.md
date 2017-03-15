@@ -72,14 +72,14 @@ makeAllItemOccurenciesDeleteOperations: animated: completion:
 		
 	d) at MAGTableManager  - heightForItem:  you should return your [baseCell requiredHeight]
 For example: bottomMarginEqualToTopViewMargin = YES
-![alt tag](http://github.com/Magora-IOS/MAGTablesCollections/blob/master/Preview/BottomMarginEqualToTopMargin.png)
+![alt tag](https://github.com/Magora-IOS/MAGTablesCollections/blob/master/Preview/BottomMarginEqualToTopMargin.png)
 result
-![alt tag](http://github.com/Magora-IOS/MAGTablesCollections/blob/master/Preview/result_equal.png)
+![alt tag](https://github.com/Magora-IOS/MAGTablesCollections/blob/master/Preview/result_equal.png)
 
 bottomMarginEqualToTopViewMargin = NO, bottomMargin = 50
-![alt tag](http://github.com/Magora-IOS/MAGTablesCollections/blob/master/Preview/BottomMarginNOTEQUALtoTopMarginAndSetTo50.png)
+![alt tag](https://github.com/Magora-IOS/MAGTablesCollections/blob/master/Preview/BottomMarginNOTEQUALtoTopMarginAndSetTo50.png)
 result:
-![alt tag](http://github.com/Magora-IOS/MAGTablesCollections/blob/master/Preview/result_50.png)
+![alt tag](https://github.com/Magora-IOS/MAGTablesCollections/blob/master/Preview/result_50.png)
 
 #### So you can link top of most top contentView's subview to top and then configure bottomMarginEqualToTopViewMargin, bottomMargin properties as you want!
 
