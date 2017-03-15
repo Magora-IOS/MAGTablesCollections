@@ -6,7 +6,7 @@ With this class you mustn't interact with tableView directly but should to do it
         
 Take in attention that MAGTableManager prefer works with MAGBaseCell-like cells (but it is not required. It required for special abilities of MAGTableManager and its cells)
 		
-FEATURES:
+I MAGTableManager FEATURES:
 	
 1 Displaying of separators at full wide: useSeparatorsZeroInset = YES
  
@@ -16,10 +16,11 @@ FEATURES:
 		
 4 Display backgroundColor of allCells in alternate color order inside each section: alternateBackgroundColors = @[myColor1, myColor2, myColor3, etc]
 	
-5 Display emptyView over tableView when data is empty: setDisplayEmptyViewWhenDataIsEmpty:YES classnameForEmptyView:[MyTableEmptyView class] emptyViewCustomizationBlock:^(UIView *view) {
-			MyTableEmptyView *v = (MyTableEmptyView *)view; 
-			v.title = @"List is empty";
-			}
+5 Display emptyView over tableView when data is empty: 
+	setDisplayEmptyViewWhenDataIsEmpty:YES classnameForEmptyView:[MyTableEmptyView class] emptyViewCustomizationBlock:^(UIView *view) {
+		MyTableEmptyView *v = (MyTableEmptyView *)view; 
+		v.title = @"List is empty";
+	}
  
 6 If you want close your table's bottom for avoid default zebra from separators and close bottom of last cell, then you can
 set useFooterSeparatorViewInsteadOfEmptyTableFooterView = YES.
@@ -54,28 +55,27 @@ Or to know which sections contains your item:
 	makeReloadOperations: animated: completion:
 	makeAllItemOccurenciesDeleteOperations: animated: completion:
 			
-		Here exists category for redefinition of methods to get better control over tableManager: MAGTableManager+Redefinition
+II Redefinition: Here exists category for redefinition of methods to get better control over tableManager: MAGTableManager+Redefinition
 		
-		If you use MAGBaseCell as cells, then you have additional possibilities:
+1 If you use MAGBaseCell as cells, then you have additional possibilities:
 		
-		1) Cells extended with good system of separators displaying inside cell
-		2) You can use autocalculation of cell's height. To do it:
-			a) You should to know that "top view" is subview with minimal Y of cell's contentView's subviews
-			b) so you can specify that bottom margin should be equal to topView y: bottomMarginEqualToTopViewMargin = YES
-			c) else if you want custom bottom margin, then bottomMarginEqualToTopViewMargin = NO, bottomMargin = 15.0 (for example)
-			note: you can setup bottomMarginEqualToTopViewMargin and bottomMargin from both xib or code :)
-			d) at MAGTableManager  - heightForItem:  you should return your [baseCell requiredHeight]
-		3) you can setup selectedBackgroundColor and nonselectedBackgroundColor
-		4) you can store any item inside of cell.
+1) Cells extended with good system of separators displaying inside cell
+2) Autocalculation of cell's height. To have it you should:
+	a) To know about "top view" is subview with minimal Y of cell's contentView's subviews (it is important far)
+	b) So you can specify that bottom margin should be equal to topView y: bottomMarginEqualToTopViewMargin = YES
+	c) else if you want custom bottom margin, then bottomMarginEqualToTopViewMargin = NO, bottomMargin = 15.0 (for example)
+	note: you can setup bottomMarginEqualToTopViewMargin and bottomMargin from both xib or code :)
+	d) at MAGTableManager  - heightForItem:  you should return your [baseCell requiredHeight]
+3) you can store any item inside of cell.
 		
-		EASY REQUIREMENTS:
-		After subclassing of MAGTableManager you MUST redefine next methods:
+III EASY REQUIREMENTS:
+After subclassing of MAGTableManager you MUST redefine next methods:
 		
-		-cellClassNamesForNibOrClassRegistering return here array of cell class names for autoregistration on reusable of them. Example:
-			InfoCell, UserCell have InfoCell.xib and UserCell.xib
-			ManagerCell haven't ManagerCell.xib
-			So for addition all of them as reusable cells:
-			@[[InfoCell class], [UserCell class], [Manager class]] - just return array of them's classes
+-cellClassNamesForNibOrClassRegistering return here array of cell class names for autoregistration on reusable of them. Example:
+InfoCell, UserCell have InfoCell.xib and UserCell.xib
+ManagerCell haven't ManagerCell.xib
+So for addition all of them as reusable cells:
+@[[InfoCell class], [UserCell class], [Manager class]] - just return array of them's classes
  
 	
 		- permanentCellForItem:atIndexPath: - here you should return cells which mustn't be reusable and must be as constantly visible cells.
