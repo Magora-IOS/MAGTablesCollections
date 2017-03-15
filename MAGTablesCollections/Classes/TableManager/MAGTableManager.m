@@ -268,7 +268,7 @@ static UIColor *_defaultSeparatorColorSTATIC;
         _sections = @[section];
     }
     _selectedItems = @[];
-    self.itemsOrSectionsWasFilledByUser = YES;
+    _itemsOrSectionsWasFilledByUser = YES;
     [self reloadData];
 }
 
@@ -303,7 +303,7 @@ static UIColor *_defaultSeparatorColorSTATIC;
 - (void)setSections:(NSArray *)sections {
     _sections = [sections copy];
     _selectedItems = @[];
-    self.itemsOrSectionsWasFilledByUser = YES;
+    _itemsOrSectionsWasFilledByUser = YES;
     
     [self reloadData];
 }
@@ -594,6 +594,11 @@ static UIColor *_defaultSeparatorColorSTATIC;
             NSString *cellId = [self cellIdentifierForItem:[self itemByIndexPath:indexPath] atIndexPath:indexPath];
             cell = [tableView dequeueReusableCellWithIdentifier:cellId];
             [self configureCell:cell withItem:item atIndexPath:indexPath];
+			if (self.alternateBackgroundColors.count) {
+				NSInteger index = indexPath.row % self.alternateBackgroundColors.count;
+				UIColor *color = self.alternateBackgroundColors[index];
+				cell.contentView.backgroundColor = color;
+			}
         }
     }
     @catch (NSException *exception) {

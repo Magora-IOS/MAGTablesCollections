@@ -23,39 +23,39 @@ typedef void (^MAGIntegerBlock) (NSInteger affectedItemCount);
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (readonly, nonatomic) BOOL itemsOrSectionsWasFilledByUser;//		YES if any items or sections was set by user after initialization
+@property (readonly, nonatomic) NSValue *initialSeparatorInset;//		just to know which was initial separator inset before any actions with separators
+@property (nonatomic) BOOL useSeparatorsZeroInset;
+
+@property (nonatomic) BOOL useFooterSeparatorViewInsteadOfEmptyTableFooterView;
+@property (readonly, strong, nonatomic) MAGSeparatorView *footerSeparatorView;
+@property (readonly, strong, nonatomic) UIView *footerSeparatorFundamentView;
+
++ (void)setDefaultSelectionColor:(UIColor *)color;//       do it on start of application :)
++ (void)setDefaultSeparatorColor:(UIColor *)color;//       do it on start of application :)
+
+@property (strong, nonatomic) UIColor *separatorsColor;
+
+@property (strong, nonatomic) NSArray <UIColor *> *alternateBackgroundColors;//		color sequence resets in every section. Color sequence inside concrete section willn't updated after any operations on rows, so you must do it yourself
+
+@property (readonly, nonatomic) BOOL displayEmptyViewWhenDataIsEmpty;
+@property (readonly, strong, nonatomic) NSString *classnameForEmptyView;
+@property (readonly, strong, nonatomic) MAGViewBlock emptyViewCustomizationBlock;
+- (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock;
+
+@property (nonatomic) BOOL clearSelectionOnce;//		will deselect selected item once
+@property (nonatomic) BOOL changingSelectionByUserTapsDisabled;//     but you still can detect selection attempt by didTryChangeSelectionItemBlock
+
 @property (copy, nonatomic) MAGTableItemBlock didSelectedCellWithItemBlock;
 @property (copy, nonatomic) MAGTableItemBlock didDeselectedCellWithItemBlock;
 @property (copy, nonatomic) MAGTableItemBlock didSelectionCellChangedWithItemBlock;
 
 @property (copy, nonatomic) MAGTableItemBlock didTryChangeSelectionItemBlock;//       use it in pair with notChangeSelectionOnSelectionOrDeselectionEvent property
 
-@property (nonatomic) BOOL itemsOrSectionsWasFilledByUser;
+@property (copy, nonatomic) NSArray *items;//      set it if you want single section
+@property (strong, nonatomic) NSArray<MAGTableSection *> *sections;//		set if you want many sections
 
-@property (copy, nonatomic) NSArray *items;//      for single section
-@property (strong, nonatomic) NSArray<MAGTableSection *> *sections;
-
-@property (nonatomic) BOOL clearSelectionOnce;
-@property (nonatomic) BOOL changingSelectionByUserTapsDisabled;//     but detect action you can via didTryChangeSelectionItemBlock
-
-@property (strong, nonatomic) NSArray *selectedItems;//     if set, all this items will displayed as selected at first or after appearing on screen. After selection's changing by user, it will contains correct selected items. WARN Be careful when some sections contains the same utem!
-@property (nonatomic) BOOL useSeparatorsZeroInset;
-
-@property (readonly, nonatomic) BOOL displayEmptyViewWhenDataIsEmpty;
-@property (readonly, strong, nonatomic) NSString *classnameForEmptyView;
-@property (readonly, strong, nonatomic) MAGViewBlock emptyViewCustomizationBlock;
-
-@property (readonly, nonatomic) NSValue *initialSeparatorInset;
-
-@property (nonatomic) BOOL useFooterSeparatorViewInsteadOfEmptyTableFooterView;
-@property (readonly, strong, nonatomic) MAGSeparatorView *footerSeparatorView;
-@property (readonly, strong, nonatomic) UIView *footerSeparatorFundamentView;
-
-@property (strong, nonatomic) UIColor *separatorsColor;
-
-+ (void)setDefaultSelectionColor:(UIColor *)color;//       do it on start of application :)
-+ (void)setDefaultSeparatorColor:(UIColor *)color;//       do it on start of application :)
-
-- (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock;
+@property (strong, nonatomic) NSArray *selectedItems;//     if set, all these items will displayed as selected at first or after appearing on screen. After selection's changing by user, it will contains correct selected items. WARN Be careful when some sections contains the same item!
 
 - (id)itemByIndexPath:(NSIndexPath *)indexPath;
 - (id)itemByCell:(UITableViewCell *)cell;

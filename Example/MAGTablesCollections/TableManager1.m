@@ -27,6 +27,7 @@
 	[super awakeFromNib];;
 	
 	self.separatorsColor = [UIColor redColor];
+	self.alternateBackgroundColors = @[RGB(250,250,250),RGB(225,225,225), RGB(200,200,200)];
 }
 
 - (NSString *)cellIdentifierForItem:(id)item atIndexPath:(NSIndexPath *)indexPath {
