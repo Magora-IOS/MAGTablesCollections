@@ -35,28 +35,6 @@
     self.selectedBackgroundView.backgroundColor = color;
 }
 
-//- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-//    [super setSelected:selected animated:animated];
-//    
-//    if (selected) {
-//        [self displayBackgroundColorAsSelected];
-//    } else {
-//        [self displayBackgroundColorAsNonselected];
-//    }
-//}
-
-- (void)displayBackgroundColorAsSelected {
-//	if (self.selectedBackgroundColor) {
-//		self.contentView.backgroundColor = self.selectedBackgroundColor;
-//	} else {
-//		self.contentView.backgroundColor = _defaultSelectionColorSTATIC;
-//	}
-}
-
-//- (void)displayBackgroundColorAsNonselected {
-//    self.contentView.backgroundColor = self.nonselectedBackgroundColor;
-//}
-
 - (CGFloat)requiredHeight {
 	CGFloat result = 0;
 	[self.contentView mag_relayout];
