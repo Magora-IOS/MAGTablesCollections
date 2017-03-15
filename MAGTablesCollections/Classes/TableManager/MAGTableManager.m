@@ -2,6 +2,7 @@
 #import "MAGTableManager.h"
 #import "MAGCommonDefines.h"
 #import "UIView+MAGMore.h"
+#import "MAGTableManager+Redefinition.h"
 
 static UIColor *_defaultSelectionColorSTATIC;
 static UIColor *_defaultSeparatorColorSTATIC;
@@ -17,7 +18,228 @@ static UIColor *_defaultSeparatorColorSTATIC;
 
 //@synthesize selectedItems = _selectedItems;
 
-#pragma mark - LifeStyle
+#pragma mark - IMPORTANT
+
+
++ (void)setDefaultSelectionColor:(UIColor *)color {
+    _defaultSelectionColorSTATIC = color;
+}
+
++ (void)setDefaultSeparatorColor:(UIColor *)color {
+    _defaultSeparatorColorSTATIC = color;
+}
+
+- (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock {
+    _displayEmptyViewWhenDataIsEmpty = displayEmptyViewWhenDataIsEmpty;
+    _classnameForEmptyView = classnameForEmptyView;
+    _emptyViewCustomizationBlock = emptyViewCustomizationBlock;
+    
+    [self recreateEmptyLabel];
+    [self updateEmptyLabel];
+}
+
+- (id)itemByIndexPath:(NSIndexPath *)indexPath {
+    id item = nil;
+    @try {
+        MAGTableSection *section = self.sections[indexPath.section];
+        NSArray *sectionItems = section.items;
+        item = sectionItems[indexPath.row];
+    }
+    @catch (NSException *exception) {
+    }
+    
+    return item;
+}
+
+- (id)itemByCell:(UITableViewCell *)cell {
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    if (indexPath == nil) {
+        NSParameterAssert(indexPath);
+        
+        return nil;
+    }
+    return [self itemByIndexPath:indexPath];
+}
+
+- (NSArray *)indexPathsOfItem:(id)item inSections:(NSArray <MAGTableSection *> *)sections {
+    NSMutableArray *result = [@[] mutableCopy];
+    for (NSInteger i = 0; i < self.sections.count; ++i) {
+        MAGTableSection *currentSection = self.sections[i];
+        if ([sections containsObject:currentSection]) {
+            for (NSInteger k = 0; k < currentSection.items.count; ++k) {
+                id currentItem = currentSection.items[k];
+                if (EQUAL(currentItem, item)) {
+                    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:k inSection:i];
+                    [result addObject:indexPath];
+                }
+            }
+        }
+    }
+    return result;
+}
+
+- (NSArray <MAGTableSection *> *)sectionsContainingItem:(id)item {
+    NSMutableArray *result = [@[] mutableCopy];
+    for (NSInteger i = 0; i < self.sections.count; ++i) {
+        MAGTableSection *section = self.sections[i];
+        if ([section.items containsObject:item]) {
+            [result addObject:section];
+            break;
+        }
+    }
+    return result;
+}
+
+- (void)selectAllRowsWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition {
+    [self addItemToSelectedItems:item];
+    NSArray *indexPaths = [self indexPathsOfItem:item inSections:self.sections];
+    for (NSIndexPath *indexPath in indexPaths) {
+        [self.tableView selectRowAtIndexPath:indexPath animated:animated scrollPosition:scrollPosition];
+    }
+}
+
+- (void)deselectAllRowsWithItem:(id)item animated:(BOOL)animated {
+    [self removeItemFromSelectedItems:item];
+    NSArray *indexPaths = [self indexPathsOfItem:item inSections:self.sections];
+    for (NSIndexPath *indexPath in indexPaths) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:animated];
+    }
+}
+
+- (void)clearSelection {
+    self.selectedItems = @[];
+    for (NSIndexPath *index in self.tableView.indexPathsForSelectedRows) {
+        [self.tableView deselectRowAtIndexPath:index animated:NO];
+    }
+}
+
+- (void)makeInsertOperations:(NSArray <MAGInsertOperation *> *)operations animated:(BOOL)animated completion:(MAGIntegerBlock)completion {
+    NSLog(@"INSERTION ITEMS STARTED");
+    UITableViewRowAnimation animation = UITableViewRowAnimationNone;
+    if (animated) {
+        animation = UITableViewRowAnimationBottom;
+    }
+    BOOL updatesHappened = NO;
+	NSInteger affectedItemCount = 0;
+	for (MAGInsertOperation *operation in operations) {
+		BOOL suchSectionExists = [self.sections containsObject:operation.destinationSection];
+		if (suchSectionExists) {
+			if (operation.indexWhereto <= operation.destinationSection.items.count) {//        bcs we can insert element after all
+				updatesHappened = YES;
+				[self.tableView beginUpdates];
+				
+				NSMutableArray *indexpathsOfInsertedItems = @[].mutableCopy;
+				NSMutableArray *changedItems = [operation.destinationSection.items mutableCopy];
+				NSInteger rowIncrement;
+				for (NSInteger i = operation.items.count - 1; i >= 0; --i) {//insert in backward order for making forward order
+					id item = operation.items[i];
+					[changedItems insertObject:item atIndex:operation.indexWhereto];
+					NSInteger sectionIndex = [self.sections indexOfObject:operation.destinationSection];
+					if (sectionIndex != NSNotFound) {
+						NSInteger itemRow = operation.indexWhereto + i;
+						NSIndexPath *insertedItemIndexpath = [NSIndexPath indexPathForRow:itemRow inSection:sectionIndex];
+						[indexpathsOfInsertedItems addObject:insertedItemIndexpath];
+					}
+				}
+				operation.destinationSection.items = changedItems;
+				[self.tableView insertRowsAtIndexPaths:indexpathsOfInsertedItems withRowAnimation:animation];
+				affectedItemCount += indexpathsOfInsertedItems.count;
+								[self.tableView endUpdates];
+			}
+		}
+	}
+	if (updatesHappened) {
+		if (animated) {
+			dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kMAGTableManagerAnimationTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+				RUN_BLOCK(completion, affectedItemCount);
+			});
+		} else {
+			RUN_BLOCK(completion, affectedItemCount);
+		}
+	} else {
+		RUN_BLOCK(completion, 0);
+	}
+}
+
+- (void)makeReloadOperations:(NSArray <MAGReloadOperation *> *)operations animated:(BOOL)animated completion:(MAGIntegerBlock)completion {
+    NSLog(@"RELOADING ITEMS STARTED");
+    UITableViewRowAnimation animation = UITableViewRowAnimationNone;
+    if (animated) {
+        animation = UITableViewRowAnimationAutomatic;
+    }
+	NSMutableArray *indexpaths = @[].mutableCopy;
+	for (MAGReloadOperation *operation in operations) {
+		BOOL suchSectionExists = [self.sections containsObject:operation.sourceSection];
+		if (suchSectionExists) {
+			for (id item in operation.items) {
+				NSArray *currentIndexpaths = [self indexPathsOfItem:item inSections:@[operation.sourceSection]];
+				[indexpaths addObjectsFromArray:currentIndexpaths];
+			}
+		}
+	}
+    if (indexpaths.count) {
+		[self.tableView beginUpdates];
+        [self.tableView reloadRowsAtIndexPaths:indexpaths withRowAnimation:animation];
+        [self.tableView endUpdates];
+        NSInteger affectedItemCount = indexpaths.count;
+        if (animated) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kMAGTableManagerAnimationTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                RUN_BLOCK(completion, affectedItemCount);
+            });
+        } else {
+            RUN_BLOCK(completion, affectedItemCount);
+        }
+    } else {
+        RUN_BLOCK(completion, 0);
+    }
+}
+
+- (void)makeAllItemOccurenciesDeleteOperations:(NSArray <MAGDeleteOperation *> *)operations animated:(BOOL)animated completion:(MAGIntegerBlock)completion {
+	NSLog(@"DELETION ITEMS STARTED");
+	UITableViewRowAnimation animation = UITableViewRowAnimationNone;
+	if (animated) {
+		animation = UITableViewRowAnimationBottom;
+	}
+	NSMutableArray *indexpaths = @[].mutableCopy;
+	for (MAGDeleteOperation *operation in operations) {
+		BOOL suchSectionExists = [self.sections containsObject:operation.sourceSection];
+		if (suchSectionExists) {
+			for (id item in operation.items) {
+				NSArray *currentIndexpaths = [self indexPathsOfItem:item inSections:@[operation.sourceSection]];
+				[indexpaths addObjectsFromArray:currentIndexpaths];
+				if (indexpaths.count) {
+					[self.tableView beginUpdates];
+					[self.tableView deleteRowsAtIndexPaths:currentIndexpaths withRowAnimation:animation];
+					
+					//        for (MAGTableSection *section in sections) {
+					NSUInteger itemIndex = [operation.sourceSection.items indexOfObject:item];
+					if (itemIndex != NSNotFound) {
+						NSMutableArray *changedItems = [operation.sourceSection.items mutableCopy];
+						[changedItems removeObject:item];
+						operation.sourceSection.items = changedItems;
+					}
+					//        }
+					[self.tableView endUpdates];
+				}
+			}
+		}
+	}
+	NSInteger affectedItemCount = indexpaths.count;
+	if (affectedItemCount) {
+		if (animated) {
+			dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kMAGTableManagerAnimationTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+				RUN_BLOCK(completion, affectedItemCount);
+			});
+		} else {
+			RUN_BLOCK(completion, affectedItemCount);
+		}
+	} else {
+		RUN_BLOCK(completion, 0)
+	}
+}
+
+#pragma mark - Ot
+
 
 - (instancetype)initWithTableView:(UITableView *)tableView {
     if (self = [super init]) {
@@ -152,22 +374,8 @@ static UIColor *_defaultSeparatorColorSTATIC;
     }
 }
 
-- (void)setDisplayEmptyViewWhenDataIsEmpty:(BOOL)displayEmptyViewWhenDataIsEmpty classnameForEmptyView:(NSString *)classnameForEmptyView emptyViewCustomizationBlock:(MAGViewBlock)emptyViewCustomizationBlock {
-    _displayEmptyViewWhenDataIsEmpty = displayEmptyViewWhenDataIsEmpty;
-    _classnameForEmptyView = classnameForEmptyView;
-    _emptyViewCustomizationBlock = emptyViewCustomizationBlock;
-    
-    [self recreateEmptyLabel];
-    [self updateEmptyLabel];
-}
 
-+ (void)setDefaultSelectionColor:(UIColor *)color {
-    _defaultSelectionColorSTATIC = color;
-}
 
-+ (void)setDefaultSeparatorColor:(UIColor *)color {
-    _defaultSeparatorColorSTATIC = color;
-}
 
 - (void)updateEmptyLabel {
     if (self.emptyView) {
@@ -486,20 +694,6 @@ static UIColor *_defaultSeparatorColorSTATIC;
 	}
 }
 
-- (UIColor *)selectedBackgroundColorForBaseCell:(MAGBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-	UIColor *result = RGB(208,208,208);
-	return result;
-}
-
-- (SeparatorDisplayingMode)separatorDisplayingModeForBaseCellNormalState:(MAGBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-	SeparatorDisplayingMode result = SeparatorDisplayingModeBottom;
-	return result;
-}
-
-- (SeparatorDisplayingMode)separatorDisplayingModeForBaseCellSelectedState:(MAGBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-	SeparatorDisplayingMode result = SeparatorDisplayingModeNone;
-	return result;
-}
 
 #pragma mark - From Childs
 
@@ -511,265 +705,6 @@ static UIColor *_defaultSeparatorColorSTATIC;
         result = [tableSection.items count];
     }
     return result;
-}
-
-- (id)itemByIndexPath:(NSIndexPath *)indexPath {
-    id item = nil;
-    @try {
-        MAGTableSection *section = self.sections[indexPath.section];
-        NSArray *sectionItems = section.items;
-        item = sectionItems[indexPath.row];
-    }
-    @catch (NSException *exception) {
-    }
-    
-    return item;
-}
-
-- (id)itemByCell:(UITableViewCell *)cell {
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    if (indexPath == nil) {
-        NSParameterAssert(indexPath);
-        
-        return nil;
-    }
-    return [self itemByIndexPath:indexPath];
-}
-
-- (NSArray *)indexPathsOfItem:(id)item inSections:(NSArray <MAGTableSection *> *)sections {
-    NSMutableArray *result = [@[] mutableCopy];
-    for (NSInteger i = 0; i < self.sections.count; ++i) {
-        MAGTableSection *currentSection = self.sections[i];
-        if ([sections containsObject:currentSection]) {
-            for (NSInteger k = 0; k < currentSection.items.count; ++k) {
-                id currentItem = currentSection.items[k];
-                if (EQUAL(currentItem, item)) {
-                    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:k inSection:i];
-                    [result addObject:indexPath];
-                }
-            }
-        }
-    }
-    return result;
-}
-
-- (NSArray <MAGTableSection *> *)sectionsContainingItem:(id)item {
-    NSMutableArray *result = [@[] mutableCopy];
-    for (NSInteger i = 0; i < self.sections.count; ++i) {
-        MAGTableSection *section = self.sections[i];
-        if ([section.items containsObject:item]) {
-            [result addObject:section];
-            break;
-        }
-    }
-    return result;
-}
-
-- (CGFloat)heightForItem:(id)item {
-    return 44.;
-}
-
-- (CGFloat)heightForHeaderViewOfSection:(MAGTableSection *)section {
-    return 0.00001;
-}
-
-- (CGFloat)heightForFooterViewOfSection:(MAGTableSection *)section {
-    return 0.00001;
-}
-
-- (UITableViewCell *)permanentCellForItem:(id)item atIndexPath:(NSIndexPath *)indexPath {
-    return nil;
-}
-
-- (NSString *)cellIdentifierForItem:(id)item atIndexPath:(NSIndexPath *)indexPath {
-    @throw [NSException exceptionWithName:@"no cell identifier" reason:@"identifier should be provided by childs of MAGTableManager" userInfo:nil];
-    
-    return nil;
-}
-
-- (void)configureCell:(UITableViewCell *)cell withItem:(id)item atIndexPath:(NSIndexPath *)indexPath {
-    THROW_MISSED_IMPLEMENTATION_EXCEPTION;
-}
-
-- (NSArray *)cellClassNamesForNibOrClassRegistering {
-    return nil;
-}
-
-- (NSString *)headerIdentifierForSection:(MAGTableSection *)section {
-    return nil;
-}
-
-- (NSString *)footerIdentifierForSection:(MAGTableSection *)section {
-    return nil;
-}
-
-- (void)configureHeaderView:(UIView *)view forSection:(MAGTableSection *)section {
-    THROW_MISSED_IMPLEMENTATION_EXCEPTION
-}
-
-- (void)configureFooterView:(UIView *)view forSection:(MAGTableSection *)section {
-    THROW_MISSED_IMPLEMENTATION_EXCEPTION
-}
-
-- (BOOL)shouldHighlightAndSelectCellAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-
-//- (void)selectFirstRowWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition {
-//    NSArray *indexPaths = [self indexPathsOfItem:item inSections:self.sections];
-//    if (indexPaths.count > 0) {
-//        NSIndexPath *first = [indexPaths firstObject];
-//        [self.tableView selectRowAtIndexPath:first animated:animated scrollPosition:scrollPosition];
-//        [self addItemToSelectedItems:item];
-//    }
-//}
-
-- (void)selectAllRowsWithItem:(id)item animated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition {
-    [self addItemToSelectedItems:item];
-    NSArray *indexPaths = [self indexPathsOfItem:item inSections:self.sections];
-    for (NSIndexPath *indexPath in indexPaths) {
-        [self.tableView selectRowAtIndexPath:indexPath animated:animated scrollPosition:scrollPosition];
-    }
-}
-
-- (void)deselectAllRowsWithItem:(id)item animated:(BOOL)animated {
-    [self removeItemFromSelectedItems:item];
-    NSArray *indexPaths = [self indexPathsOfItem:item inSections:self.sections];
-    for (NSIndexPath *indexPath in indexPaths) {
-        [self.tableView deselectRowAtIndexPath:indexPath animated:animated];
-    }
-}
-
-- (void)clearSelection {
-    self.selectedItems = @[];
-    for (NSIndexPath *index in self.tableView.indexPathsForSelectedRows) {
-        [self.tableView deselectRowAtIndexPath:index animated:NO];
-    }
-}
-
-- (void)makeInsertOperations:(NSArray <MAGInsertOperation *> *)operations animated:(BOOL)animated completion:(MAGIntegerBlock)completion {
-    NSLog(@"INSERTION ITEMS STARTED");
-    UITableViewRowAnimation animation = UITableViewRowAnimationNone;
-    if (animated) {
-        animation = UITableViewRowAnimationBottom;
-    }
-    BOOL updatesHappened = NO;
-	NSInteger affectedItemCount = 0;
-	for (MAGInsertOperation *operation in operations) {
-		BOOL suchSectionExists = [self.sections containsObject:operation.destinationSection];
-		if (suchSectionExists) {
-			if (operation.indexWhereto <= operation.destinationSection.items.count) {//        bcs we can insert element after all
-				updatesHappened = YES;
-				[self.tableView beginUpdates];
-				
-				NSMutableArray *indexpathsOfInsertedItems = @[].mutableCopy;
-				NSMutableArray *changedItems = [operation.destinationSection.items mutableCopy];
-				NSInteger rowIncrement;
-				for (NSInteger i = operation.items.count - 1; i >= 0; --i) {//insert in backward order for making forward order
-					id item = operation.items[i];
-					[changedItems insertObject:item atIndex:operation.indexWhereto];
-					NSInteger sectionIndex = [self.sections indexOfObject:operation.destinationSection];
-					if (sectionIndex != NSNotFound) {
-						NSInteger itemRow = operation.indexWhereto + i;
-						NSIndexPath *insertedItemIndexpath = [NSIndexPath indexPathForRow:itemRow inSection:sectionIndex];
-						[indexpathsOfInsertedItems addObject:insertedItemIndexpath];
-					}
-				}
-				operation.destinationSection.items = changedItems;
-				[self.tableView insertRowsAtIndexPaths:indexpathsOfInsertedItems withRowAnimation:animation];
-				affectedItemCount += indexpathsOfInsertedItems.count;
-								[self.tableView endUpdates];
-			}
-		}
-	}
-	if (updatesHappened) {
-		if (animated) {
-			dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kMAGTableManagerAnimationTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-				RUN_BLOCK(completion, affectedItemCount);
-			});
-		} else {
-			RUN_BLOCK(completion, affectedItemCount);
-		}
-	} else {
-		RUN_BLOCK(completion, 0);
-	}
-}
-
-- (void)makeReloadOperations:(NSArray <MAGReloadOperation *> *)operations animated:(BOOL)animated completion:(MAGIntegerBlock)completion {
-    NSLog(@"RELOADING ITEMS STARTED");
-    UITableViewRowAnimation animation = UITableViewRowAnimationNone;
-    if (animated) {
-        animation = UITableViewRowAnimationAutomatic;
-    }
-	NSMutableArray *indexpaths = @[].mutableCopy;
-	for (MAGReloadOperation *operation in operations) {
-		BOOL suchSectionExists = [self.sections containsObject:operation.sourceSection];
-		if (suchSectionExists) {
-			for (id item in operation.items) {
-				NSArray *currentIndexpaths = [self indexPathsOfItem:item inSections:@[operation.sourceSection]];
-				[indexpaths addObjectsFromArray:currentIndexpaths];
-			}
-		}
-	}
-    if (indexpaths.count) {
-		[self.tableView beginUpdates];
-        [self.tableView reloadRowsAtIndexPaths:indexpaths withRowAnimation:animation];
-        [self.tableView endUpdates];
-        NSInteger affectedItemCount = indexpaths.count;
-        if (animated) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kMAGTableManagerAnimationTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                RUN_BLOCK(completion, affectedItemCount);
-            });
-        } else {
-            RUN_BLOCK(completion, affectedItemCount);
-        }
-    } else {
-        RUN_BLOCK(completion, 0);
-    }
-}
-
-- (void)makeAllItemOccurenciesDeleteOperations:(NSArray <MAGDeleteOperation *> *)operations animated:(BOOL)animated completion:(MAGIntegerBlock)completion {
-	NSLog(@"DELETION ITEMS STARTED");
-	UITableViewRowAnimation animation = UITableViewRowAnimationNone;
-	if (animated) {
-		animation = UITableViewRowAnimationBottom;
-	}
-	NSMutableArray *indexpaths = @[].mutableCopy;
-	for (MAGDeleteOperation *operation in operations) {
-		BOOL suchSectionExists = [self.sections containsObject:operation.sourceSection];
-		if (suchSectionExists) {
-			for (id item in operation.items) {
-				NSArray *currentIndexpaths = [self indexPathsOfItem:item inSections:@[operation.sourceSection]];
-				[indexpaths addObjectsFromArray:currentIndexpaths];
-				if (indexpaths.count) {
-					[self.tableView beginUpdates];
-					[self.tableView deleteRowsAtIndexPaths:currentIndexpaths withRowAnimation:animation];
-					
-					//        for (MAGTableSection *section in sections) {
-					NSUInteger itemIndex = [operation.sourceSection.items indexOfObject:item];
-					if (itemIndex != NSNotFound) {
-						NSMutableArray *changedItems = [operation.sourceSection.items mutableCopy];
-						[changedItems removeObject:item];
-						operation.sourceSection.items = changedItems;
-					}
-					//        }
-					[self.tableView endUpdates];
-				}
-			}
-		}
-	}
-	NSInteger affectedItemCount = indexpaths.count;
-	if (affectedItemCount) {
-		if (animated) {
-			dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kMAGTableManagerAnimationTimeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-				RUN_BLOCK(completion, affectedItemCount);
-			});
-		} else {
-			RUN_BLOCK(completion, affectedItemCount);
-		}
-	} else {
-		RUN_BLOCK(completion, 0)
-	}
 }
 
 @end
