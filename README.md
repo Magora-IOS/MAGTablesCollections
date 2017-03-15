@@ -4,7 +4,7 @@ Framework for very convenient work with UITableView and UICollectionView
 
 With this class you mustn't interact with tableView directly but should to do it via tableManager.
         
-Take in attention that MAGTableManager prefer works with MAGBaseCell-like cells (but it is not required. It required for special abilities of MAGTableManager and its cells)
+Take in attention that MAGTableManager prefer works with MAGBaseCell-like cells (but it is not requirement. It requirement just to get special abilities of MAGTableManager and its cells)
 		
 ## I MAGTableManager FEATURES:
 	
