@@ -16,7 +16,7 @@ typedef void (^MAGTableItemBlock) (id item);
 typedef void (^MAGViewBlock) (UIView *view);
 typedef void (^MAGIntegerBlock) (NSInteger affectedItemCount);
 /**
-        @warn TableManager shoudn't contains some of identical section objects at single time!
+		@warn TableManager shoudn't contains some of identical section objects at single time!
  */
 
 @interface MAGTableManager : NSObject <UITableViewDataSource, UITableViewDelegate>

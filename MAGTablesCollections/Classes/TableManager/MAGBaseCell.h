@@ -25,15 +25,17 @@ typedef NS_ENUM(NSInteger, SeparatorDisplayingMode) {
 @property (nonatomic) IBInspectable CGFloat bottomMargin;
 @property (nonatomic) IBInspectable BOOL bottomMarginEqualToTopViewMargin;
 
-@property (strong, nonatomic) UIColor *selectedBackgroundColor;
-@property (strong, nonatomic) UIColor *nonselectedBackgroundColor;
-
-@property (nonatomic) SeparatorDisplayingMode separatorDisplayingMode;
-@property (nonatomic) SeparatorDisplayingMode selectedStateSeparatorDisplayingMode;
-@property (strong, nonatomic) UIColor *separatorColor;
-
 @property (strong, nonatomic) id item;
 
 - (CGFloat)requiredHeight;
+
+
+
+@property (strong, nonatomic) UIColor *selectedBackgroundColor;//		for using by MAGTableManager. Not use by yourself!
+@property (strong, nonatomic) UIColor *nonselectedBackgroundColor;//		for using by MAGTableManager. Not use by yourself!
+
+@property (nonatomic) SeparatorDisplayingMode separatorDisplayingMode;//		for using by MAGTableManager. Not use by yourself!
+@property (nonatomic) SeparatorDisplayingMode selectedStateSeparatorDisplayingMode;//		for using by MAGTableManager. Not use by yourself!
+@property (strong, nonatomic) UIColor *separatorColor;//		for using by MAGTableManager. Not use by yourself!
 
 @end
