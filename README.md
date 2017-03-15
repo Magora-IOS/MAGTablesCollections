@@ -96,3 +96,7 @@ So for addition all of them as reusable cells:
 - selectedBackgroundColorForBaseCell: atIndexPath: - specify selected background color for concrete baseCells (it works with MAGBaseCell only!)
 - separatorDisplayingModeForBaseCellNormalState: atIndexPath: - specify separatorDisplayingMode for normal state ob baseCell at indexPath (it works with MAGBaseCell only!)
 - separatorDisplayingModeForBaseCellSelectedState: atIndexPath: - specify separatorDisplayingMode for selected state ob baseCell at indexPath (it works with MAGBaseCell only!)
+
+
+
+# MAGTablesCollections: instruction not ready yet, because beautiful examples exists yet, just see it (inside this pod)!
