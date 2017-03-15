@@ -57,7 +57,7 @@ Or to know which sections contains your item:
 	makeReloadOperations: animated: completion:
 	makeAllItemOccurenciesDeleteOperations: animated: completion:
 ```			
-##II For better results use MAGBaseCell as cells, bcs then you will have additional possibilities:
+## II For better results use MAGBaseCell as cells, bcs then you will have additional possibilities:
 		
 1) Cells extended with good system of separators displaying inside cell
 2) Autocalculation of cell's height bypassing stupid system methods (which differs for iOS versions). To have it you should:
