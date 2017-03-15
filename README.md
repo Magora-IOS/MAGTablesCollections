@@ -69,7 +69,7 @@ Or to know which sections contains your item:
 3) you can store any item inside of cell.
 		
 ## III EASY REQUIREMENTS:
-### After subclassing of MAGTableManager you MUST redefine next methods (they contains inside category MAGTableManager+Redefinition):
+### After subclassing of MAGTableManager you MUST redefine next methods (category MAGTableManager+Redefinition contains them):
 		
 1 -cellClassNamesForNibOrClassRegistering return here array of cell class names for autoregistration on reusable of them. Example:
 InfoCell, UserCell have InfoCell.xib and UserCell.xib
