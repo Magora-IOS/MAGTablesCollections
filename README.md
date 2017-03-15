@@ -2,57 +2,57 @@
 
 Framework for very convenient work with UITableView and UICollectionView
 
-		With this class you mustn't interact with tableView directly but should to do it via tableManager.
-        Take in attention that MAGTableManager prefer works with MAGBaseCell-like cells (but it is not required. It required for special abilities of MAGTableManager and its cells)
+With this class you mustn't interact with tableView directly but should to do it via tableManager.
+        
+Take in attention that MAGTableManager prefer works with MAGBaseCell-like cells (but it is not required. It required for special abilities of MAGTableManager and its cells)
 		
- 
-		Mostly useful features:
+FEATURES:
 	
-		Displaying of separators at full wide: useSeparatorsZeroInset = YES
+1 Displaying of separators at full wide: useSeparatorsZeroInset = YES
  
-		Specify colors of all separators: separatorsColor = [UIColor myColor]
+2 Specify colors of all separators: separatorsColor = [UIColor myColor]
  
-		Sed default selection color for all tables of your app: +setDefaultSelectionColor:[UIColor myColor]. Then at any moment you can use other values for concrete MAGTableManager-s
+3 Set default selection color for all tables of your app: +setDefaultSelectionColor:[UIColor myColor]. Then at any moment you can use other values for concrete MAGTableManager-s
 		
-		Display backgroundColor of allCells in alternate color order inside each section: alternateBackgroundColors = @[myColor1, myColor2, myColor3, etc]
+4 Display backgroundColor of allCells in alternate color order inside each section: alternateBackgroundColors = @[myColor1, myColor2, myColor3, etc]
 	
-		Display emptyView over tableView when data is empty: setDisplayEmptyViewWhenDataIsEmpty:YES classnameForEmptyView:[MyTableEmptyView class] emptyViewCustomizationBlock:^(UIView *view) {
+5 Display emptyView over tableView when data is empty: setDisplayEmptyViewWhenDataIsEmpty:YES classnameForEmptyView:[MyTableEmptyView class] emptyViewCustomizationBlock:^(UIView *view) {
 			MyTableEmptyView *v = (MyTableEmptyView *)view; 
 			v.title = @"List is empty";
 			}
  
-		If you want close your table's bottom for avoid default zebra from separators and close bottom of last cell, then you can
-		set useFooterSeparatorViewInsteadOfEmptyTableFooterView = YES.
+6 If you want close your table's bottom for avoid default zebra from separators and close bottom of last cell, then you can
+set useFooterSeparatorViewInsteadOfEmptyTableFooterView = YES.
  
-		Clear cell's selection once: clearSelectionOnce = YES
-		Disable changing selection by user taps: changingSelectionByUserTapsDisabled = YES
+7 Clear cell's selection once: clearSelectionOnce = YES
+8 Disable changing selection by user taps: changingSelectionByUserTapsDisabled = YES
 		
-		Displaying single section with any items: items = @[myItem1, myItem2, myItem3 etc]
-		Displaying many sections with any items inside each section:
-		MAGTableSection *s1 = [MAGTableSection new];
-		s1.items = @[myItem1, myItem2];
-		MAGTableSection *s2 = [MAGTableSection new];
-		s2.items = @[myItem3, myItem4];
-		sections = @[s1,s2]
+9 Displaying single section with any items: items = @[myItem1, myItem2, myItem3 etc]
+10 Displaying many sections with any items inside each section:
+	MAGTableSection *s1 = [MAGTableSection new];
+	s1.items = @[myItem1, myItem2];
+	MAGTableSection *s2 = [MAGTableSection new];
+	s2.items = @[myItem3, myItem4];
+	sections = @[s1,s2]
 		
-		Table will reload immediately after set items or sections.
+	Table will reload immediately after set items or sections.
 		
-		Set selected items (detected by selected rows of table):  selectedItems = @[myItem1, myItem2]
-		For getting selected items: [self selectedItems]
+11 Set selected items (detected by selected rows of table):  selectedItems = @[myItem1, myItem2]
+For getting selected items: [self selectedItems]
  
-		At any time you can fastly find your item by indexPath or by cell: 
-			itemByIndexPath:
-			itemByCell:
+12 At any time you can fastly find your item by indexPath or by cell: 
+	itemByIndexPath:
+	itemByCell:
 			
-		You can find indexPath of item in sections:
-			indexPathsOfItem: inSections:
-		Or to know which sections contains your item:
-			sectionsContainingItem:
+13 You can find indexPath of item in sections:
+	indexPathsOfItem: inSections:
+Or to know which sections contains your item:
+	sectionsContainingItem:
 			
-		You can do operations with items usable methods:
-			makeInsertOperations: animated:completion:
-			makeReloadOperations: animated: completion:
-			makeAllItemOccurenciesDeleteOperations: animated: completion:
+14 You can do operations with items usable methods:
+	makeInsertOperations: animated:completion:
+	makeReloadOperations: animated: completion:
+	makeAllItemOccurenciesDeleteOperations: animated: completion:
 			
 		Here exists category for redefinition of methods to get better control over tableManager: MAGTableManager+Redefinition
 		
