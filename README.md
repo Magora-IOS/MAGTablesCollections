@@ -8,6 +8,7 @@ Take in attention that MAGTableManager prefer works with MAGBaseCell-like cells 
 		
 ## I MAGTableManager FEATURES:
 	
+0 It operates with items generally, not with indexpaths!
 1 Displaying of separators at full wide: useSeparatorsZeroInset = YES
  
 2 Specify colors of all separators: separatorsColor = [UIColor myColor]
