@@ -32,11 +32,11 @@ set useFooterSeparatorViewInsteadOfEmptyTableFooterView = YES.
 9 Displaying single section with any items: items = @[myItem1, myItem2, myItem3 etc]
 10 Displaying many sections with any items inside each section:
 ```
-	MAGTableSection *s1 = [MAGTableSection new];
-	s1.items = @[myItem1, myItem2];
-	MAGTableSection *s2 = [MAGTableSection new];
-	s2.items = @[myItem3, myItem4];
-	sections = @[s1,s2]
+MAGTableSection *s1 = [MAGTableSection new];
+s1.items = @[myItem1, myItem2];
+MAGTableSection *s2 = [MAGTableSection new];
+s2.items = @[myItem3, myItem4];
+sections = @[s1,s2]
 ```		
 Table will reload immediately after set items or sections.
 		
@@ -44,8 +44,9 @@ Table will reload immediately after set items or sections.
 For getting selected items: [self selectedItems]
  
 12 At any time you can fastly find your item by indexPath or by cell: 
-```	itemByIndexPath:
-	itemByCell:
+```	
+itemByIndexPath:
+itemByCell:
 ```			
 13 You can find indexPath of item in sections:
 	indexPathsOfItem: inSections:
@@ -53,9 +54,10 @@ Or to know which sections contains your item:
 	sectionsContainingItem:
 			
 14 You can do operations with items usable methods:
-```	makeInsertOperations: animated:completion:
-	makeReloadOperations: animated: completion:
-	makeAllItemOccurenciesDeleteOperations: animated: completion:
+```	
+makeInsertOperations: animated:completion:
+makeReloadOperations: animated: completion:
+makeAllItemOccurenciesDeleteOperations: animated: completion:
 ```			
 ## II For better results use MAGBaseCell as cells, bcs then you will have additional possibilities:
 		
