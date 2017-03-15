@@ -72,8 +72,8 @@ makeAllItemOccurenciesDeleteOperations: animated: completion:
 		
 	d) at MAGTableManager  - heightForItem:  you should return your [baseCell requiredHeight]
 For example: bottomMarginEqualToTopViewMargin = YES
-![alt tag](https://github.com/Magora-IOS/MAGTablesCollections/blob/master/Preview/BottomMarginEqualToTopMargin.png
-result)
+[[https://github.com/Magora-IOS/MAGTablesCollections/blob/master/Preview/BottomMarginEqualToTopMargin.png|alt=octocat]]
+result
 ![alt tag](https://github.com/Magora-IOS/MAGTablesCollections/blob/master/Preview/result_equal.png)
 
 bottomMarginEqualToTopViewMargin = NO, bottomMargin = 50
