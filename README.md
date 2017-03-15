@@ -87,6 +87,7 @@ So for addition all of them as reusable cells:
 4 - configureCell: withItem: atIndexPath: - here you can configure your cell if needed
 
 5 - configureHeaderView: forSection: - is required bcs at any time you can add headerView
+
 6 - configureFooterView: forSection:  - is required bcs at any time you can add footerView
 		
 ## IV OPTIONALLY for increasing of features you can redefine next methods:
