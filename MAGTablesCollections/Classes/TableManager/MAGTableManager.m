@@ -1,4 +1,12 @@
 
+
+
+
+
+
+
+
+
 #import "MAGTableManager.h"
 #import "MAGCommonDefines.h"
 #import "UIView+MAGMore.h"
@@ -15,8 +23,6 @@ static UIColor *_defaultSeparatorColorSTATIC;
 @end
 
 @implementation MAGTableManager
-
-//@synthesize selectedItems = _selectedItems;
 
 #pragma mark - IMPORTANT
 

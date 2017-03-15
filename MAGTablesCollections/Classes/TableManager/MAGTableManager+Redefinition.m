@@ -1,10 +1,11 @@
-//
-//  MAGTableManager+Redefinition.m
-//  Pods
-//
-//  Created by Matveev on 14/03/17.
-//
-//
+
+
+
+
+
+
+
+
 
 #import "MAGTableManager+Redefinition.h"
 #import "MAGCommonDefines.h"
